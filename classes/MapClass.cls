@@ -13,17 +13,17 @@ public class MapClass {
     }
 
     public string qliToRemove {get;set {qliToRemove = value;}}
-    public list<markWrap> MWlist {get;set;}
+    public Transient list<markWrap> MWlist {get;set;}                       //-- Added Transient by GSD 08/27/2018
     public list<SelectOption> regns {get;set;}
     public string regnPicked {get;set;}
     public Date_Input__c mc {get;set;}
     public Quote qut {get;set;}
     public boolean underConstruction {get;set;}
     public boolean alreadyBooked {get;set;}
-    public list<markWrap> underConstructionList {get;set;}
-    public list<markWrap> alreadyBookedList {get;set;}
-    public map<id,list<Asset>> ProdIdToAsset {get;set;}
-    public map<Id,List<Product2>> kioskId_to_Product {get;set;}
+    public Transient list<markWrap> underConstructionList {get;set;}        //-- Added Transient by GSD 08/27/2018
+    public Transient list<markWrap> alreadyBookedList {get;set;}            //-- Added Transient by GSD 08/27/2018
+    public map<id,list<Asset>> ProdIdToAsset {get;set;}           //-- Added Transient by GSD 08/27/2018
+    public Transient map<Id,List<Product2>> kioskId_to_Product {get;set;}   //-- Added Transient by GSD 08/27/2018
     public string startDateString {get;set;}
     public string endDateString {get;set;}
     public list<SelectOption> regions {get;set;}
@@ -70,6 +70,7 @@ public class MapClass {
             regns.add(new SelectOption(a.getLabel(), a.getValue()));
         }
         mc = Date_Input__c.getInstance(userinfo.getProfileId());
+        System.debug('MC : ' + mc.Date_Field_1__c + ', ' + mc.Date_Field_2__c);
         qut = [select name,Pricebook2Id, Start_Date_for_Map_Page__c, End_Date_for_Map_Page__c from Quote where id = :ApexPages.CurrentPage().getParameters().get('qid')];
         if(qut.Pricebook2Id == null){
             needsPriceBook = true;
@@ -115,11 +116,14 @@ public class MapClass {
                 for(Product2 p : kioskId_to_Product.get(k.id)){
                     faceWrap fw = new faceWrap();
                         fw.prod = p;
+                        system.debug('p : ' +p.id);
                         fw.prodName = string.escapeSingleQuotes(p.name);
                         system.debug(logginglevel.info, '*****ProdIdToAsset1212='+ProdIdToAsset);
                         if(ProdIdToAsset.get(p.id) != null){
                             Asset[] tempassetlist = ProdIdToAsset.get(p.id);
+                            System.debug('tempassetlist : ' + tempassetlist);
                             fw.bookedTime = ProdIdToAsset.get(p.id);
+                            System.debug('bookedTime : ' + fw.bookedTime);
                             openTime[] optiList = new list<openTime>();
                             for(Asset a : tempassetlist){
                                 openTime ot = new openTime();
@@ -223,6 +227,9 @@ public class MapClass {
                     kioskId_to_Product.put(p.Kiosk__c,tempList);
                 }
             }
+            
+            System.debug('prodIdSet : ' + prodIdSet);
+            
             ProdIdToQuoteLineItem = new map<id,list<QuoteLineItem>>();
             List<QuoteLineItem> qliList = [select Start_Date_Text__c,End_Date_Text__c,Product2Id,Quote.Status,Quote.Id,Quote.Name,Quote.OpportunityId,Quote.Opportunity.Name,Quote.Opportunity.Owner.Name,End_Date__c,Start_Date__c from QuoteLineItem where Product2Id in :prodIdSet AND ((Start_Date__c >= :mc.Date_Field_1__c AND Start_Date__c <= :mc.Date_Field_2__c) OR (End_Date__c >= :mc.Date_Field_1__c AND End_Date__c <= :mc.Date_Field_2__c))];
             for(QuoteLineItem qli : qliList){
@@ -299,8 +306,18 @@ public class MapClass {
                         kioskId_to_Product.put(p.Kiosk__c,tempList);
                     }
                 }
-                qliList = [select Start_Date_Text__c,End_Date_Text__c,Product2Id,Quote.Status,End_Date__c,Start_Date__c,Quote.Name,Quote.OpportunityId,Quote.Opportunity.Name,Quote.Opportunity.Owner.Name from QuoteLineItem where Product2Id in :prodIdSet AND ((Start_Date__c >= :mc.Date_Field_1__c AND Start_Date__c <= :mc.Date_Field_2__c) OR (End_Date__c >= :mc.Date_Field_1__c AND End_Date__c <= :mc.Date_Field_2__c))];
+                
+                System.debug('prodIdSet Again : ' + prodIdSet);
+                System.debug('Date Input : ' + mc.Date_Field_1__c + ', ' + mc.Date_Field_2__c);
+                System.debug('All QLIList : ' + [SELECT id, Product2Id, Start_Date__c, End_Date__c FROM QuoteLineItem Where Product2Id in ('01t2C0000019NB2QAM')]);
+                qliList = [select Start_Date_Text__c,End_Date_Text__c,Product2Id,Quote.Status,End_Date__c,Start_Date__c,Quote.Name,Quote.OpportunityId,Quote.Opportunity.Name,Quote.Opportunity.Owner.Name 
+                           from QuoteLineItem 
+                           where Product2Id in :prodIdSet 
+                           AND ((Start_Date__c >= :mc.Date_Field_1__c AND Start_Date__c <= :mc.Date_Field_2__c) OR (End_Date__c >= :mc.Date_Field_1__c AND End_Date__c <= :mc.Date_Field_2__c))];
+                
+                System.debug('qliList : ' + qliList);
                 for(QuoteLineItem qli : qliList){
+                    System.debug('For Loop ProdIdToQuoteLineItem.get(qli.Product2Id) : ' + ProdIdToQuoteLineItem.get(qli.Product2Id));
                     if(ProdIdToQuoteLineItem.get(qli.Product2Id) != null){
                         list<QuoteLineItem> tempQliList = new list<QuoteLineItem>();
                         tempQliList = ProdIdToQuoteLineItem.get(qli.Product2Id);
@@ -313,6 +330,7 @@ public class MapClass {
                         ProdIdToQuoteLineItem.put(qli.Product2Id,tempQliList);
                     }
                 }
+                System.debug('333 klist : ' + klist);
                 for(Kiosk__c k : kList){
                     markWrap mw = createMarkWrap(k,i);
                     if(mw != null){
@@ -343,6 +361,9 @@ public class MapClass {
                     kioskMap.put(k.id,k);
                     //acctIdSet1.add(k.Account__c);
                 }
+                
+                System.debug('kList : ' + kList );
+                
                 ProdIdToAsset = new map<id,list<Asset>>();
                 aList = [select Start_Date_Text__c,End_Date_Text__c,AccountId,Product2Id,UsageEndDate,InstallDate from Asset where Region__c = :regnPicked AND ((InstallDate >= :mc.Date_Field_1__c AND InstallDate <= :mc.Date_Field_2__c) OR (UsageEndDate >= :mc.Date_Field_1__c AND UsageEndDate <= :mc.Date_Field_2__c))];
                 system.debug(logginglevel.info, '*****aList='+aList);
@@ -361,6 +382,7 @@ public class MapClass {
                 }
                 ProdIdToQuoteLineItem = new map<id,list<QuoteLineItem>>();
                 faceList = [select name,Kiosk__c from Product2 where Kiosk__c in :kioskMap.keyset() AND id IN (select Product2Id from Asset where Region__c = :regnPicked AND (InstallDate <= :mc.Date_Field_1__c AND UsageEndDate >= :mc.Date_Field_2__c))];
+                System.debug('faceList : ' + faceList);
                 kioskId_to_Product = new map<Id,List<Product2>>();
                 prodIdSet = new set<id>();
                 for(Product2 p : faceList){
@@ -428,12 +450,16 @@ public class MapClass {
             }
         }
         if(selectedIdSet.size() > 0){
+            
             date stdate =ParseDateFromString(sd);
             date enDate = ParseDateFromString(ed);
+            System.debug('stdate : ' + stdate + ', enDate : ' + enDate);
+            System.debug('selectedIdSet : ' + selectedIdSet);
             //date stdate = date.parse(sd);
             //date enDate = date.parse(ed);
             map<id,list<Asset>> ProdIdToAsset = new map<id,list<Asset>>();
             List<Asset> aList = [select Start_Date_Text__c,End_Date_Text__c,AccountId,Product2Id,UsageEndDate,InstallDate from Asset where Product2Id in :selectedIdSet AND ((InstallDate >= :stdate AND InstallDate <= :enDate) OR (UsageEndDate >= :stdate AND UsageEndDate <= :enDate))];
+            System.debug('aList addProducts : ' + [select Start_Date_Text__c,End_Date_Text__c,AccountId,Product2Id,UsageEndDate,InstallDate from Asset]);
             for(Asset a : aList){
                 if(ProdIdToAsset.get(a.Product2Id) == null){
                     list<Asset> tempAlist = new list<Asset>();
@@ -458,10 +484,12 @@ public class MapClass {
             list<QuoteLineItem> newQliList = new list<QuoteLineItem>();
             for(PricebookEntry pbe : pbeList){
                 if(ProdIdToAsset.get(pbe.Product2Id) == null){
-                    date startd =ParseDateFromString(sd);
+                    date startd = stdate;
+                    //date startd =ParseDateFromString(sd);
                     //date startd = date.valueOf(sd);
                     //date endd = date.valueOf(ed);
-                    date endd = ParseDateFromString(ed);
+                    date endd = enDate;
+                    //date endd = ParseDateFromString(ed);
                     decimal dec1 = startd.daysbetween(endd);
                     system.debug(logginglevel.info, '*****dec1='+dec1);
                     decimal dec2 = dec1 / 30;
@@ -500,11 +528,15 @@ public class MapClass {
                     newQliList.add(qli);
                 }
                 else{
-                    date startd = date.parse(sd);
-                    date endd = date.parse(ed);
+                    date startd = stdate;
+                    date endd = enDate;
+                    //date startd = date.parse(sd);
+                    //date endd = date.parse(ed);
                     Asset[] tempassetlist = ProdIdToAsset.get(pbe.Product2Id);
                     system.debug(logginglevel.info, '*****tempassetlist='+tempassetlist);
                     for(Asset a : tempassetlist){
+                        System.debug('a.InstallDate : ' + a.InstallDate + ', startd : ' + startd);
+                        System.debug('a.UsageEndDate : ' + a.UsageEndDate + ', endd : ' + endd);
                         if(a.InstallDate <= startd && a.UsageEndDate <= endd){
                             decimal d1 = a.UsageEndDate.daysbetween(endd);
                             decimal dec2 = d1 / 30;
@@ -669,251 +701,6 @@ public class MapClass {
         return MyPage;
     }
 
-    /**
-     * Used to get critical update pushed to production.
-     */
-    public void codeCoverage() {
-        Integer i = 0;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-    }
+
 
 }
