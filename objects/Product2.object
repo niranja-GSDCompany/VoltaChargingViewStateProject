@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>Construction_Completion_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Construction Completion Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Face_ID__c</fullName>
+        <externalId>false</externalId>
+        <label>Face ID</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Large</fullName>
+                    <default>false</default>
+                    <label>Large</label>
+                </value>
+                <value>
+                    <fullName>Small</fullName>
+                    <default>false</default>
+                    <label>Small</label>
+                </value>
+                <value>
+                    <fullName>Wall Mount</fullName>
+                    <default>false</default>
+                    <label>Wall Mount</label>
+                </value>
+                <value>
+                    <fullName>Digital</fullName>
+                    <default>false</default>
+                    <label>Digital</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Face_Specification__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>This is where you can choose the Face Specification Template. Once you choose this box, it will fill in a lot of the others.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>This is where you can choose the Face Specification Template. Once you choose this box, it will fill in a lot of the others.</inlineHelpText>
+        <label>Face Specification</label>
+        <referenceTo>Face_Specification__c</referenceTo>
+        <relationshipLabel>Products</relationshipLabel>
+        <relationshipName>Products</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Kiosk__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Location</label>
+        <referenceTo>Kiosk__c</referenceTo>
+        <relationshipLabel>Face</relationshipLabel>
+        <relationshipName>Products</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Visible_Area_Horizontal__c</fullName>
+        <externalId>false</externalId>
+        <formula>Text(Face_Specification__r.Visible_Area__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Visible Area - Horizontal</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Visible_Area_Vertical__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(Face_Specification__r.Visible_Area_Vertical__c )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Visible Area - Vertical</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+</CustomObject>

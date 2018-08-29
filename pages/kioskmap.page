@@ -1,0 +1,151 @@
+<apex:page standardController="Kiosk__c">
+<apex:pageBlock >
+<head>
+<script src="/soap/ajax/10.0/connection.js"> </script >
+<script src="/soap/ajax/10.0/apex.js"> </script >
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBYvTWKNWGWWXnO7MW3gtTtQAUNpW7cQ3A" type="text/javascript"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script type="text/javascript">
+
+
+$(document).ready(function() {
+var query = "select Id, Direction__c, CP_Street_Address__c, CP_City__c, CP_Zip__c, Geolocation__Latitude__s, Geolocation__Longitude__s from Kiosk__c where Id = '{!Kiosk__c.Id}' limit 1";
+var result = sforce.connection.query(query);
+var records = result.getArray("records");
+var myObj = records[0];
+console.log("MyObj: " + myObj);
+  
+  var myOptions = {
+    zoom: 17,
+    mapTypeId: google.maps.MapTypeId.HYBRID,
+    mapTypeControl: true
+  }
+ 
+  var map;
+  var marker;
+  var c = 'green';
+  var geocoder = new google.maps.Geocoder();
+  var address = (myObj.CP_Street_Address__c + ", " + myObj.CP_City__c + ", " + myObj.CP_Zip__c);
+  var lat = myObj.Geolocation__Latitude__s;
+  var lon = myObj.Geolocation__Longitude__s;
+  var kioskId = myObj.Id;
+  if (myObj.Direction__c == null){
+          var direction = 0;
+      }
+  else {
+      var direction = parseFloat(myObj.Direction__c);
+      }
+     
+  var myLatLng = new google.maps.LatLng(lat, lon);
+  console.log("Direction: " + direction + ", KioskId: " + kioskId + ", MyLatLng: " + myLatLng);
+  var infowindow = new google.maps.InfoWindow({
+    content: "<b>{!Kiosk__c.Name}</b>"
+  });
+
+  geocoder.geocode( { address: address}, function(results, status) {
+    if (status == google.maps.GeocoderStatus.OK && results.length) {
+      if (status != google.maps.GeocoderStatus.ZERO_RESULTS) {
+     
+        //create map
+        map = new google.maps.Map(document.getElementById("map"), myOptions)
+       
+        //center map
+        map.setCenter(results[0].geometry.location);
+        map.panBy(0,200);
+       
+        //create marker
+        marker = new google.maps.Marker({
+            position: myLatLng,
+            map: map,
+            title: "{!Kiosk__c.Name}",
+            draggable: true,
+            icon: {
+                path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW,
+                scale: 6,
+                fillColor: c,
+                fillOpacity: 0.8,
+                rotation: direction,
+                strokeWeight: 2        
+                }
+        });
+       
+        //add listeners
+        google.maps.event.addListener(marker, 'click', function() {
+          infowindow.open(map,marker);
+        });
+        google.maps.event.addListener(infowindow, 'closeclick', function() {
+          map.setCenter(marker.getPosition());
+        });
+        var dirFromDelta = function(x, y) {
+          y = marker.getPosition().lng() - myLatLng.lng();
+          x = marker.getPosition().lat() - myLatLng.lat();
+          var rval = 180/Math.PI * Math.atan(y / x);
+          if (x < 0) rval += 180;
+          return rval;
+        };
+        var rotateArrow = function(val) {
+          marker.setIcon({
+             path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW,
+             scale: 6,
+             fillColor: c,
+             fillOpacity: 0.8,
+             strokeWeight: 2,
+             anchor: new google.maps.Point(0,2),
+             rotation: val
+          });
+        }
+        marker.addListener('drag', function() {
+          if (marker.getPosition() == myLatLng) return;
+          rotateArrow(dirFromDelta(marker.getPosition().lat() - myLatLng.lat(), marker.getPosition().lng() - myLatLng.lng()));
+          console.log('SetPos' + myLatLng);
+          marker.setPosition(myLatLng);
+        });
+
+        var orig = parseFloat(myObj.Direction__c);
+        marker.addListener('dragend', function() {
+          myObj.Direction__c = marker.getIcon().rotation;
+          sforce.connection.update([myObj]);
+          //if (!sforce.connection.update(myObj.getBoolean('success'))) {
+            //rotateArrow(orig);
+          //}
+        });
+      }
+     
+    } else {
+      $('#map').css({'height' : '15px'});
+      $('#map').html("Oops! {!Kiosk__c.Name}'s address could not be found, please make sure the address is correct.");
+      resizeIframe();
+    }
+  });
+ 
+  function resizeIframe() {
+    var me = window.name;
+    if (me) {
+      var iframes = parent.document.getElementsByName(me);
+      if (iframes && iframes.length == 1) {
+        height = document.body.offsetHeight;
+        iframes[0].style.height = height + "px";
+      }
+    }
+  }
+ 
+});
+</script>
+
+<style>
+#map {
+  font-family: Arial;
+  font-size:12px;
+  line-height:normal !important;
+  height:500px;
+  background:transparent;
+}
+</style>
+
+</head>
+
+<body>
+<div id="map"></div>
+</body>
+</apex:pageBlock>
+</apex:page>

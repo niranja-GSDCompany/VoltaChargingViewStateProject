@@ -1,0 +1,581 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>true</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>PC Serial #s</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableChangeDataCapture>false</enableChangeDataCapture>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ReadWrite</externalSharingModel>
+    <fields>
+        <fullName>Colour__c</fullName>
+        <externalId>false</externalId>
+        <label>Colour</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Black</fullName>
+                    <default>false</default>
+                    <label>Black</label>
+                </value>
+                <value>
+                    <fullName>Blue</fullName>
+                    <default>false</default>
+                    <label>Blue</label>
+                </value>
+                <value>
+                    <fullName>Purple</fullName>
+                    <default>false</default>
+                    <label>Purple</label>
+                </value>
+                <value>
+                    <fullName>Silver</fullName>
+                    <default>false</default>
+                    <label>Silver</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Cost__c</fullName>
+        <externalId>false</externalId>
+        <label>Cost</label>
+        <precision>12</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Hard_Drive__c</fullName>
+        <externalId>false</externalId>
+        <label>Hard Drive</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>128GB MSATA SSD</fullName>
+                    <default>false</default>
+                    <label>128GB MSATA SSD</label>
+                </value>
+                <value>
+                    <fullName>64GB MSATA SSD</fullName>
+                    <default>false</default>
+                    <label>64GB MSATA SSD</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>LAN_MAC_alt__c</fullName>
+        <description>Alternative Lan MAC Address</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Alternative Lan MAC Address</inlineHelpText>
+        <label>LAN MAC alt</label>
+        <length>17</length>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MAC_Address__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <externalId>false</externalId>
+        <label>LAN MAC</label>
+        <length>17</length>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>Manufacturer__c</fullName>
+        <externalId>false</externalId>
+        <label>Manufacturer</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Aleutia</fullName>
+                    <default>false</default>
+                    <label>Aleutia</label>
+                </value>
+                <value>
+                    <fullName>HP</fullName>
+                    <default>false</default>
+                    <label>HP</label>
+                </value>
+                <value>
+                    <fullName>AOpen</fullName>
+                    <default>false</default>
+                    <label>AOpen</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Media_Player_Model__c</fullName>
+        <externalId>false</externalId>
+        <label>Media Player Model</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>DE3250</fullName>
+                    <default>false</default>
+                    <label>DE3250</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Motherboard_Serial__c</fullName>
+        <externalId>false</externalId>
+        <label>Motherboard Serial</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>OS__c</fullName>
+        <externalId>false</externalId>
+        <label>OS</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>None</fullName>
+                    <default>false</default>
+                    <label>None</label>
+                </value>
+                <value>
+                    <fullName>Windows</fullName>
+                    <default>false</default>
+                    <label>Windows</label>
+                </value>
+                <value>
+                    <fullName>Ubuntu</fullName>
+                    <default>false</default>
+                    <label>Ubuntu</label>
+                </value>
+                <value>
+                    <fullName>Mac OS</fullName>
+                    <default>false</default>
+                    <label>Mac OS</label>
+                </value>
+                <value>
+                    <fullName>iOS</fullName>
+                    <default>false</default>
+                    <label>iOS</label>
+                </value>
+                <value>
+                    <fullName>Android</fullName>
+                    <default>false</default>
+                    <label>Android</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Processor__c</fullName>
+        <externalId>false</externalId>
+        <label>Processor</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Intel Celeron J1800 CPU</fullName>
+                    <default>false</default>
+                    <label>Intel Celeron J1800 CPU</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Production_Build__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Production Build</label>
+        <referenceTo>Production_Build__c</referenceTo>
+        <relationshipLabel>Media Players</relationshipLabel>
+        <relationshipName>Media_Players</relationshipName>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>RAM_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>RAM Type</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>DDR3L</fullName>
+                    <default>false</default>
+                    <label>DDR3L</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>RAM__c</fullName>
+        <externalId>false</externalId>
+        <label>RAM</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>2GB</fullName>
+                    <default>false</default>
+                    <label>2GB</label>
+                </value>
+                <value>
+                    <fullName>4GB</fullName>
+                    <default>false</default>
+                    <label>4GB</label>
+                </value>
+                <value>
+                    <fullName>8GB</fullName>
+                    <default>false</default>
+                    <label>8GB</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Software_Version__c</fullName>
+        <description>10.0 - Original Image
+10.1 - Corrected Image Fix
+10.2 - Boot Order Fix
+10.4 Telemetry update
+10.3.1 - Ayuda Hang Fix &amp; Remote Log In
+10.3 Ayuda Splash Player</description>
+        <externalId>false</externalId>
+        <inlineHelpText>10.0 - Original Image
+10.1 - Corrected Image Fix
+10.2 - Boot Order Fix
+10.4 Telemetry update
+10.3.1 - Ayuda Hang Fix &amp; Remote Log In
+10.3 Ayuda Splash Player</inlineHelpText>
+        <label>Software Version</label>
+        <required>true</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>None</fullName>
+                    <default>false</default>
+                    <label>None</label>
+                </value>
+                <value>
+                    <fullName>10.0</fullName>
+                    <default>false</default>
+                    <label>10.0 Original Image</label>
+                </value>
+                <value>
+                    <fullName>10.1</fullName>
+                    <default>false</default>
+                    <label>10.1 Corrected Image Fix</label>
+                </value>
+                <value>
+                    <fullName>10.2</fullName>
+                    <default>false</default>
+                    <label>10.2 Boot Order Fix</label>
+                </value>
+                <value>
+                    <fullName>10.3</fullName>
+                    <default>false</default>
+                    <label>10.3 Ayuda Splash Player</label>
+                </value>
+                <value>
+                    <fullName>10.3.1</fullName>
+                    <default>false</default>
+                    <label>10.3.1 Ayuda Hang Fix &amp; Remote Log In</label>
+                </value>
+                <value>
+                    <fullName>10.4</fullName>
+                    <default>false</default>
+                    <label>10.4 Telemetry Update</label>
+                </value>
+                <value>
+                    <fullName>10.5.0</fullName>
+                    <default>false</default>
+                    <label>10.5.0</label>
+                </value>
+                <value>
+                    <fullName>11.1</fullName>
+                    <default>false</default>
+                    <label>11.1</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>WIFI__c</fullName>
+        <externalId>false</externalId>
+        <label>WIFI</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>No WIFI</fullName>
+                    <default>false</default>
+                    <label>No WIFI</label>
+                </value>
+                <value>
+                    <fullName>A</fullName>
+                    <default>false</default>
+                    <label>A</label>
+                </value>
+                <value>
+                    <fullName>B</fullName>
+                    <default>false</default>
+                    <label>B</label>
+                </value>
+                <value>
+                    <fullName>G</fullName>
+                    <default>false</default>
+                    <label>G</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <label>Media Player</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>Manufacturer__c</columns>
+        <columns>Colour__c</columns>
+        <columns>Motherboard_Serial__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>Processor__c</columns>
+        <columns>RAM__c</columns>
+        <columns>RAM_Type__c</columns>
+        <columns>WIFI__c</columns>
+        <columns>OWNER.ALIAS</columns>
+        <columns>OS__c</columns>
+        <columns>Hard_Drive__c</columns>
+        <columns>MAC_Address__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <listViews>
+        <fullName>All_AOpen</fullName>
+        <columns>NAME</columns>
+        <columns>Manufacturer__c</columns>
+        <columns>Colour__c</columns>
+        <columns>Motherboard_Serial__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>Processor__c</columns>
+        <columns>RAM__c</columns>
+        <columns>RAM_Type__c</columns>
+        <columns>WIFI__c</columns>
+        <columns>OWNER.ALIAS</columns>
+        <columns>OS__c</columns>
+        <columns>Hard_Drive__c</columns>
+        <columns>MAC_Address__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Manufacturer__c</field>
+            <operation>equals</operation>
+            <value>AOpen</value>
+        </filters>
+        <label>All AOpen</label>
+    </listViews>
+    <listViews>
+        <fullName>All_Software_Versions</fullName>
+        <columns>NAME</columns>
+        <columns>Manufacturer__c</columns>
+        <columns>Software_Version__c</columns>
+        <columns>Colour__c</columns>
+        <columns>Motherboard_Serial__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>Processor__c</columns>
+        <columns>RAM__c</columns>
+        <columns>RAM_Type__c</columns>
+        <columns>WIFI__c</columns>
+        <columns>OWNER.ALIAS</columns>
+        <columns>OS__c</columns>
+        <columns>Hard_Drive__c</columns>
+        <columns>MAC_Address__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Software_Version__c</field>
+            <operation>notEqual</operation>
+        </filters>
+        <label>All Software Versions</label>
+    </listViews>
+    <nameField>
+        <label>Media Player Serial</label>
+        <trackHistory>true</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Media Players</pluralLabel>
+    <searchLayouts>
+        <customTabListAdditionalFields>Manufacturer__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Hard_Drive__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>OS__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Processor__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>RAM__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>WIFI__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>MAC_Address__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Colour__c</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>Manufacturer__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Hard_Drive__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>MAC_Address__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Motherboard_Serial__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>OS__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Processor__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>RAM__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>RAM_Type__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>WIFI__c</lookupDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Manufacturer__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Hard_Drive__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>MAC_Address__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>OS__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Processor__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>RAM__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>RAM_Type__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>WIFI__c</lookupPhoneDialogsAdditionalFields>
+        <searchResultsAdditionalFields>Manufacturer__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Hard_Drive__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>OS__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Processor__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>RAM__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>RAM_Type__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>WIFI__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>MAC_Address__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+    <validationRules>
+        <fullName>MAC_Address_test</fullName>
+        <active>true</active>
+        <errorConditionFormula>NOT(
+OR(
+ISBLANK (MAC_Address__c),
+REGEX( MAC_Address__c ,&quot;^([0-9A-Fa-f]{2}[:-]){5}([0-9A-Fa-f]{2})$&quot;)
+)
+)</errorConditionFormula>
+        <errorDisplayField>MAC_Address__c</errorDisplayField>
+        <errorMessage>Must be a valid MAC address, eg. 3D:F2:C9:A6:B3:4F</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>MAC_FORMAT</fullName>
+        <active>true</active>
+        <errorConditionFormula>NOT( 
+OR( 
+ISBLANK ( LAN_MAC_alt__c ), 
+REGEX( LAN_MAC_alt__c  ,&quot;^([0-9A-Fa-f]{2}[:-]){5}([0-9A-Fa-f]{2})$&quot;) 
+) 
+)</errorConditionFormula>
+        <errorDisplayField>LAN_MAC_alt__c</errorDisplayField>
+        <errorMessage>Incorrect MAC Address Format</errorMessage>
+    </validationRules>
+    <visibility>Public</visibility>
+</CustomObject>

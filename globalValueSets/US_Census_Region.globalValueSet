@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>New England</fullName>
+        <default>false</default>
+        <label>New England</label>
+    </customValue>
+    <customValue>
+        <fullName>Middle Atlantic</fullName>
+        <default>false</default>
+        <label>Middle Atlantic</label>
+    </customValue>
+    <customValue>
+        <fullName>East North Central</fullName>
+        <default>false</default>
+        <label>East North Central</label>
+    </customValue>
+    <customValue>
+        <fullName>West North Central</fullName>
+        <default>false</default>
+        <label>West North Central</label>
+    </customValue>
+    <customValue>
+        <fullName>South Atlantic</fullName>
+        <default>false</default>
+        <label>South Atlantic</label>
+    </customValue>
+    <customValue>
+        <fullName>East South Central</fullName>
+        <default>false</default>
+        <label>East South Central</label>
+    </customValue>
+    <customValue>
+        <fullName>West South Central</fullName>
+        <default>false</default>
+        <label>West South Central</label>
+    </customValue>
+    <customValue>
+        <fullName>Mountain</fullName>
+        <default>false</default>
+        <label>Mountain</label>
+    </customValue>
+    <customValue>
+        <fullName>Pacific</fullName>
+        <default>false</default>
+        <label>Pacific</label>
+    </customValue>
+    <description>https://www2.census.gov/geo/pdfs/maps-data/maps/reference/us_regdiv.pdf</description>
+    <masterLabel>US Census Region</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

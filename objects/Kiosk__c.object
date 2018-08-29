@@ -1,0 +1,3226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>true</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Location ID, formerly &quot;The kiosks associated with a specific location&quot; however we are now splitting the apart. What was the KIN is now the LIN, which represents the location of the charging station.</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableChangeDataCapture>false</enableChangeDataCapture>
+    <enableEnhancedLookup>true</enableEnhancedLookup>
+    <enableFeeds>true</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ReadWrite</externalSharingModel>
+    <fields>
+        <fullName>ADA_Type__c</fullName>
+        <description>ADA Exclusive (Volta Kiosk in ADA only stall)
+ADA Compliant (Volta Kiosk that is &quot;Open&quot; but meets ADA requirements)
+ADA Pedestal (Non revenue generating Pedestal in ADA only stall)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>ADA Exclusive (Volta Kiosk in ADA only stall)
+ADA Compliant (Volta Kiosk that is &quot;Open&quot; but meets ADA requirements)
+ADA Pedestal (Non revenue generating Pedestal in ADA only stall)</inlineHelpText>
+        <label>ADA Type</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <controllingField>ADA__c</controllingField>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>ADA Exclusive</fullName>
+                    <default>false</default>
+                    <label>ADA Exclusive</label>
+                </value>
+                <value>
+                    <fullName>ADA Compliant</fullName>
+                    <default>false</default>
+                    <label>ADA Compliant</label>
+                </value>
+                <value>
+                    <fullName>ADA Pedestal</fullName>
+                    <default>false</default>
+                    <label>ADA Pedestal</label>
+                </value>
+            </valueSetDefinition>
+            <valueSettings>
+                <controllingFieldValue>checked</controllingFieldValue>
+                <valueName>ADA Exclusive</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>checked</controllingFieldValue>
+                <valueName>ADA Compliant</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>checked</controllingFieldValue>
+                <valueName>ADA Pedestal</valueName>
+            </valueSettings>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>ADA__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Does this stations service only an ADA parking spot?</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Does this stations service only an ADA parking spot?</inlineHelpText>
+        <label>ADA</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>AHJ_Approval__c</fullName>
+        <description>Has this specific Location been approved by the AHJ? This is does NOT represent the AHJ approval of the Construction Project.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Has this specific Location been approved by the AHJ? This is does NOT represent the AHJ approval of the Construction Project.</inlineHelpText>
+        <label>AHJ Approval</label>
+        <required>true</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Not Submitted</fullName>
+                    <default>true</default>
+                    <label>Not Submitted</label>
+                </value>
+                <value>
+                    <fullName>Approved</fullName>
+                    <default>false</default>
+                    <label>Approved</label>
+                </value>
+                <value>
+                    <fullName>Denied</fullName>
+                    <default>false</default>
+                    <label>Denied</label>
+                </value>
+                <value>
+                    <fullName>Pending</fullName>
+                    <default>false</default>
+                    <label>Pending</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>AT_T_Signal_Strength__c</fullName>
+        <description>In -db</description>
+        <externalId>false</externalId>
+        <inlineHelpText>In -db</inlineHelpText>
+        <label>AT&amp;T Signal Strength</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>AccruedUnApprovedExpenseTotal__c</fullName>
+        <description>Concur Field</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Concur Field</inlineHelpText>
+        <label>Accrued UnApproved Expense Total</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Ad_Copy_Approval_Required__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Ad Copy Approval Required</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Antenna_Kit__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Does this station have a cellular antenna booster kit installed?</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Does this station have a cellular antenna booster kit installed?</inlineHelpText>
+        <label>Antenna Kit</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Azimuth__c</fullName>
+        <description>Direction on a compass that the front (small face) of the station faces</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Direction on a compass that the front (small face) of the station faces</inlineHelpText>
+        <label>Azimuth</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Breaker_Amperage__c</fullName>
+        <description>Nominal rating of max amperage at the panel that&apos;s feeding the circuit on that make ready (ex: 40A label on the breaker)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Nominal rating of max amperage at the panel that&apos;s feeding the circuit on that make ready (ex: 40A label on the breaker)</inlineHelpText>
+        <label>Breaker Amperage</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Standard_Amperage</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>CP_City__c</fullName>
+        <externalId>false</externalId>
+        <formula>Construction_Project__r.Opp_City__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>CP City</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CP_Completion_Date__c</fullName>
+        <externalId>false</externalId>
+        <formula>Construction_Project__r.Completion_Date__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Expected CP Completion Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>CP_Stage__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(Construction_Project__r.Stage__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>CP Stage</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CP_State__c</fullName>
+        <externalId>false</externalId>
+        <formula>Construction_Project__r.Opp_State__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>CP State</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CP_Street_Address__c</fullName>
+        <externalId>false</externalId>
+        <formula>Construction_Project__r.Opp_Site_A__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>CP Street Address</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CP_Zip__c</fullName>
+        <externalId>false</externalId>
+        <formula>Construction_Project__r.Opp_Zip_Code__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>CP Zip</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Charger_OoS__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>PUBLIC FACING - Charger Out of Service. If this field is checked, the app will show this LIN as OoS.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>PUBLIC FACING - Charger Out of Service. If this field is checked, the app will show this LIN as OoS.</inlineHelpText>
+        <label>Charger OoS</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Charging_Data_Total_Charge_Events__c</fullName>
+        <externalId>false</externalId>
+        <label>Charging Data Total Charge Events</label>
+        <summarizedField>Charging_Data__c.Charge_Events__c</summarizedField>
+        <summaryForeignKey>Charging_Data__c.Location_LIN__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Charging_Data_Total_kwh__c</fullName>
+        <externalId>false</externalId>
+        <label>Charging Data Total kwh</label>
+        <summarizedField>Charging_Data__c.Monthly_kwhs__c</summarizedField>
+        <summaryForeignKey>Charging_Data__c.Location_LIN__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Charging_Engineered_for__c</fullName>
+        <description>This tracks the charing level the site was engineered for. The amperage made available to the Location (LIN) via the make-ready. Should be tested to always be a lower value than the output of the line loss equation.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>This tracks the charing level the site was engineered for. The amperage made available to the Location (LIN) via the make-ready. Should be tested to always be a lower value than the output of the line loss equation.</inlineHelpText>
+        <label>Charging Engineered for</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Standard_Amperage</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>City__c</fullName>
+        <externalId>false</externalId>
+        <label>City</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Client_Code__c</fullName>
+        <description>LIN Client Code Autonumber Generated on the related Construction Project</description>
+        <externalId>false</externalId>
+        <formula>Construction_Project__r.Client_No_Account__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>LIN Client Code Autonumber Generated on the related Construction Project</inlineHelpText>
+        <label>Client Code</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Client_No__c</fullName>
+        <externalId>false</externalId>
+        <label>Client Code No</label>
+        <length>3</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Conduit_Size__c</fullName>
+        <description>Tubing is measured by the OUTSIDE DIAMETER (O.D.), specified in inches (e.g., 1.250) or fraction of an inch (eg. 1-1/4″). Pipe is usually measured by NOMINAL PIPE SIZE (NPS). ... The table below cross-references the nominal dimension of a PIPE with its actual outside diameter.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Measured by the OUTSIDE DIAMETER (O.D.), specified in inches (e.g., 1.250) or fraction of an inch (eg. 1-1/4″). Pipe is usually measured by NOMINAL PIPE SIZE (NPS). ... The table below cross-references the nominal dimension of a PIPE with its actual OD.</inlineHelpText>
+        <label>Conduit Size</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Conduit_Size</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Construction_Project__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Construction Project</label>
+        <referenceTo>Construction_Project__c</referenceTo>
+        <relationshipName>Kiosks</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Contact_Phone__c</fullName>
+        <externalId>false</externalId>
+        <label>Contact Phone</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Phone</type>
+    </fields>
+    <fields>
+        <fullName>Cost_to_Access__c</fullName>
+        <description>If you need to pay an access fee to access the parking area, please enter the cost here.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>If you need to pay an access fee to access the parking area, please enter the cost here.</inlineHelpText>
+        <label>Cost to Access</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Desired_Azimuth__c</fullName>
+        <description>Azimuth (direction of a compass bearing) The flat plane of the smaller smaller side of the station should be facing (perpendicular to) this direction. Ex: If the small side of the station is to be placed facing due east, the Desired Azimuth is 90.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Azimuth (direction of a compass bearing) The flat plane of the smaller smaller side of the station should be facing (perpendicular to) this direction. Ex: If the small side of the station is to be placed facing due east, the Desired Azimuth is 90.</inlineHelpText>
+        <label>Desired Azimuth</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Direction__c</fullName>
+        <externalId>false</externalId>
+        <label>Direction</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>EKM_Meter_B__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>If this station has two charging ports, this is where the second or &quot;B&quot; meter # is saved.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>If this station has two charging ports, this is where the second or &quot;B&quot; meter # is saved.</inlineHelpText>
+        <label>EKM Meter B</label>
+        <referenceTo>EKM_Meter__c</referenceTo>
+        <relationshipName>Kiosks1</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>EKM_Meter_Left_Test__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>EKM Meter Left Test</label>
+        <referenceTo>EKM_Meter__c</referenceTo>
+        <relationshipLabel>Locations (EKM Meter Left Test)</relationshipLabel>
+        <relationshipName>Locations</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>EKM_Meter__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>EKM Meter</label>
+        <referenceTo>EKM_Meter__c</referenceTo>
+        <relationshipName>Kiosks</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>EKM_Push__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>EKM Push</label>
+        <referenceTo>EKM_Push__c</referenceTo>
+        <relationshipName>Kiosks</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Electrical_Reimbursement_Amount__c</fullName>
+        <externalId>false</externalId>
+        <label>Electrical Reimbursement Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Electrical_Reimbursement__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Electrical Reimbursement</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipName>KiosksElec</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Est_Monthly_Impressions_Per_Station__c</fullName>
+        <description>EST MONTHLY IMPRESSIONS PER STATION</description>
+        <externalId>false</externalId>
+        <inlineHelpText>EST MONTHLY IMPRESSIONS PER STATION</inlineHelpText>
+        <label>Est Monthly Impressions Per Station</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>FinalExpenseTotal__c</fullName>
+        <description>Concur Field</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Concur Field</inlineHelpText>
+        <label>Final Expense Total</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Geolocation__c</fullName>
+        <displayLocationInDecimal>true</displayLocationInDecimal>
+        <externalId>false</externalId>
+        <label>Geolocation</label>
+        <required>false</required>
+        <scale>9</scale>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Location</type>
+    </fields>
+    <fields>
+        <fullName>Kiosk_Tracking_ID_No__c</fullName>
+        <externalId>false</externalId>
+        <formula>Network_No__c &amp;&quot;-&quot;&amp; Property_No__c &amp;&quot;-&quot;&amp; Client_No__c &amp;&quot;-&quot;&amp; Station_No__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>KIN</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LIN_Record_ID__c</fullName>
+        <externalId>false</externalId>
+        <formula>(Id)</formula>
+        <label>LIN Record ID</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LIN_Text__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <description>LIN in text format</description>
+        <externalId>true</externalId>
+        <inlineHelpText>LIN in text format</inlineHelpText>
+        <label>LIN Text</label>
+        <length>30</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>LIN__c</fullName>
+        <externalId>false</externalId>
+        <formula>Construction_Project__r.Opp_Network_Region_No__c &amp;&quot;-&quot;&amp; Property_Code__c &amp;&quot;-&quot;&amp; Client_Code__c &amp;&quot;-&quot;&amp; Station_No__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>LIN</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LatLong__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(Latitude__c)  &amp; &quot;,&quot; &amp; &quot; &quot; &amp; TEXT(Longitude__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>LatLong</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Lat_Lon_Looked_Up_At__c</fullName>
+        <description>This field is only used by the trigger.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>This field is only used by the trigger.</inlineHelpText>
+        <label>Lat Lon Looked Up At</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Latitude__c</fullName>
+        <externalId>false</externalId>
+        <label>Latitude</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>9</scale>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Launch_Checklist_Completion_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Launch Checklist Completion Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Location_Notes__c</fullName>
+        <description>INTERNAL ONLY</description>
+        <externalId>false</externalId>
+        <inlineHelpText>INTERNAL ONLY</inlineHelpText>
+        <label>Location Notes</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Longitude__c</fullName>
+        <externalId>false</externalId>
+        <label>Longitude</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>9</scale>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Media_Networks__c</fullName>
+        <externalId>false</externalId>
+        <label>Media Sales Networks</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Grocery</fullName>
+                    <default>false</default>
+                    <label>Grocery</label>
+                </value>
+                <value>
+                    <fullName>Cinema/Entertainment</fullName>
+                    <default>false</default>
+                    <label>Cinema/Entertainment</label>
+                </value>
+                <value>
+                    <fullName>Personal Care</fullName>
+                    <default>false</default>
+                    <label>Personal Care</label>
+                </value>
+                <value>
+                    <fullName>Beauty</fullName>
+                    <default>false</default>
+                    <label>Beauty</label>
+                </value>
+                <value>
+                    <fullName>Fashion/Luxury</fullName>
+                    <default>false</default>
+                    <label>Fashion/Luxury</label>
+                </value>
+                <value>
+                    <fullName>High HHI</fullName>
+                    <default>false</default>
+                    <label>High HHI</label>
+                </value>
+                <value>
+                    <fullName>Consumer Electronics</fullName>
+                    <default>false</default>
+                    <label>Consumer Electronics</label>
+                </value>
+                <value>
+                    <fullName>Pet Network</fullName>
+                    <default>false</default>
+                    <label>Pet Network</label>
+                </value>
+                <value>
+                    <fullName>Male Network</fullName>
+                    <default>false</default>
+                    <label>Male Network</label>
+                </value>
+                <value>
+                    <fullName>Fitness</fullName>
+                    <default>false</default>
+                    <label>Fitness</label>
+                </value>
+                <value>
+                    <fullName>Wellness</fullName>
+                    <default>false</default>
+                    <label>Wellness</label>
+                </value>
+                <value>
+                    <fullName>Millennial</fullName>
+                    <default>false</default>
+                    <label>Millennial</label>
+                </value>
+                <value>
+                    <fullName>Organic food consumers</fullName>
+                    <default>false</default>
+                    <label>Organic food consumers</label>
+                </value>
+                <value>
+                    <fullName>RX Network</fullName>
+                    <default>false</default>
+                    <label>RX Network</label>
+                </value>
+                <value>
+                    <fullName>CPG</fullName>
+                    <default>false</default>
+                    <label>CPG</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Network_No__c</fullName>
+        <externalId>false</externalId>
+        <label>Network No</label>
+        <length>3</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Network_Region__c</fullName>
+        <externalId>false</externalId>
+        <label>Network Region</label>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>CA - Northern</fullName>
+                    <default>false</default>
+                    <label>CA - Northern</label>
+                </value>
+                <value>
+                    <fullName>CA - Santa Barbara</fullName>
+                    <default>false</default>
+                    <label>CA - Santa Barbara</label>
+                </value>
+                <value>
+                    <fullName>CA - Los Angeles</fullName>
+                    <default>false</default>
+                    <label>CA - Los Angeles</label>
+                </value>
+                <value>
+                    <fullName>CA - Orange County</fullName>
+                    <default>false</default>
+                    <label>CA - Orange County</label>
+                </value>
+                <value>
+                    <fullName>CA - San Diego</fullName>
+                    <default>false</default>
+                    <label>CA - San Diego</label>
+                </value>
+                <value>
+                    <fullName>HI</fullName>
+                    <default>false</default>
+                    <label>HI</label>
+                </value>
+                <value>
+                    <fullName>AZ</fullName>
+                    <default>false</default>
+                    <label>AZ</label>
+                </value>
+                <value>
+                    <fullName>FL</fullName>
+                    <default>false</default>
+                    <label>FL</label>
+                </value>
+                <value>
+                    <fullName>Chicago</fullName>
+                    <default>false</default>
+                    <label>Chicago</label>
+                </value>
+                <value>
+                    <fullName>DC</fullName>
+                    <default>false</default>
+                    <label>DC</label>
+                </value>
+                <value>
+                    <fullName>NJ</fullName>
+                    <default>false</default>
+                    <label>NJ</label>
+                </value>
+                <value>
+                    <fullName>NY</fullName>
+                    <default>false</default>
+                    <label>NY</label>
+                </value>
+                <value>
+                    <fullName>Oregon</fullName>
+                    <default>false</default>
+                    <label>Oregon</label>
+                </value>
+                <value>
+                    <fullName>Texas</fullName>
+                    <default>false</default>
+                    <label>Texas</label>
+                </value>
+                <value>
+                    <fullName>Seattle</fullName>
+                    <default>false</default>
+                    <label>Seattle</label>
+                </value>
+                <value>
+                    <fullName>Boston</fullName>
+                    <default>false</default>
+                    <label>Boston</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Network__c</fullName>
+        <description>From CP</description>
+        <externalId>false</externalId>
+        <formula>TEXT(Construction_Project__r.Network_Region__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>From CP</inlineHelpText>
+        <label>Network</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>No_of_Faces__c</fullName>
+        <externalId>false</externalId>
+        <label># of Faces</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>OP_EX__c</fullName>
+        <externalId>false</externalId>
+        <label>Other Opex</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Pay_Rent_To__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Pay Rent To:</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipName>Kiosks2</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Pay_to_Park__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Check this field if a charging customer is required to pay for access our location. (Example: Location is in a parking garage that requires validation or payment)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Check this field if a charging customer is required to pay for access our location. (Example: Location is in a parking garage that requires validation or payment)</inlineHelpText>
+        <label>Pay to Park</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Payment_Notes__c</fullName>
+        <externalId>false</externalId>
+        <label>Payment Notes</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>PlugShare_Link__c</fullName>
+        <description>A link to the specific site on plugshare.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>A link to the specific site on plugshare.</inlineHelpText>
+        <label>PlugShare Link</label>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>Property_Code__c</fullName>
+        <description>LIN Property Code Autonumber Generated on the related Construction Project﻿</description>
+        <externalId>false</externalId>
+        <formula>Construction_Project__r.Property_No__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>LIN Property Code Autonumber Generated on the related Construction Project﻿</inlineHelpText>
+        <label>Property Code</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Property_No__c</fullName>
+        <externalId>false</externalId>
+        <label>Property No</label>
+        <length>4</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Rent_Frequency__c</fullName>
+        <externalId>false</externalId>
+        <label>Rent Frequency</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Quarterly - Pre</fullName>
+                    <default>false</default>
+                    <label>Quarterly - Pre</label>
+                </value>
+                <value>
+                    <fullName>Quarterly - Post</fullName>
+                    <default>false</default>
+                    <label>Quarterly - Post</label>
+                </value>
+                <value>
+                    <fullName>Monthly - Pre</fullName>
+                    <default>false</default>
+                    <label>Monthly - Pre</label>
+                </value>
+                <value>
+                    <fullName>Monthly - Post</fullName>
+                    <default>false</default>
+                    <label>Monthly - Post</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Rent_Payee__c</fullName>
+        <externalId>false</externalId>
+        <label>Rent Payee</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Rent__c</fullName>
+        <externalId>false</externalId>
+        <label>Rent Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Rev_Share_Percent__c</fullName>
+        <externalId>false</externalId>
+        <label>Rev Share Percent</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Rev_Share__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Rev Share</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipName>KiosksRevShare</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Revenue_Generating__c</fullName>
+        <description>Does this Kiosk have as ad faces that can be sold to generate revenue? Example of Non-Revenue Generating would be Crissy Field, where we can&apos;t actually sell the ad space, even though there are two physical faces on the the station. The site agreement contract stipulates whether we can generate revenue from a specific kiosk.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Does this Kiosk have as ad faces that can be sold to generate revenue? Example of Non-Revenue Generating would be Crissy Field, where we can&apos;t actually sell the ad space, even though there are two physical faces on the the station. The site agreement cont</inlineHelpText>
+        <label>Revenue Generating</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Media Revenue Generating</fullName>
+                    <default>false</default>
+                    <label>Media Revenue Generating</label>
+                </value>
+                <value>
+                    <fullName>Non-Revenue Generating</fullName>
+                    <default>false</default>
+                    <label>Non-Revenue Generating</label>
+                </value>
+                <value>
+                    <fullName>Volta Services Revenue Generating</fullName>
+                    <default>false</default>
+                    <label>Volta Services Revenue Generating</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Revenue_Share__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Revenue Share</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>SIN_Access_Key__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(Station_SIN__r.Access_Key__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>SIN Access Key</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Sales_Tax_Percent__c</fullName>
+        <externalId>false</externalId>
+        <label>Sales Tax Percent</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>3</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Sales_Tax__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Sales Tax</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Show_on_App__c</fullName>
+        <defaultValue>true</defaultValue>
+        <externalId>false</externalId>
+        <label>Show on App</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Signal_Environment__c</fullName>
+        <externalId>false</externalId>
+        <label>Signal Environment</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Open Air</fullName>
+                    <default>false</default>
+                    <label>Open Air</label>
+                </value>
+                <value>
+                    <fullName>Garage Above Grade</fullName>
+                    <default>false</default>
+                    <label>Garage Above Grade</label>
+                </value>
+                <value>
+                    <fullName>Garage Ground Level</fullName>
+                    <default>false</default>
+                    <label>Garage Ground Level</label>
+                </value>
+                <value>
+                    <fullName>Garage Below Grade</fullName>
+                    <default>false</default>
+                    <label>Garage Below Grade</label>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                    <label>Other</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Site_Account_Cluster__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Site Account Cluster</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Locations (LIN) (Site Account Cluster)</relationshipLabel>
+        <relationshipName>Locations_LIN</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Site_Account_Shipping_Address__c</fullName>
+        <externalId>false</externalId>
+        <formula>Site_Account__r.ShippingStreet &amp; BR() 
+&amp; Site_Account__r.ShippingCity &amp; &quot;, &quot; &amp; Site_Account__r.ShippingState &amp; &quot; &quot; &amp; Site_Account__r.ShippingPostalCode &amp;BR() 
+&amp; Site_Account__r.ShippingCountry</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Site Account Shipping Address</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Site_Account_Zip__c</fullName>
+        <externalId>false</externalId>
+        <formula>HYPERLINK(&quot;https://na52.salesforce.com/&quot;&amp;Site_Account__r.Zip__c , Site_Account__r.Zip__r.Name)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Site Account Zip</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Site_Account__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Site Account</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Locations (LIN) (Account)</relationshipLabel>
+        <relationshipName>Kiosks</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Site_Opportunity__c</fullName>
+        <externalId>false</externalId>
+        <formula>HYPERLINK(&quot;https://na52.salesforce.com/&quot;&amp; Construction_Project__r.Biz_Dev_Opportunity__c, Construction_Project__r.Biz_Dev_Opportunity__r.Name )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Site Opportunity</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Site_Partner_Approval__c</fullName>
+        <description>Site partner&apos;s approval status of this specific Location. NOT indicative of the entire Construction Project.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Site partner&apos;s approval status of this specific Location. NOT indicative of the entire Construction Project.</inlineHelpText>
+        <label>Site Partner Approval</label>
+        <required>true</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Not Submitted</fullName>
+                    <default>true</default>
+                    <label>Not Submitted</label>
+                </value>
+                <value>
+                    <fullName>Approved</fullName>
+                    <default>false</default>
+                    <label>Approved</label>
+                </value>
+                <value>
+                    <fullName>Denied</fullName>
+                    <default>false</default>
+                    <label>Denied</label>
+                </value>
+                <value>
+                    <fullName>Pending</fullName>
+                    <default>false</default>
+                    <label>Pending</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Site_Vet_Approval__c</fullName>
+        <description>Status of our internal Site Vetting Committee approval of the specific Location.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Status of our internal Site Vetting Committee approval of the specific Location.</inlineHelpText>
+        <label>Site Vet Approval</label>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Approved</fullName>
+                    <default>false</default>
+                    <label>Approved</label>
+                </value>
+                <value>
+                    <fullName>Denied</fullName>
+                    <default>false</default>
+                    <label>Denied</label>
+                </value>
+                <value>
+                    <fullName>Pending</fullName>
+                    <default>false</default>
+                    <label>Pending</label>
+                </value>
+                <value>
+                    <fullName>Not Submitted</fullName>
+                    <default>true</default>
+                    <label>Not Submitted</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>State__c</fullName>
+        <externalId>false</externalId>
+        <label>State</label>
+        <length>2</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Station_Chassis__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT (Station_SIN__r.Station_type__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Station Chassis</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Station_EKM_Meter_Left__c</fullName>
+        <description>Metering equipment is associated with the Station, not the Location. This field auto-populates with the meter from the associated station. You can go to the station object to edit this field.</description>
+        <externalId>false</externalId>
+        <formula>HYPERLINK(&quot;https://na14.salesforce.com/&quot;&amp;Station_SIN__r.EKM_Meter_Left__c, Station_SIN__r.EKM_Meter_Left__r.Name )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Metering equipment is associated with the Station, not the Location. This field auto-populates with the meter from the associated station. You can go to the station object to edit this field.</inlineHelpText>
+        <label>Station EKM Meter Left</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Station_EKM_Meter_Right__c</fullName>
+        <description>Metering equipment is associated with the Station, not the Location. This field auto-populates with the meter from the associated station. You can go to the station object to edit this field.</description>
+        <externalId>false</externalId>
+        <formula>HYPERLINK(&quot;https://na14.salesforce.com/&quot;&amp;Station_SIN__r.EKM_Meter_Right__c, Station_SIN__r.EKM_Meter_Right__r.Name )</formula>
+        <inlineHelpText>Metering equipment is associated with the Station, not the Location. This field auto-populates with the meter from the associated station. You can go to the station object to edit this field.</inlineHelpText>
+        <label>Station EKM Meter Right</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Station_Face_Back_Text__c</fullName>
+        <externalId>false</externalId>
+        <formula>Station_SIN__r.Face_Specification_Back__r.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Station Face Back Text</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Station_Face_Back__c</fullName>
+        <externalId>false</externalId>
+        <formula>HYPERLINK(&quot;https://na14.salesforce.com/&quot;&amp;Station_SIN__r.Face_Specification_Back__c, Station_SIN__r.Face_Specification_Back__r.Name )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Station Face Back</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Station_Face_Front_Text__c</fullName>
+        <externalId>false</externalId>
+        <formula>Station_SIN__r.Face_Specification_Front__r.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Station Face Front Text</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Station_Face_Front__c</fullName>
+        <externalId>false</externalId>
+        <formula>HYPERLINK(&quot;https://na14.salesforce.com/&quot;&amp;Station_SIN__r.Face_Specification_Front__c, Station_SIN__r.Face_Specification_Front__r.Name )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Station Face Front</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Station_No__c</fullName>
+        <externalId>false</externalId>
+        <label>Station No</label>
+        <length>2</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Station_SIN__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Station (SIN)</label>
+        <referenceTo>Station__c</referenceTo>
+        <relationshipLabel>Locations</relationshipLabel>
+        <relationshipName>Locations</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Station_Type__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT (Station_SIN__r.Media_Type__c )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Station Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Status_Notes__c</fullName>
+        <description>Project Managers: Here&apos;s where you can find a quick note on what it&apos;ll take to bring the Kiosk status back to Active.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Project Managers: Here&apos;s where you can find a quick note on what it&apos;ll take to bring the Kiosk status back to Active.</inlineHelpText>
+        <label>Status Notes</label>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Status</label>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Initial Site Inspection</fullName>
+                    <color>#F96FB7</color>
+                    <default>false</default>
+                    <label>Initial Site Inspection</label>
+                </value>
+                <value>
+                    <fullName>Under Construction</fullName>
+                    <color>#FFFF66</color>
+                    <default>false</default>
+                    <label>Under Construction</label>
+                </value>
+                <value>
+                    <fullName>Active</fullName>
+                    <color>#78C953</color>
+                    <default>false</default>
+                    <label>Active</label>
+                </value>
+                <value>
+                    <fullName>Needs Service</fullName>
+                    <color>#FF0000</color>
+                    <default>false</default>
+                    <label>Needs Service</label>
+                </value>
+                <value>
+                    <fullName>Decommissioned - Out of Service</fullName>
+                    <color>#333333</color>
+                    <default>false</default>
+                    <label>Decommissioned - Out of Service</label>
+                </value>
+                <value>
+                    <fullName>Disqualified</fullName>
+                    <color>#E27001</color>
+                    <default>false</default>
+                    <label>Disqualified</label>
+                </value>
+                <value>
+                    <fullName>On Hold - Muni Obstacles</fullName>
+                    <color>#8F6429</color>
+                    <default>false</default>
+                    <label>On Hold - Muni Obstacles</label>
+                </value>
+                <value>
+                    <fullName>On Hold - Property Ownership</fullName>
+                    <color>#AFCADF</color>
+                    <default>false</default>
+                    <label>On Hold - Property Ownership</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Street_Address__c</fullName>
+        <externalId>false</externalId>
+        <label>Street Address</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Tax_ID__c</fullName>
+        <externalId>false</externalId>
+        <label>Tax ID#</label>
+        <length>10</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Utility_Company__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Utility Company</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipName>Kiosks1</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Verizon_Signal_Strength__c</fullName>
+        <description>In -db</description>
+        <externalId>false</externalId>
+        <inlineHelpText>In -db</inlineHelpText>
+        <label>Verizon Signal Strength</label>
+        <precision>4</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>W9_Recipients__c</fullName>
+        <externalId>false</externalId>
+        <label>W9 Recipients</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Widget__c</fullName>
+        <externalId>false</externalId>
+        <formula>EKM_Meter__r.Widget_URL__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Widget URL</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Wire_Gauge__c</fullName>
+        <description>Standard Gauging in AWG (American Wire Gauge) Copper Wire</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Standard Gauging in AWG (American Wire Gauge) Copper Wire</inlineHelpText>
+        <label>Wire Gauge</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>AWG</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Wire_Run_Length__c</fullName>
+        <description>Length of wire/conduit from service panel breaker to charge unit.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Length of wire/conduit from service panel breaker to charge unit.</inlineHelpText>
+        <label>Wire Run Length</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Zip_Code__c</fullName>
+        <externalId>false</externalId>
+        <label>Zip Code</label>
+        <length>9</length>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Zip_Nielsen_DMA__c</fullName>
+        <externalId>false</externalId>
+        <formula>Site_Account__r.Zip_Nielsen_DMA__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Zip Nielsen DMA from Site Account</inlineHelpText>
+        <label>Zip Nielsen DMA</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>readMeter__c</fullName>
+        <externalId>false</externalId>
+        <formula>EKM_Meter__r.Meter_URL_Formula__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Meter URL</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Location (LIN)</label>
+    <listViews>
+        <fullName>Active</fullName>
+        <columns>LIN__c</columns>
+        <columns>LIN_Text__c</columns>
+        <columns>NAME</columns>
+        <columns>Site_Account__c</columns>
+        <columns>Network_Region__c</columns>
+        <columns>Latitude__c</columns>
+        <columns>Longitude__c</columns>
+        <columns>Lat_Lon_Looked_Up_At__c</columns>
+        <columns>Street_Address__c</columns>
+        <columns>City__c</columns>
+        <columns>Zip_Code__c</columns>
+        <columns>Status__c</columns>
+        <columns>LAST_ACTIVITY</columns>
+        <columns>Client_Code__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>Active</value>
+        </filters>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>Kiosk__c.Installation_Location</value>
+        </filters>
+        <label>Active</label>
+    </listViews>
+    <listViews>
+        <fullName>Active1</fullName>
+        <columns>Kiosk_Tracking_ID_No__c</columns>
+        <columns>NAME</columns>
+        <columns>Site_Account__c</columns>
+        <columns>Network_Region__c</columns>
+        <columns>Latitude__c</columns>
+        <columns>Longitude__c</columns>
+        <columns>Lat_Lon_Looked_Up_At__c</columns>
+        <columns>Street_Address__c</columns>
+        <columns>City__c</columns>
+        <columns>Zip_Code__c</columns>
+        <columns>Status__c</columns>
+        <columns>LAST_ACTIVITY</columns>
+        <columns>Client_Code__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>Kiosk__c.Installation_Location</value>
+        </filters>
+        <label>Active</label>
+    </listViews>
+    <listViews>
+        <fullName>Active_all</fullName>
+        <columns>Kiosk_Tracking_ID_No__c</columns>
+        <columns>NAME</columns>
+        <columns>Site_Account__c</columns>
+        <columns>Network_Region__c</columns>
+        <columns>Latitude__c</columns>
+        <columns>Longitude__c</columns>
+        <columns>Lat_Lon_Looked_Up_At__c</columns>
+        <columns>Street_Address__c</columns>
+        <columns>City__c</columns>
+        <columns>Zip_Code__c</columns>
+        <columns>Status__c</columns>
+        <columns>LAST_ACTIVITY</columns>
+        <columns>Client_Code__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>Kiosk__c.Installation_Location</value>
+        </filters>
+        <label>Active - all</label>
+    </listViews>
+    <listViews>
+        <fullName>All_Installation_Locations</fullName>
+        <columns>LIN__c</columns>
+        <columns>Network_Region__c</columns>
+        <columns>NAME</columns>
+        <columns>Est_Monthly_Impressions_Per_Station__c</columns>
+        <columns>Status__c</columns>
+        <columns>Construction_Project__c</columns>
+        <columns>Site_Account__c</columns>
+        <columns>Station_SIN__c</columns>
+        <columns>Station_EKM_Meter_Left__c</columns>
+        <columns>Station_EKM_Meter_Right__c</columns>
+        <columns>LatLong__c</columns>
+        <columns>Latitude__c</columns>
+        <columns>Longitude__c</columns>
+        <columns>Geolocation__Latitude__s</columns>
+        <columns>Geolocation__Longitude__s</columns>
+        <filterScope>Everything</filterScope>
+        <label>All Installation Locations</label>
+    </listViews>
+    <listViews>
+        <fullName>All_Installation_Locations_Media_Not_Bla</fullName>
+        <columns>NAME</columns>
+        <columns>Kiosk_Tracking_ID_No__c</columns>
+        <columns>Station_SIN__c</columns>
+        <columns>Status__c</columns>
+        <columns>Network_Region__c</columns>
+        <columns>Site_Account__c</columns>
+        <columns>EKM_Meter__c</columns>
+        <columns>No_of_Faces__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>Kiosk__c.Installation_Location</value>
+        </filters>
+        <label>All Installation Locations Media Not Bla</label>
+    </listViews>
+    <listViews>
+        <fullName>All_Installation_Locations_website</fullName>
+        <columns>NAME</columns>
+        <columns>Kiosk_Tracking_ID_No__c</columns>
+        <columns>Station_SIN__c</columns>
+        <columns>Status__c</columns>
+        <columns>Network_Region__c</columns>
+        <columns>Site_Account__c</columns>
+        <columns>EKM_Meter__c</columns>
+        <columns>No_of_Faces__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>Kiosk__c.Installation_Location</value>
+        </filters>
+        <label>All Installation Locations SIM</label>
+    </listViews>
+    <listViews>
+        <fullName>All_V3</fullName>
+        <booleanFilter>1 AND 2</booleanFilter>
+        <columns>Status__c</columns>
+        <columns>NAME</columns>
+        <columns>Site_Account__c</columns>
+        <columns>Construction_Project__c</columns>
+        <columns>CP_Stage__c</columns>
+        <columns>EKM_Meter__c</columns>
+        <columns>EKM_Push__c</columns>
+        <columns>No_of_Faces__c</columns>
+        <columns>Revenue_Generating__c</columns>
+        <columns>CP_Completion_Date__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Status__c</field>
+            <operation>notContain</operation>
+            <value>Decommissioned - Out of Service,Disqualified,Initial Site Inspection,Under Con</value>
+        </filters>
+        <filters>
+            <field>CP_Completion_Date__c</field>
+            <operation>notEqual</operation>
+        </filters>
+        <label>All V3</label>
+    </listViews>
+    <listViews>
+        <fullName>All_Warehouses</fullName>
+        <columns>NAME</columns>
+        <columns>RECORDTYPE</columns>
+        <columns>Site_Account__c</columns>
+        <columns>Network_Region__c</columns>
+        <columns>City__c</columns>
+        <columns>Rent_Payee__c</columns>
+        <columns>Rent_Frequency__c</columns>
+        <columns>Rent__c</columns>
+        <columns>Latitude__c</columns>
+        <columns>Longitude__c</columns>
+        <columns>LatLong__c</columns>
+        <columns>Geolocation__Latitude__s</columns>
+        <columns>Geolocation__Longitude__s</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>012d0000001UOwg</value>
+        </filters>
+        <label>All Warehouses</label>
+    </listViews>
+    <listViews>
+        <fullName>Anna_s_view_WFLA</fullName>
+        <columns>NAME</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Network_Region__c</field>
+            <operation>equals</operation>
+            <value>CA - Los Angeles,CA - Orange County,CA - San Diego</value>
+        </filters>
+        <filters>
+            <field>NAME</field>
+            <operation>contains</operation>
+            <value>whole foods,WF</value>
+        </filters>
+        <label>Anna&apos;s view (WFLA)</label>
+    </listViews>
+    <listViews>
+        <fullName>Arizona</fullName>
+        <columns>NAME</columns>
+        <columns>Kiosk_Tracking_ID_No__c</columns>
+        <columns>Status__c</columns>
+        <columns>Network_Region__c</columns>
+        <columns>Construction_Project__c</columns>
+        <columns>No_of_Faces__c</columns>
+        <columns>Site_Account__c</columns>
+        <columns>Street_Address__c</columns>
+        <columns>City__c</columns>
+        <columns>State__c</columns>
+        <columns>Zip_Code__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>State__c</field>
+            <operation>equals</operation>
+            <value>AZ</value>
+        </filters>
+        <label>Arizona</label>
+    </listViews>
+    <listViews>
+        <fullName>CA</fullName>
+        <columns>NAME</columns>
+        <columns>Street_Address__c</columns>
+        <columns>Kiosk_Tracking_ID_No__c</columns>
+        <columns>Status__c</columns>
+        <columns>Network_Region__c</columns>
+        <columns>Construction_Project__c</columns>
+        <columns>No_of_Faces__c</columns>
+        <columns>Site_Account__c</columns>
+        <columns>City__c</columns>
+        <columns>State__c</columns>
+        <columns>Zip_Code__c</columns>
+        <columns>Latitude__c</columns>
+        <columns>Longitude__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>State__c</field>
+            <operation>equals</operation>
+            <value>CA</value>
+        </filters>
+        <label>CA</label>
+    </listViews>
+    <listViews>
+        <fullName>Chicago_Network_Locations</fullName>
+        <columns>NAME</columns>
+        <columns>Station_SIN__c</columns>
+        <columns>Status__c</columns>
+        <columns>Construction_Project__c</columns>
+        <columns>CP_Stage__c</columns>
+        <columns>No_of_Faces__c</columns>
+        <columns>Site_Account__c</columns>
+        <columns>CP_Street_Address__c</columns>
+        <columns>CP_City__c</columns>
+        <columns>EKM_Meter__c</columns>
+        <columns>EKM_Push__c</columns>
+        <columns>Widget__c</columns>
+        <columns>Kiosk_Tracking_ID_No__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Network_Region__c</field>
+            <operation>equals</operation>
+            <value>Chicago</value>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operation>notEqual</operation>
+            <value>Decommissioned - Out of Service,Disqualified</value>
+        </filters>
+        <label>Chicago Network Locations</label>
+    </listViews>
+    <listViews>
+        <fullName>Decommissioned</fullName>
+        <columns>Kiosk_Tracking_ID_No__c</columns>
+        <columns>Station_SIN__c</columns>
+        <columns>NAME</columns>
+        <columns>CP_Street_Address__c</columns>
+        <columns>EKM_Meter__c</columns>
+        <columns>EKM_Push__c</columns>
+        <columns>Widget__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>Decommissioned - Out of Service</value>
+        </filters>
+        <label>Decommissioned</label>
+    </listViews>
+    <listViews>
+        <fullName>Hawaii</fullName>
+        <columns>NAME</columns>
+        <columns>Station_SIN__c</columns>
+        <columns>Street_Address__c</columns>
+        <columns>Kiosk_Tracking_ID_No__c</columns>
+        <columns>Status__c</columns>
+        <columns>Status_Notes__c</columns>
+        <columns>Network_Region__c</columns>
+        <columns>Construction_Project__c</columns>
+        <columns>No_of_Faces__c</columns>
+        <columns>Site_Account__c</columns>
+        <columns>City__c</columns>
+        <columns>State__c</columns>
+        <columns>Zip_Code__c</columns>
+        <columns>LatLong__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>State__c</field>
+            <operation>equals</operation>
+            <value>HI</value>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operation>notEqual</operation>
+            <value>Under Construction,Decommissioned - Out of Service,Disqualified</value>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operation>notEqual</operation>
+            <value>On Hold - Muni Obstacles,On Hold - Property Ownership</value>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operation>notEqual</operation>
+            <value>Initial Site Inspection</value>
+        </filters>
+        <label>Hawaii</label>
+    </listViews>
+    <listViews>
+        <fullName>Hawaii_Installed</fullName>
+        <columns>NAME</columns>
+        <columns>Street_Address__c</columns>
+        <columns>City__c</columns>
+        <columns>Network_Region__c</columns>
+        <columns>Kiosk_Tracking_ID_No__c</columns>
+        <columns>Status__c</columns>
+        <columns>Construction_Project__c</columns>
+        <columns>No_of_Faces__c</columns>
+        <columns>Site_Account__c</columns>
+        <columns>State__c</columns>
+        <columns>Zip_Code__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>State__c</field>
+            <operation>equals</operation>
+            <value>HI</value>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>Active,Metering Issue</value>
+        </filters>
+        <label>Hawaii Installed</label>
+    </listViews>
+    <listViews>
+        <fullName>Illinois</fullName>
+        <columns>NAME</columns>
+        <columns>Kiosk_Tracking_ID_No__c</columns>
+        <columns>Status__c</columns>
+        <columns>Network_Region__c</columns>
+        <columns>Construction_Project__c</columns>
+        <columns>No_of_Faces__c</columns>
+        <columns>Site_Account__c</columns>
+        <columns>Street_Address__c</columns>
+        <columns>City__c</columns>
+        <columns>State__c</columns>
+        <columns>Zip_Code__c</columns>
+        <columns>EKM_Meter__c</columns>
+        <columns>EKM_Push__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>State__c</field>
+            <operation>equals</operation>
+            <value>IL</value>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operation>notEqual</operation>
+            <value>Decommissioned - Out of Service,Disqualified</value>
+        </filters>
+        <label>Illinois</label>
+    </listViews>
+    <listViews>
+        <fullName>Illinois_In_Progress</fullName>
+        <columns>NAME</columns>
+        <columns>Kiosk_Tracking_ID_No__c</columns>
+        <columns>Status__c</columns>
+        <columns>Network_Region__c</columns>
+        <columns>Construction_Project__c</columns>
+        <columns>No_of_Faces__c</columns>
+        <columns>Site_Account__c</columns>
+        <columns>Street_Address__c</columns>
+        <columns>City__c</columns>
+        <columns>State__c</columns>
+        <columns>Zip_Code__c</columns>
+        <columns>EKM_Meter__c</columns>
+        <columns>EKM_Push__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>State__c</field>
+            <operation>equals</operation>
+            <value>IL</value>
+        </filters>
+        <filters>
+            <field>CP_Stage__c</field>
+            <operation>notContain</operation>
+            <value>,Completed,Disqualified</value>
+        </filters>
+        <label>Illinois In Progress</label>
+    </listViews>
+    <listViews>
+        <fullName>Illinois_Installed</fullName>
+        <columns>NAME</columns>
+        <columns>Kiosk_Tracking_ID_No__c</columns>
+        <columns>Status__c</columns>
+        <columns>Network_Region__c</columns>
+        <columns>CP_Completion_Date__c</columns>
+        <columns>Construction_Project__c</columns>
+        <columns>No_of_Faces__c</columns>
+        <columns>Site_Account__c</columns>
+        <columns>Zip_Code__c</columns>
+        <columns>EKM_Meter__c</columns>
+        <columns>EKM_Push__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>State__c</field>
+            <operation>equals</operation>
+            <value>IL</value>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>Active,Metering Issue,Needs Service</value>
+        </filters>
+        <label>Illinois Installed</label>
+    </listViews>
+    <listViews>
+        <fullName>Kiosks_Without_Completion_Date</fullName>
+        <columns>Kiosk_Tracking_ID_No__c</columns>
+        <columns>NAME</columns>
+        <columns>Latitude__c</columns>
+        <columns>Longitude__c</columns>
+        <columns>Lat_Lon_Looked_Up_At__c</columns>
+        <columns>Street_Address__c</columns>
+        <columns>City__c</columns>
+        <columns>Zip_Code__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CP_Completion_Date__c</field>
+            <operation>equals</operation>
+        </filters>
+        <label>Kiosks Without Completion Date</label>
+    </listViews>
+    <listViews>
+        <fullName>Kiosks_Without_Construction_Projects</fullName>
+        <columns>Kiosk_Tracking_ID_No__c</columns>
+        <columns>NAME</columns>
+        <columns>Latitude__c</columns>
+        <columns>Longitude__c</columns>
+        <columns>Lat_Lon_Looked_Up_At__c</columns>
+        <columns>Street_Address__c</columns>
+        <columns>City__c</columns>
+        <columns>Zip_Code__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Construction_Project__c</field>
+            <operation>equals</operation>
+        </filters>
+        <label>Kiosks Without Construction Projects</label>
+    </listViews>
+    <listViews>
+        <fullName>Kiosks_Without_Lat_Long</fullName>
+        <columns>Kiosk_Tracking_ID_No__c</columns>
+        <columns>NAME</columns>
+        <columns>Latitude__c</columns>
+        <columns>Longitude__c</columns>
+        <columns>Lat_Lon_Looked_Up_At__c</columns>
+        <columns>Street_Address__c</columns>
+        <columns>City__c</columns>
+        <columns>Zip_Code__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Latitude__c</field>
+            <operation>equals</operation>
+        </filters>
+        <filters>
+            <field>Longitude__c</field>
+            <operation>equals</operation>
+        </filters>
+        <label>Kiosks Without Lat/Long</label>
+    </listViews>
+    <listViews>
+        <fullName>LINs_in_ENP</fullName>
+        <columns>Status__c</columns>
+        <columns>Construction_Project__c</columns>
+        <columns>CP_Stage__c</columns>
+        <columns>CP_Completion_Date__c</columns>
+        <columns>NAME</columns>
+        <columns>Charging_Engineered_for__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>Initial Site Inspection,Under Construction</value>
+        </filters>
+        <filters>
+            <field>CP_Stage__c</field>
+            <operation>equals</operation>
+            <value>initial site inspection,engineering,permitting,pre-construction approval</value>
+        </filters>
+        <label>LINs in ENP</label>
+    </listViews>
+    <listViews>
+        <fullName>Location_Info</fullName>
+        <columns>Kiosk_Tracking_ID_No__c</columns>
+        <columns>Station_SIN__c</columns>
+        <columns>NAME</columns>
+        <columns>CP_Street_Address__c</columns>
+        <columns>EKM_Meter__c</columns>
+        <columns>EKM_Push__c</columns>
+        <columns>Widget__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Network_Region__c</field>
+            <operation>equals</operation>
+            <value>CA - Santa Barbara,CA - Los Angeles,CA - Orange County,CA - San Diego</value>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operation>notEqual</operation>
+            <value>Decommissioned - Out of Service,Disqualified</value>
+        </filters>
+        <label>Location Info</label>
+    </listViews>
+    <listViews>
+        <fullName>Need_Cord_Swap</fullName>
+        <columns>NAME</columns>
+        <columns>Kiosk_Tracking_ID_No__c</columns>
+        <columns>Status__c</columns>
+        <columns>Status_Notes__c</columns>
+        <columns>Network_Region__c</columns>
+        <columns>Construction_Project__c</columns>
+        <columns>No_of_Faces__c</columns>
+        <columns>Site_Account__c</columns>
+        <columns>Street_Address__c</columns>
+        <columns>City__c</columns>
+        <columns>State__c</columns>
+        <columns>Zip_Code__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>Active,Metering Issue,Needs Service</value>
+        </filters>
+        <label>Need Cord Swap</label>
+    </listViews>
+    <listViews>
+        <fullName>Need_Info</fullName>
+        <booleanFilter>(1 OR 2) AND 3</booleanFilter>
+        <columns>Status__c</columns>
+        <columns>NAME</columns>
+        <columns>Network_Region__c</columns>
+        <columns>EKM_Meter__c</columns>
+        <columns>EKM_Push__c</columns>
+        <columns>Site_Account__c</columns>
+        <columns>Construction_Project__c</columns>
+        <columns>Street_Address__c</columns>
+        <columns>City__c</columns>
+        <columns>Zip_Code__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>EKM_Meter__c</field>
+            <operation>equals</operation>
+        </filters>
+        <filters>
+            <field>EKM_Push__c</field>
+            <operation>equals</operation>
+        </filters>
+        <label>Need Info</label>
+    </listViews>
+    <listViews>
+        <fullName>Need_Swap</fullName>
+        <columns>NAME</columns>
+        <columns>Kiosk_Tracking_ID_No__c</columns>
+        <columns>Status__c</columns>
+        <columns>Network_Region__c</columns>
+        <columns>Construction_Project__c</columns>
+        <columns>No_of_Faces__c</columns>
+        <columns>Site_Account__c</columns>
+        <columns>Street_Address__c</columns>
+        <columns>City__c</columns>
+        <columns>State__c</columns>
+        <columns>Zip_Code__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Status__c</field>
+            <operation>notEqual</operation>
+            <value>Under Construction,Initial Site Inspection,Needs Service</value>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operation>notContain</operation>
+            <value>On Hold - Muni Obstacles,On Hold - Property Ownership,Disqualified,Decommission</value>
+        </filters>
+        <label>Need Swap</label>
+    </listViews>
+    <listViews>
+        <fullName>Needs_Service</fullName>
+        <columns>NAME</columns>
+        <columns>LIN__c</columns>
+        <columns>Status__c</columns>
+        <columns>Status_Notes__c</columns>
+        <columns>Network_Region__c</columns>
+        <columns>Construction_Project__c</columns>
+        <columns>No_of_Faces__c</columns>
+        <columns>Site_Account__c</columns>
+        <columns>Street_Address__c</columns>
+        <columns>City__c</columns>
+        <columns>State__c</columns>
+        <columns>Zip_Code__c</columns>
+        <columns>Station_SIN__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>Needs Service</value>
+        </filters>
+        <label>Needs Service</label>
+    </listViews>
+    <listViews>
+        <fullName>Non_Revenue_Generating_Kiosks</fullName>
+        <columns>NAME</columns>
+        <columns>Site_Account__c</columns>
+        <columns>Status__c</columns>
+        <columns>Status_Notes__c</columns>
+        <columns>CP_Completion_Date__c</columns>
+        <columns>Location_Notes__c</columns>
+        <columns>Kiosk_Tracking_ID_No__c</columns>
+        <columns>ADA__c</columns>
+        <columns>ADA_Type__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Revenue_Generating__c</field>
+            <operation>equals</operation>
+            <value>Non-Revenue Generating</value>
+        </filters>
+        <label>Non-Revenue Generating Kiosks</label>
+    </listViews>
+    <listViews>
+        <fullName>Pedestal</fullName>
+        <columns>Status__c</columns>
+        <columns>Network_Region__c</columns>
+        <columns>NAME</columns>
+        <columns>Revenue_Generating__c</columns>
+        <columns>Zip_Code__c</columns>
+        <columns>Site_Account__c</columns>
+        <columns>Construction_Project__c</columns>
+        <columns>CP_Stage__c</columns>
+        <columns>EKM_Meter__c</columns>
+        <columns>EKM_Push__c</columns>
+        <columns>Revenue_Share__c</columns>
+        <columns>Rev_Share_Percent__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>Pedestal</label>
+    </listViews>
+    <listViews>
+        <fullName>Quick_Edit_Locations</fullName>
+        <columns>Kiosk_Tracking_ID_No__c</columns>
+        <columns>NAME</columns>
+        <columns>City__c</columns>
+        <columns>Geolocation__Latitude__s</columns>
+        <columns>Geolocation__Longitude__s</columns>
+        <columns>Location_Notes__c</columns>
+        <columns>State__c</columns>
+        <columns>Street_Address__c</columns>
+        <columns>Zip_Code__c</columns>
+        <columns>Network_Region__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>notEqual</operation>
+            <value>012d0000001UOwg</value>
+        </filters>
+        <label>Quick Edit Locations</label>
+    </listViews>
+    <listViews>
+        <fullName>Region_Check</fullName>
+        <columns>NAME</columns>
+        <columns>Kiosk_Tracking_ID_No__c</columns>
+        <columns>Status__c</columns>
+        <columns>Status_Notes__c</columns>
+        <columns>Network_Region__c</columns>
+        <columns>Construction_Project__c</columns>
+        <columns>No_of_Faces__c</columns>
+        <columns>Site_Account__c</columns>
+        <columns>Street_Address__c</columns>
+        <columns>City__c</columns>
+        <columns>State__c</columns>
+        <columns>Zip_Code__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Network_Region__c</field>
+            <operation>notEqual</operation>
+            <value>CA - Northern,CA - Santa Barbara,CA - Los Angeles,CA - Orange County</value>
+        </filters>
+        <filters>
+            <field>Network_Region__c</field>
+            <operation>notEqual</operation>
+            <value>CA - San Diego,HI,AZ,FL,Chicago,DC,NJ,NY</value>
+        </filters>
+        <label>Region Check</label>
+    </listViews>
+    <listViews>
+        <fullName>Torr_s_View</fullName>
+        <columns>NAME</columns>
+        <columns>LIN__c</columns>
+        <columns>Network__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>Active,Needs Service</value>
+        </filters>
+        <label>Torr&apos;s View</label>
+    </listViews>
+    <nameField>
+        <label>Location Name</label>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Locations (LIN)</pluralLabel>
+    <recordTypeTrackFeedHistory>true</recordTypeTrackFeedHistory>
+    <recordTypeTrackHistory>false</recordTypeTrackHistory>
+    <recordTypes>
+        <fullName>Installation_Location</fullName>
+        <active>true</active>
+        <description>This is where a station is, or will be, installed.</description>
+        <label>Installation Location</label>
+        <picklistValues>
+            <picklist>ADA_Type__c</picklist>
+            <values>
+                <fullName>ADA Compliant</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ADA Exclusive</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ADA Pedestal</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>AHJ_Approval__c</picklist>
+            <values>
+                <fullName>Approved</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Denied</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Submitted</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Pending</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Breaker_Amperage__c</picklist>
+            <values>
+                <fullName>100</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>12</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>15</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>20</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>25</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>30</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>32</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>35</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>40</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>45</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>50</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>60</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>70</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>8</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>80</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>90</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Charging_Engineered_for__c</picklist>
+            <values>
+                <fullName>100</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>12</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>15</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>20</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>25</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>30</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>32</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>35</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>40</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>45</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>50</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>60</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>70</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>8</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>80</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>90</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Conduit_Size__c</picklist>
+            <values>
+                <fullName>1%22</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1%2F2%22</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-1%2F2%22</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-1%2F4%22</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2%22</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-1%2F2%22</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3%22</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3%2F4%22</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3-1%2F2%22</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Media_Networks__c</picklist>
+            <values>
+                <fullName>Beauty</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CPG</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cinema%2FEntertainment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Consumer Electronics</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fashion%2FLuxury</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fitness</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Grocery</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>High HHI</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Male Network</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Millennial</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Organic food consumers</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Personal Care</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pet Network</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>RX Network</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Wellness</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Network_Region__c</picklist>
+            <values>
+                <fullName>AZ</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Boston</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CA - Los Angeles</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CA - Northern</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CA - Orange County</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CA - San Diego</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CA - Santa Barbara</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Chicago</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>FL</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HI</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NJ</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NY</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Seattle</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Texas</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Rent_Frequency__c</picklist>
+            <values>
+                <fullName>Monthly - Post</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Monthly - Pre</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Quarterly - Post</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Quarterly - Pre</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Revenue_Generating__c</picklist>
+            <values>
+                <fullName>Media Revenue Generating</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Non-Revenue Generating</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Volta Services Revenue Generating</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Signal_Environment__c</picklist>
+            <values>
+                <fullName>Garage Above Grade</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Garage Below Grade</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Garage Ground Level</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Open Air</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Site_Partner_Approval__c</picklist>
+            <values>
+                <fullName>Approved</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Denied</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Submitted</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Pending</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Site_Vet_Approval__c</picklist>
+            <values>
+                <fullName>Approved</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Denied</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Submitted</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pending</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status__c</picklist>
+            <values>
+                <fullName>Active</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Decommissioned - Out of Service</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Disqualified</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Initial Site Inspection</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Needs Service</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>On Hold - Muni Obstacles</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>On Hold - Property Ownership</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Under Construction</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Wire_Gauge__c</picklist>
+            <values>
+                <fullName>0 %281%2F0%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>00 %282%2F0%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>000 %283%2F0%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>0000 %284%2F0%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>10</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>11</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>12</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>13</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>14</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>15</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>16</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>17</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>18</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>19</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>20</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>21</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>22</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>23</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>24</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>25</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>26</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>27</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>28</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>30</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>31</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>32</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>33</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>34</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>35</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>36</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>37</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>38</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>39</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>40</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>6</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>7</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>8</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>9</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts>
+        <customTabListAdditionalFields>LIN__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Station_Chassis__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Status__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Construction_Project__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>EKM_Meter__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>EKM_Push__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Network_Region__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Location_Notes__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>LatLong__c</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>Station_Chassis__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Status__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>LIN__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Construction_Project__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>EKM_Meter__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>EKM_Push__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Network_Region__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Street_Address__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Location_Notes__c</lookupDialogsAdditionalFields>
+        <lookupFilterFields>NAME</lookupFilterFields>
+        <lookupFilterFields>LIN__c</lookupFilterFields>
+        <searchResultsAdditionalFields>Status__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>LIN__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Station_SIN__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Station_Chassis__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Station_Type__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Location_Notes__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Station_EKM_Meter_Left__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+    <validationRules>
+        <fullName>All_Locations_have_Charging_Engineered</fullName>
+        <active>true</active>
+        <description>Needs &quot;Charging Engineered for&quot; Field not blank before moving from stage &quot;Initial Site Inspection&quot;</description>
+        <errorConditionFormula>AND 
+(ISPICKVAL ( Status__c,&quot;Under Construction&quot;), 
+ISBLANK( TEXT(Charging_Engineered_for__c) ) 
+)</errorConditionFormula>
+        <errorDisplayField>Charging_Engineered_for__c</errorDisplayField>
+        <errorMessage>Needs &quot;Charging Engineered for&quot; Field not blank before moving from stage &quot;Initial Site Inspection&quot;</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>All_Locations_have_GeoLat_before_Active</fullName>
+        <active>true</active>
+        <description>Needs &quot;Geolocation Latitude&quot; Field not blank before moving from stage &quot;Active&quot;</description>
+        <errorConditionFormula>AND 
+(ISPICKVAL ( Status__c,&quot;Active&quot;), 
+ISBLANK(Geolocation__Latitude__s) 
+)</errorConditionFormula>
+        <errorMessage>Needs &quot;Geolocation (Latitude)&quot; Field not blank before moving to stage &quot;Active&quot;</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>All_Locations_have_GeoLong_before_Active</fullName>
+        <active>true</active>
+        <description>Needs &quot;Geolocation Longitude&quot; Field not blank before moving from stage &quot;Active&quot;</description>
+        <errorConditionFormula>AND 
+(ISPICKVAL ( Status__c,&quot;Active&quot;), 
+ISBLANK(Geolocation__Longitude__s) 
+)</errorConditionFormula>
+        <errorMessage>Needs &quot;Geolocation (Longitude)&quot; Field not blank before moving to stage &quot;Active&quot;</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>All_Locations_have_Latitude_before_Activ</fullName>
+        <active>true</active>
+        <description>Needs &quot;Latitude&quot; Field not blank before moving from stage &quot;Active&quot;</description>
+        <errorConditionFormula>AND 
+(ISPICKVAL ( Status__c,&quot;Active&quot;), 
+ISBLANK(Latitude__c) 
+)</errorConditionFormula>
+        <errorDisplayField>Latitude__c</errorDisplayField>
+        <errorMessage>Needs &quot;Latitude&quot; Field not blank before moving to stage &quot;Active&quot;</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>All_Locations_have_Longitud_before_Activ</fullName>
+        <active>true</active>
+        <description>Needs &quot;Longitude&quot; Field not blank before moving from stage &quot;Active&quot;</description>
+        <errorConditionFormula>AND 
+(ISPICKVAL ( Status__c,&quot;Active&quot;), 
+ISBLANK(Longitude__c) 
+)</errorConditionFormula>
+        <errorDisplayField>Longitude__c</errorDisplayField>
+        <errorMessage>Needs &quot;Longitude&quot; Field not blank before moving to stage &quot;Active&quot;</errorMessage>
+    </validationRules>
+    <visibility>Public</visibility>
+    <webLinks>
+        <fullName>New_Face</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>New Face</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <url>/01t/e?CF00NJ0000001d0oS={!Kiosk__c.Name}&amp;CF00NJ0000001d0oS_lkid={!Kiosk__c.Id}&amp;retURL=%2F{!Kiosk__c.Id}&amp;00NJ0000001eRnT={!Kiosk__c.City__c}&amp;00NJ0000001eRnY={!Kiosk__c.Client_No__c}&amp;00NJ0000001eRnd={!Construction_Project__c.Completion_Date__c}&amp;00NJ0000001eRns={!Kiosk__c.Network_No__c}&amp;00NJ0000001eRnn={!Kiosk__c.Property_No__c}&amp;00NJ0000001eUPy={!Kiosk__c.Network_Region__c}&amp;00NJ0000001eRnx={!Kiosk__c.State__c}&amp;00NJ0000001eRoH={!Kiosk__c.Station_No__c}&amp;00NJ0000001eRo2={!Kiosk__c.Street_Address__c}&amp;00NJ0000001eRo7={!Kiosk__c.Zip_Code__c}&amp;</url>
+    </webLinks>
+    <webLinks>
+        <fullName>New_Kiosk</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>New Kiosk</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <requireRowSelection>false</requireRowSelection>
+        <url>/a0d/e?CF00Nd0000008EI89={!Construction_Project__c.Name}&amp;CF00Nd0000008EI89_lkid={!Construction_Project__c.Id}&amp;retURL=%2F{!Construction_Project__c.Id}&amp;00Nd0000008EI8T={!Construction_Project__c.Site_Address__c}&amp;00Nd0000008EI86={!Construction_Project__c.City__c}&amp;00Nd0000008EI87={!Construction_Project__c.Client_No__c}&amp;00Nd0000008EI8G={!Construction_Project__c.Network_No__c}&amp;00Nd0000008EI8H={!Construction_Project__c.Network_Region__c}&amp;00Nd0000008EI8J={!Construction_Project__c.Property_No__c}&amp;00Nd0000008EI8P={!Construction_Project__c.State__c}&amp;00Nd0000008EI8V={!Construction_Project__c.Zip_Code__c}&amp;CF00Nd0000008EI84={!Construction_Project__c.Primary_Account__c}&amp;CF00Nd0000008EI84_lkid={!Construction_Project__c.Primary_AccountId__c}&amp;00Nd0000008EI88={!Construction_Project__c.Completion_Date__c}</url>
+    </webLinks>
+</CustomObject>

@@ -1,0 +1,327 @@
+<apex:page Controller="MapClass" showHeader="false">
+    <head>
+        <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+        <style type="text/css">
+            html { height: 100% }
+            body { height: 100%; margin: 0; padding: 0 }
+            #map-canvas { height: 100%; width: 100%; }
+            .row {
+                width:100%;
+            }
+            .column {
+                float: left;
+                display: inline;
+            }
+        </style>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBiaTtN6zJ3O261UsD8kqZmFo_Jm3BzOFA"></script>
+    </head>
+    <body>
+        <apex:outputPanel rendered="{!needsPriceBook == false}">
+            <apex:pageMessages id="msg" ></apex:pageMessages>
+            <apex:form >
+                <script>
+                    var map;
+                    function initialize() {
+                        var mapOptions = {
+                            zoom: 10
+                        };
+                        map = new google.maps.Map(document.getElementById('map-canvas'),mapOptions);
+                        <apex:repeat value="{!underConstructionList}" var="v">
+                            var {!v.latLong} = new google.maps.LatLng({!v.lat},{!v.lon});
+
+                            var {!v.contentstrng} = '<table><tr><th>Kiosk</th><th>Face</th><th>Include</th><th></th></tr><tr><td>{!v.name}</td><td></td><td></td><td></td></tr><apex:repeat value="{!v.faces}" var="v1"><tr><td></td><td>{!v1.prodName}</td><td><input type="checkbox" id="{!v1.prod.id}" class="inputProd" onchange="addToSet(\'{!v1.prod.id}\');" /></td><td></td></tr><apex:repeat value="{!v1.otlist}" var="v2"><tr><td></td><td colspan="3" style="text-align:right;">Available From:{!v2.startDate}&nbsp;To&nbsp;{!v2.endDate}</td></tr></apex:repeat></apex:repeat></table>';
+
+                            var {!v.infowndw} = new google.maps.InfoWindow({
+                                content: {!v.contentstrng}
+                            });
+                            var {!v.mark} = new google.maps.Marker({
+                                position: {!v.latLong},
+                                map: map,
+                                title: "{!v.name}",
+                                icon: "https://maps.google.com/mapfiles/ms/icons/green-dot.png"
+                            });
+                            google.maps.event.addListener({!v.mark}, 'click', function() {
+                                {!v.infowndw}.open(map,{!v.mark});
+                            });
+                        </apex:repeat>
+                        <apex:repeat value="{!alreadyBookedList}" var="v">
+                            var {!v.latLong} = new google.maps.LatLng({!v.lat},{!v.lon});
+
+                            var {!v.contentstrng} = '<table><tr><th>Kiosk</th><th>Face</th><th>Include</th><th></th></tr><tr><td>{!v.name}</td><td></td><td></td><td></td></tr><apex:repeat value="{!v.faces}" var="v1"><tr><td></td><td>{!v1.prodName}</td><td><input type="checkbox" id="{!v1.prod.id}" class="inputProd" onchange="addToSet(\'{!v1.prod.id}\');" /></td><td></td></tr><apex:repeat value="{!v1.otlist}" var="v2"><tr><td></td><td colspan="3" style="text-align:right;">Available From:{!v2.startDate}&nbsp;To&nbsp;{!v2.endDate}</td></tr></apex:repeat></apex:repeat></table>';
+
+                            var {!v.infowndw} = new google.maps.InfoWindow({
+                                content: {!v.contentstrng}
+                            });
+                            var {!v.mark} = new google.maps.Marker({
+                                position: {!v.latLong},
+                                map: map,
+                                title: "{!v.name}",
+                                icon: "https://maps.google.com/mapfiles/ms/icons/blue-dot.png"
+                            });
+                            google.maps.event.addListener({!v.mark}, 'click', function() {
+                                {!v.infowndw}.open(map,{!v.mark});
+                            });
+                        </apex:repeat>
+                        <apex:outputText rendered="{!mwlist != null && mwlist.size != 0}" >
+                            var pos = new google.maps.LatLng("{!mwlist[0].lat}","{!mwlist[0].lon}");
+                        </apex:outputText>
+                        <apex:outputText rendered="{!mwlist == null || mwlist.size == 0}" >
+                            var pos = new google.maps.LatLng("37.7655519","-122.4000855");
+                        </apex:outputText>
+                        map.setCenter(pos);
+                        if(navigator.geolocation) {
+                        }
+                        else {
+                        }
+                    }
+                    function handleNoGeolocation(errorFlag) {
+                    }
+                    google.maps.event.addDomListener(window, 'load', initialize);
+                </script>
+            </apex:form>
+            <div style="height:100%; width:25%; float:left;">&nbsp;</div>
+            <div style="height:25px;width:75%; float:left;">&nbsp;</div>
+            <div id="map-canvas" style="width:50%; height:50%;float:left;"/>
+            <div style="float:left; width:50%; padding-top:25px;">
+                <apex:form >
+                    <table>
+                        <tr>
+                            <td style="text-align:right;">
+                                <apex:outputLabel >Select Region To Display Kiosks</apex:outputLabel>
+                            </td>
+                            <td>
+                                <apex:selectList value="{!regnPicked}" size="1" >
+                                    <apex:selectOption itemValue="" itemLabel="" />
+                                    <apex:selectOptions value="{!regns}" />
+                                </apex:selectList>
+                            </td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td style="text-align:right;">
+                                <apex:outputLabel >Start Date:</apex:outputLabel>
+                            </td>
+                            <td>
+                                <apex:inputField value="{!qut.Start_Date_for_Map_Page__c}" />
+                            </td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td style="text-align:right;">
+                                <apex:outputLabel >End Date:</apex:outputLabel>
+                            </td>
+                            <td>
+                                <apex:inputField value="{!qut.End_Date_for_Map_Page__c}" />
+                            </td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <apex:outputLabel >Include Kiosks Under Construction</apex:outputLabel>
+                            </td>
+                            <td>
+                                <apex:inputCheckbox value="{!underConstruction}" />
+                            </td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <apex:outputLabel >Include Kiosks already booked</apex:outputLabel>
+                            </td>
+                            <td>
+                                <apex:inputCheckbox value="{!alreadyBooked}" />
+                            </td>
+                            <td></td>
+                        </tr>
+                        <tr >
+                            <td style="padding-top:15px;">
+                                <apex:commandButton value="Find Kiosks" action="{!updateSearch}" />
+                            </td>
+                            <td style="padding-top:15px;">
+                                <!-- <apex:commandButton onclick="makeProducts();" value="Add to Quote" reRender="msg" oncomplete="alert('Your Ad Faces have been added to the Quote.')" /> -->
+                                <apex:commandButton onclick="makeProducts();" value="Add to Quote" reRender="msg" />
+                            </td>
+                            <td style="padding-top:15px;">
+                                <apex:commandButton action="{!returnToQuote}" value="Return to Quote" />
+                            </td>
+                        </tr>
+                    </table>
+                </apex:form>
+            </div>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+            <script type="text/javascript">
+                var selectedProducts = [];
+                var addToSet = function(e){
+                    console.log('selectedProducts='+selectedProducts);
+                    console.log('e='+e);
+                    if($.inArray(e, selectedProducts) === 0){
+                        console.log('remove');
+                        selectedProducts.remove(e);
+                    }else{
+                        console.log('push');
+                        selectedProducts.push(e);
+                    }
+                    console.log('selectedProducts='+selectedProducts);
+                }
+                var makeProducts = function(){
+                        // var myList = [];
+                    var qid = "{!$currentpage.parameters.qid}";
+                    console.log(qid);
+                        // $('.inputProd:checked').each(function(i,e){
+                        //  myList.push(e.id);
+                        // });
+                    console.log('selectedProducts before addProducts class = '+selectedProducts);
+                    console.log('1');
+                    console.log('{!qut.Start_Date_for_Map_Page__c}');
+                    console.log('{!qut.End_Date_for_Map_Page__c}');
+                    console.log('2');
+                    MapClass.addProducts(selectedProducts,qid,'{!qut.Start_Date_for_Map_Page__c}','{!qut.End_Date_for_Map_Page__c}', function(result, event){
+                        alert(event.result);
+                    });
+                }
+            </script>
+
+
+
+            <apex:pageBlock title="Existing Faces">
+                <apex:form >
+                    <table>
+                        <tr>
+                            <th></th>
+                            <th width="10"></th>
+                            <th>Face</th>
+                            <th width="10"></th>
+                            <th>List Price</th>
+                            <th width="10"></th>
+                            <th>Sales Price</th>
+                            <th width="10"></th>
+                            <th>Quantity</th>
+                            <th width="10"></th>
+                            <th>Subtotal</th>
+                            <th width="10"></th>
+                            <th>Discount</th>
+                            <th width="10"></th>
+                            <th>Total Price</th>
+                            <th width="10"></th>
+                            <th>Start Date</th>
+                            <th width="10"></th>
+                            <th>End Date</th>
+                        </tr>
+                        <apex:repeat value="{!existingFaces}" var="ef">
+                            <tr>
+                                <td>
+                                    <apex:commandLink onclick="return confirm('You are about to remove a Face from this quote.\r\nClick OK to proceed.');" action="{!removeFromQuote}" value="Remove From Quote">
+                                        <apex:param name="qliToRemove" value="{!ef.Id}" assignTo="{!qliToRemove}"/>
+                                    </apex:commandLink>
+                                </td>
+                                <td width="10"></td>
+                                <td>{!ef.Product2.Name}</td>
+                                <td width="10"></td>
+                                <td>{!ef.ListPrice}</td>
+                                <td width="10"></td>
+                                <td>{!ef.UnitPrice}</td>
+                                <td width="10"></td>
+                                <td>{!ef.Quantity}</td>
+                                <td width="10"></td>
+                                <td>{!ef.Subtotal}</td>
+                                <td width="10"></td>
+                                <td>{!ef.Discount}</td>
+                                <td width="10"></td>
+                                <td>{!ef.TotalPrice}</td>
+                                <td width="10"></td>
+                                <td>{!ef.Start_Date_Text__c}</td>
+                                <td width="10"></td>
+                                <td>{!ef.End_Date_Text__c}</td>
+                            </tr>
+                        </apex:repeat>
+                    </table>
+                </apex:form>
+            </apex:pageBlock>
+
+
+
+            <apex:pageBlock title="Matching Kiosks">
+                <apex:form >
+                    <table cellpadding="0" cellspacing="0">
+                        <tr>
+                            <th>Kiosk</th>
+                            <th width="10"></th>
+                            <th>Face (Check to include)</th>
+                            <th width="10"></th>
+                            <th>Notes</th>
+                        </tr>
+                        <apex:repeat value="{!underConstructionList}" var="v">
+                            <tr valign="top">
+                                <td>{!v.name}</td>
+                                <td width="10"></td>
+                                <td>
+                                    <table cellpadding="0" cellspacing="0">
+                                        <apex:repeat value="{!v.faces}" var="v1">
+                                            <tr><td><input type="checkbox" id="B{!v1.prod.id}" class="inputProd" onchange="addToSet('{!v1.prod.id}');" />&nbsp;{!v1.prod.Name}</td></tr>
+                                        </apex:repeat>
+                                    </table>
+                                </td>
+                                <td width="10"></td>
+                                <td>
+                                    <table cellspacing="0" cellpadding="0">
+                                        <apex:repeat value="{!v.faces}" var="v1">
+                                            <apex:repeat value="{!v1.otlist}" var="v2">
+                                                <tr><td>Available From:{!v2.startDate}&nbsp;To&nbsp;{!v2.endDate}</td></tr>
+                                            </apex:repeat>
+                                            // <apex:repeat value="{!v1.quliitList}" var="v3">
+                                            //     <tr><td>In another {!v3.Quote.Status} Quote (<a href="/{!v3.Quote.Id}" target="_blank">{!v3.Quote.Name}</a>) from {!v3.Start_Date_Text__c} to {!v3.End_Date_Text__c} in <a href="/{!v3.Quote.OpportunityId}" target="_blank">{!v3.Quote.Opportunity.Name}</a> which is owned by {!v3.Quote.Opportunity.Owner.Name}.</td></tr>
+                                            // </apex:repeat>
+                                        </apex:repeat>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr><td colspan="5">&nbsp;</td></tr>
+                        </apex:repeat>
+                        <apex:repeat value="{!alreadyBookedList}" var="v">
+                            <tr valign="top">
+                                <td>{!v.name}</td>
+                                <td width="10"></td>
+                                <td>
+                                    <table cellpadding="0" cellspacing="0">
+                                        <apex:repeat value="{!v.faces}" var="v1">
+                                            <tr><td><input type="checkbox" id="B{!v1.prod.id}" class="inputProd" onchange="addToSet('{!v1.prod.id}');" />&nbsp;{!v1.prod.Name}</td></tr>
+                                        </apex:repeat>
+                                    </table>
+                                </td>
+                                <td width="10"></td>
+                                <td>
+                                    <table cellspacing="0" cellpadding="0">
+                                        <apex:repeat value="{!v.faces}" var="v1">
+                                            <apex:repeat value="{!v1.otlist}" var="v2">
+                                                <tr><td>Available From:{!v2.startDate}&nbsp;To&nbsp;{!v2.endDate}</td></tr>
+                                            </apex:repeat>
+                                            // <apex:repeat value="{!v1.quliitList}" var="v3">
+                                            //     <tr><td>In another {!v3.Quote.Status} Quote (<a href="/{!v3.Quote.Id}" target="_blank">{!v3.Quote.Name}</a>) from {!v3.Start_Date_Text__c} to {!v3.End_Date_Text__c} in <a href="/{!v3.Quote.OpportunityId}" target="_blank">{!v3.Quote.Opportunity.Name}</a> which is owned by {!v3.Quote.Opportunity.Owner.Name}.</td></tr>
+                                            // </apex:repeat>
+                                        </apex:repeat>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr><td colspan="5">&nbsp;</td></tr>
+                        </apex:repeat>
+                    </table>
+                </apex:form>
+            </apex:pageBlock>
+        </apex:outputPanel>
+
+        <apex:outputPanel rendered="{!needsPriceBook == true}">
+            <apex:form >
+                <apex:pageBlock >
+                    <apex:outputLabel >Select PriceBook</apex:outputLabel>
+                    <apex:selectList value="{!qut.Pricebook2Id}" size="1">
+                        <apex:selectOptions value="{!pbs}" />
+                    </apex:selectList>
+                    <apex:commandButton value="Next" action="{!choosePriceBook}" />
+                </apex:pageBlock>
+            </apex:form>
+        </apex:outputPanel>
+        <apex:outputPanel >
+
+        </apex:outputPanel>
+    </body>
+</apex:page>

@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>true</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>This is the actual charge controller unit that regulates voltage and amperage, commonly inside the station, but independent on wall mounts.</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableChangeDataCapture>false</enableChangeDataCapture>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ReadWrite</externalSharingModel>
+    <fields>
+        <fullName>Allowed_current_setting__c</fullName>
+        <description>&quot;Allowed Current Setting&quot; - This is the max setting the charger can be at in the Juicenet platform.
+Named from JuiceNet Platform, however is just as applicable to other amperage settings on other platforms.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>&quot;Allowed Current Setting&quot; - This is the max setting the charger can be at in the Juicenet platform.
+Named from JuiceNet Platform, however is just as applicable to other amperage settings on other platforms.</inlineHelpText>
+        <label>Allowed Current Setting</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Charge_Level__c</fullName>
+        <externalId>false</externalId>
+        <label>Charge Level</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Charge_Level</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Cord_Manufacturer__c</fullName>
+        <externalId>false</externalId>
+        <label>Cord Manufacturer</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Delphi (Clipper Creek)</fullName>
+                    <default>false</default>
+                    <label>Delphi (Clipper Creek)</label>
+                </value>
+                <value>
+                    <fullName>Tesla</fullName>
+                    <default>false</default>
+                    <label>Tesla</label>
+                </value>
+                <value>
+                    <fullName>ITT</fullName>
+                    <default>false</default>
+                    <label>ITT</label>
+                </value>
+                <value>
+                    <fullName>GreatLink</fullName>
+                    <default>false</default>
+                    <label>GreatLink</label>
+                </value>
+                <value>
+                    <fullName>Leviton</fullName>
+                    <default>false</default>
+                    <label>Leviton</label>
+                </value>
+                <value>
+                    <fullName>ABB</fullName>
+                    <default>false</default>
+                    <label>ABB</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Cord_Serial__c</fullName>
+        <externalId>false</externalId>
+        <label>Cord Serial</label>
+        <length>40</length>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Cord_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Cord Type</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Clipper Creek Gen 1 (White)</fullName>
+                    <default>false</default>
+                    <label>Clipper Creek Gen 1 (White)</label>
+                </value>
+                <value>
+                    <fullName>Clipper Creek Gen 2 (Black)</fullName>
+                    <default>false</default>
+                    <label>Clipper Creek Gen 2 (Black)</label>
+                </value>
+                <value>
+                    <fullName>ITT</fullName>
+                    <default>false</default>
+                    <label>ITT</label>
+                </value>
+                <value>
+                    <fullName>Leviton</fullName>
+                    <default>false</default>
+                    <label>Leviton</label>
+                </value>
+                <value>
+                    <fullName>Tesla HPWC</fullName>
+                    <default>false</default>
+                    <label>Tesla HPWC</label>
+                </value>
+                <value>
+                    <fullName>Greatlink</fullName>
+                    <default>false</default>
+                    <label>Greatlink</label>
+                </value>
+                <value>
+                    <fullName>ABB CHAdeMO &amp; CCS</fullName>
+                    <default>false</default>
+                    <label>ABB CHAdeMO &amp; CCS</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Current_Setting_Notes__c</fullName>
+        <description>Record why the Allowed Current Setting is the way it is.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Record why the Allowed Current Setting is the way it is.</inlineHelpText>
+        <label>Current Setting Notes</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Firmware_Level__c</fullName>
+        <externalId>false</externalId>
+        <label>Firmware Level</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>10.0.2</fullName>
+                    <default>false</default>
+                    <label>10.0.2</label>
+                </value>
+                <value>
+                    <fullName>10.10.00</fullName>
+                    <default>false</default>
+                    <label>10.10.00</label>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                    <label>Other</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>JuiceNet_Base_URL__c</fullName>
+        <defaultValue>&quot;https://dashboard.emotorwerks.com/Portal/Details?unitID=&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>JuiceNet Base URL</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>JuiceNet_Enabled__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>JuiceNet Enabled</label>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>JuiceNet_ID__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <externalId>false</externalId>
+        <label>JuiceNet ID</label>
+        <length>28</length>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>JuiceNet_Link__c</fullName>
+        <externalId>false</externalId>
+        <formula>HYPERLINK(JuiceNet_Base_URL__c &amp; JuiceNet_ID__c, JuiceNet_ID__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>JuiceNet Link</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Location__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Where is this component housed or installed?</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Where is this component housed or installed?</inlineHelpText>
+        <label>Location</label>
+        <referenceTo>Kiosk__c</referenceTo>
+        <relationshipLabel>Chargers</relationshipLabel>
+        <relationshipName>Chargers</relationshipName>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Manufacturer__c</fullName>
+        <externalId>false</externalId>
+        <label>Manufacturer</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Clipper Creek</fullName>
+                    <default>false</default>
+                    <label>Clipper Creek</label>
+                </value>
+                <value>
+                    <fullName>Leviton</fullName>
+                    <default>false</default>
+                    <label>Leviton</label>
+                </value>
+                <value>
+                    <fullName>Tesla</fullName>
+                    <default>false</default>
+                    <label>Tesla</label>
+                </value>
+                <value>
+                    <fullName>Eaton</fullName>
+                    <default>false</default>
+                    <label>Eaton</label>
+                </value>
+                <value>
+                    <fullName>EMW</fullName>
+                    <default>false</default>
+                    <label>EMW</label>
+                </value>
+                <value>
+                    <fullName>ABB</fullName>
+                    <default>false</default>
+                    <label>ABB</label>
+                </value>
+                <value>
+                    <fullName>Bosch</fullName>
+                    <default>false</default>
+                    <label>Bosch</label>
+                </value>
+                <value>
+                    <fullName>EVBox</fullName>
+                    <default>false</default>
+                    <label>EVBox</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Production_Build__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Production Build</label>
+        <referenceTo>Production_Build__c</referenceTo>
+        <relationshipLabel>Chargers</relationshipLabel>
+        <relationshipName>Chargers</relationshipName>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <label>Charger</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>JuiceNet_Link__c</columns>
+        <columns>Manufacturer__c</columns>
+        <columns>Cord_Serial__c</columns>
+        <columns>Cord_Type__c</columns>
+        <columns>Location__c</columns>
+        <columns>Production_Build__c</columns>
+        <columns>Cord_Manufacturer__c</columns>
+        <columns>JuiceNet_Enabled__c</columns>
+        <columns>JuiceNet_ID__c</columns>
+        <columns>UPDATEDBY_USER</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <label>Charger Serial</label>
+        <trackHistory>true</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Chargers</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+    <visibility>Public</visibility>
+</CustomObject>

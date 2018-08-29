@@ -1,0 +1,16 @@
+<!--This is a workaround for a bug in Dropbox for Salesforce which normally results in opening a blank page instead of a picture in custom objects only.-->
+<!--Known side effect: it prevents any other JS running on this page from opening a new window.-->
+
+<apex:page standardController="Construction_Project__c" docType="html-5.0" showHeader="false" sidebar="false" applyHtmlTag="false" applyBodyTag="false">
+  <Dropbox_for_SF:Dropbox rendered="true"/>
+  <script type="text/javascript">
+    var orig = window.open;
+    window.open = function (open) {
+      return function (url, name, features) {
+        if (url.includes("http")) {
+          orig(url.split("link=")[1], name, features);
+        }
+      };
+    } (window.open);
+  </script>
+</apex:page>

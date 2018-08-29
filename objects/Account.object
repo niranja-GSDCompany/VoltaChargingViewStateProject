@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>Client_Code_No__c</fullName>
+        <externalId>false</externalId>
+        <label>Client Code No.</label>
+        <length>30</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Ops_Access_and_Site_Info__c</fullName>
+        <description>This is for information to assist Ops personnel and contractors with on-site work.  It is NOT intended to be driver facing.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>This is for information to assist Ops personnel and contractors with on-site work.  It is NOT intended to be driver facing.</inlineHelpText>
+        <label>Ops Access and Site Info</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Zip_Nielsen_DMA__c</fullName>
+        <description>Inherited from Nielsen DMA field on the associated Zip Object.</description>
+        <externalId>false</externalId>
+        <formula>Zip__r.Nielsen_DMA__r.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Inherited from Nielsen DMA field on the associated Zip Object.</inlineHelpText>
+        <label>Zip Nielsen DMA</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Zip__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Relates to the pre-existing Zip object to relate demographic data</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Relates to the pre-existing Zip object to relate demographic data</inlineHelpText>
+        <label>Zip</label>
+        <referenceTo>Zip__c</referenceTo>
+        <relationshipLabel>Accounts</relationshipLabel>
+        <relationshipName>Site</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+</CustomObject>

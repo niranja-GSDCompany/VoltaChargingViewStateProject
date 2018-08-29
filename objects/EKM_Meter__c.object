@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableChangeDataCapture>false</enableChangeDataCapture>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ReadWrite</externalSharingModel>
+    <fields>
+        <fullName>EKM_Meter_Version__c</fullName>
+        <description>Enter the Version Number of the EKM Meter here</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter the Version Number of the EKM Meter here</inlineHelpText>
+        <label>EKM Meter Version</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>v3</fullName>
+                    <default>false</default>
+                    <label>v3</label>
+                </value>
+                <value>
+                    <fullName>v4</fullName>
+                    <default>false</default>
+                    <label>v4</label>
+                </value>
+                <value>
+                    <fullName>v3 UL</fullName>
+                    <default>false</default>
+                    <label>v3 UL</label>
+                </value>
+                <value>
+                    <fullName>v4 UL</fullName>
+                    <default>false</default>
+                    <label>v4 UL</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>EKM_Push__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Paired to EKM Push</label>
+        <referenceTo>EKM_Push__c</referenceTo>
+        <relationshipLabel>EKM Meters</relationshipLabel>
+        <relationshipName>EKM_Meters</relationshipName>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>KioskTrackingIDNo__c</fullName>
+        <externalId>false</externalId>
+        <formula>Kiosk__r.LIN__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>LIN</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Kiosk__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>What Location is this meter being used at?</description>
+        <externalId>false</externalId>
+        <inlineHelpText>What Location is this meter being used at?</inlineHelpText>
+        <label>Location</label>
+        <referenceTo>Kiosk__c</referenceTo>
+        <relationshipLabel>EKM Meters</relationshipLabel>
+        <relationshipName>EKM_Meters</relationshipName>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Meter_URL_Formula__c</fullName>
+        <externalId>false</externalId>
+        <formula>HYPERLINK(TEXT(readmeter_url_base__c)&amp;Name, Name)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Meter URL</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Production_Build__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Production Build</label>
+        <referenceTo>Production_Build__c</referenceTo>
+        <relationshipLabel>EKM Meters</relationshipLabel>
+        <relationshipName>EKM_Meters</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Widget_Link__c</fullName>
+        <description>Link to EKM Graphical Metering Data Display Widget</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Link to EKM Graphical Metering Data Display Widget</inlineHelpText>
+        <label>Widget Link</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>Widget_URL__c</fullName>
+        <externalId>false</externalId>
+        <formula>HYPERLINK(&quot;http://widget.ekmmetering.com/EKM2/?reads=100&amp;key=NTY0MjU3OjQ4OTA0Mg&amp;meter=&quot;&amp; Name, Name)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Widget URL</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>readMeter__c</fullName>
+        <description>The ekm push link to the live meter readings goes here. Not to be confused with the widget link.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The ekm push link to the live meter readings goes here. Not to be confused with the widget link.</inlineHelpText>
+        <label>/readMeter</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>readmeter_url_base__c</fullName>
+        <description>First chunk of readmeter url base</description>
+        <externalId>false</externalId>
+        <inlineHelpText>First chunk of readmeter url base</inlineHelpText>
+        <label>readmeter url base</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <controllingField>EKM_Meter_Version__c</controllingField>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>http://io.ekmpush.com/readMeter/v3/key/NTY0MjU3OjQ4OTA0Mg/format/html/count/10/timezone/America~Los_Angeles/meters/</fullName>
+                    <default>false</default>
+                    <label>http://io.ekmpush.com/readMeter/v3/key/NTY0MjU3OjQ4OTA0Mg/format/html/count/10/timezone/America~Los_Angeles/meters/</label>
+                </value>
+                <value>
+                    <fullName>http://io.ekmpush.com/readMeter/v4/key/NTY0MjU3OjQ4OTA0Mg/format/html/count/10/timezone/America~Los_Angeles/meters/</fullName>
+                    <default>false</default>
+                    <label>http://io.ekmpush.com/readMeter/v4/key/NTY0MjU3OjQ4OTA0Mg/format/html/count/10/timezone/America~Los_Angeles/meters/</label>
+                </value>
+            </valueSetDefinition>
+            <valueSettings>
+                <controllingFieldValue>v3</controllingFieldValue>
+                <controllingFieldValue>v3 UL</controllingFieldValue>
+                <valueName>http://io.ekmpush.com/readMeter/v3/key/NTY0MjU3OjQ4OTA0Mg/format/html/count/10/timezone/America~Los_Angeles/meters/</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>v4</controllingFieldValue>
+                <controllingFieldValue>v4 UL</controllingFieldValue>
+                <valueName>http://io.ekmpush.com/readMeter/v4/key/NTY0MjU3OjQ4OTA0Mg/format/html/count/10/timezone/America~Los_Angeles/meters/</valueName>
+            </valueSettings>
+        </valueSet>
+    </fields>
+    <label>EKM Meter</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>KioskTrackingIDNo__c</columns>
+        <columns>Kiosk__c</columns>
+        <columns>EKM_Meter_Version__c</columns>
+        <columns>readmeter_url_base__c</columns>
+        <columns>Meter_URL_Formula__c</columns>
+        <columns>Widget_URL__c</columns>
+        <columns>readMeter__c</columns>
+        <columns>LAST_UPDATE</columns>
+        <columns>UPDATEDBY_USER.ALIAS</columns>
+        <columns>UPDATEDBY_USER</columns>
+        <columns>OBJECT_ID</columns>
+        <columns>EKM_Push__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <listViews>
+        <fullName>Felix_Meters</fullName>
+        <columns>NAME</columns>
+        <columns>KioskTrackingIDNo__c</columns>
+        <columns>Kiosk__c</columns>
+        <columns>EKM_Meter_Version__c</columns>
+        <columns>readmeter_url_base__c</columns>
+        <columns>Meter_URL_Formula__c</columns>
+        <columns>readMeter__c</columns>
+        <columns>Widget_Link__c</columns>
+        <columns>LAST_UPDATE</columns>
+        <columns>UPDATEDBY_USER.ALIAS</columns>
+        <columns>UPDATEDBY_USER</columns>
+        <columns>OBJECT_ID</columns>
+        <columns>EKM_Push__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>OWNER.FIRST_NAME</field>
+            <operation>equals</operation>
+            <value>Felix</value>
+        </filters>
+        <label>Felix Meters</label>
+    </listViews>
+    <listViews>
+        <fullName>Not_Assigned</fullName>
+        <columns>NAME</columns>
+        <columns>EKM_Meter_Version__c</columns>
+        <columns>readMeter__c</columns>
+        <columns>Widget_Link__c</columns>
+        <columns>KioskTrackingIDNo__c</columns>
+        <columns>Kiosk__c</columns>
+        <columns>LAST_UPDATE</columns>
+        <columns>UPDATEDBY_USER.ALIAS</columns>
+        <columns>UPDATEDBY_USER</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Kiosk__c</field>
+            <operation>equals</operation>
+        </filters>
+        <label>Not Assigned</label>
+    </listViews>
+    <nameField>
+        <label>EKM Meter Serial</label>
+        <trackHistory>true</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>EKM Meters</pluralLabel>
+    <searchLayouts>
+        <customTabListAdditionalFields>EKM_Meter_Version__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>EKM_Push__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>KioskTrackingIDNo__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Meter_URL_Formula__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Widget_URL__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>LAST_ACTIVITY</customTabListAdditionalFields>
+        <customTabListAdditionalFields>readmeter_url_base__c</customTabListAdditionalFields>
+        <searchFilterFields>NAME</searchFilterFields>
+        <searchFilterFields>EKM_Push__c</searchFilterFields>
+        <searchFilterFields>Kiosk__c</searchFilterFields>
+        <searchFilterFields>Meter_URL_Formula__c</searchFilterFields>
+        <searchFilterFields>Widget_URL__c</searchFilterFields>
+        <searchResultsAdditionalFields>EKM_Meter_Version__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>KioskTrackingIDNo__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>EKM_Push__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Kiosk__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>readMeter__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Widget_Link__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+    <startsWith>Vowel</startsWith>
+    <visibility>Public</visibility>
+</CustomObject>

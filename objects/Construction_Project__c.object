@@ -1,0 +1,3940 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>true</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Represents the Installation Progress at the Site in which individual station locations (LIN)s are to be installed at.</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableChangeDataCapture>false</enableChangeDataCapture>
+    <enableFeeds>true</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ReadWrite</externalSharingModel>
+    <fields>
+        <fullName>ADA_Accessibility_Notes__c</fullName>
+        <externalId>false</externalId>
+        <label>ADA Accessibility Notes</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>AHJ_Account__c</fullName>
+        <deleteConstraint>Restrict</deleteConstraint>
+        <externalId>false</externalId>
+        <label>AHJ Account</label>
+        <lookupFilter>
+            <active>true</active>
+            <errorMessage>Must point to Authority Having Jurisdiction (AHJ) Account Type</errorMessage>
+            <filterItems>
+                <field>Account.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Authority Having Jurisdiction (AHJ)</value>
+            </filterItems>
+            <infoMessage>Create the account if it does not already exist.</infoMessage>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Construction Projects (Municipality Account)</relationshipLabel>
+        <relationshipName>Construction_Projects6</relationshipName>
+        <required>true</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>AccruedUnApprovedExpenseTotal__c</fullName>
+        <description>Concur Field</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Concur Field</inlineHelpText>
+        <label>Accrued UnApproved Expense Total</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Add_Information__c</fullName>
+        <externalId>false</externalId>
+        <label>Add. Information</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Additional_Install_Cost__c</fullName>
+        <description>The amount put in this field adds to the Total Install Cost field at the top of the construction Project. Use it to track A\ any additional expenses associated with scope of  project that is not Permit, Engineering, Install, or Striping. Make sure that the Invoice is in the DropBox for Salesforce Construction Project.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The amount put in this field adds to the Total Install Cost field at the top of the construction Project. Use it to track A\ any additional expenses associated with scope of  project that is not Permit, Engineering, Install, or Striping.</inlineHelpText>
+        <label>Additional Install Cost</label>
+        <precision>10</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Additional_Install_Notes__c</fullName>
+        <externalId>false</externalId>
+        <label>Additional Install Notes</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Advertising_Information__c</fullName>
+        <externalId>false</externalId>
+        <label>Advertising Information</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Anchor_Stores__c</fullName>
+        <externalId>false</externalId>
+        <label>Anchor Stores</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Avg_Age__c</fullName>
+        <externalId>false</externalId>
+        <label>Avg. Age</label>
+        <precision>4</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Avg_HH_Income__c</fullName>
+        <externalId>false</externalId>
+        <label>Avg, HH Income</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Biz_Dev_Opportunity__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Site Opportunity</label>
+        <referenceTo>Opportunity</referenceTo>
+        <relationshipLabel>Construction Projects</relationshipLabel>
+        <relationshipName>Construction_Projects</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Bollards_Required__c</fullName>
+        <externalId>false</externalId>
+        <label>Bollards Required</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Not Required</fullName>
+                    <default>false</default>
+                    <label>Not Required</label>
+                </value>
+                <value>
+                    <fullName>Bolt On</fullName>
+                    <default>false</default>
+                    <label>Bolt On</label>
+                </value>
+                <value>
+                    <fullName>Surface Mounted - Rebar Reinforced</fullName>
+                    <default>false</default>
+                    <label>Surface Mounted - Rebar Reinforced</label>
+                </value>
+                <value>
+                    <fullName>Poured In Place</fullName>
+                    <default>false</default>
+                    <label>Poured In Place</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>CD_90s_Review__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Construction Drawings submitted to Volta for review.</inlineHelpText>
+        <label>CD 90s - Review</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>CD_S_S__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Construction drawings are signed and sealed.  Ready to be submitted for review by jurisdiction.</inlineHelpText>
+        <label>CD S&amp;S</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>CapEx_Approval_Amount__c</fullName>
+        <description>The amount (up to but not to exceed) that this project has been approved for construction. This amount does not include the station itself (hardware).</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The amount (up to but not to exceed) that this project has been approved for construction. This amount does not include the station itself (hardware).</inlineHelpText>
+        <label>CapEx Construction Approval Amount</label>
+        <precision>12</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>CapEx_Approval_Date__c</fullName>
+        <description>This is when the CapEx Committee Approved Construction for this project.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>This is when the CapEx Committee Approved Construction for this project.</inlineHelpText>
+        <label>CapEx Construction Approval Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>CapEx_Approval_Notes__c</fullName>
+        <externalId>false</externalId>
+        <label>CapEx Construction Approval Notes</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>CapEx_Approved__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>CapEX Approval</description>
+        <externalId>false</externalId>
+        <inlineHelpText>CapEX Approval</inlineHelpText>
+        <label>CapEx Approval</label>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Charge_Access_Date__c</fullName>
+        <description>Date drivers are able to start charging their vehicle. Not a projected date - fill in only after this has been completed</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Date drivers are able to start charging their vehicle. Not a projected date - fill in only after this has been completed</inlineHelpText>
+        <label>Charge Access Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>City__c</fullName>
+        <externalId>false</externalId>
+        <label>City</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Client_No_Account__c</fullName>
+        <externalId>false</externalId>
+        <formula>Biz_Dev_Opportunity__r.Account.Client_Code_No__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Client No (Account)</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Client_No__c</fullName>
+        <externalId>false</externalId>
+        <label>Client No</label>
+        <length>3</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Closest_Public_EVSE_by_type__c</fullName>
+        <externalId>false</externalId>
+        <label>Closest Public EVSE (by type)</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Closest_Public_EVSE_in_miles__c</fullName>
+        <externalId>false</externalId>
+        <label>Closest Public EVSE (in miles)</label>
+        <precision>4</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Completion_Date__c</fullName>
+        <description>This is an estimated date during the CP lifecycle. This estimate turns into a firm and non-changeable date once he CP moves to stage &apos;complete&apos; and the station launch checklist has been confirmed to be fully executed.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>This is an estimated date during the CP lifecycle. This estimate turns into a firm and non-changeable date once he CP moves to stage &apos;complete&apos; and the station launch checklist has been confirmed to be fully executed.</inlineHelpText>
+        <label>Expected Launch Checklist Complete Date</label>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Confidence__c</fullName>
+        <description>For use by Ops management to track confidence in expected completion date</description>
+        <externalId>false</externalId>
+        <inlineHelpText>For use by Ops management to track confidence in expected completion date</inlineHelpText>
+        <label>Confidence</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Solid</fullName>
+                    <default>false</default>
+                    <label>Solid</label>
+                </value>
+                <value>
+                    <fullName>Likely</fullName>
+                    <default>false</default>
+                    <label>Likely</label>
+                </value>
+                <value>
+                    <fullName>Possible</fullName>
+                    <default>false</default>
+                    <label>Possible</label>
+                </value>
+                <value>
+                    <fullName>Low</fullName>
+                    <default>false</default>
+                    <label>Low</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Contracts__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Contracts</label>
+        <referenceTo>Contract</referenceTo>
+        <relationshipLabel>Construction Projects</relationshipLabel>
+        <relationshipName>Construction_Projects</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Counter_Hours__c</fullName>
+        <externalId>false</externalId>
+        <label>Counter Hours</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>County__c</fullName>
+        <externalId>false</externalId>
+        <label>County</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>EV_Only_Signage__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Does this site have EV Only signage installed?
+If yes, click the box
+We must have signage up before we can tow.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Does this site have EV Only signage installed?
+If yes, click the box
+We must have signage up before we can tow.</inlineHelpText>
+        <label>EV Only Signage</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>EVs_by_State__c</fullName>
+        <externalId>false</externalId>
+        <label>EVs by State</label>
+        <precision>9</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Ease_of_Installation__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Estimate difficulty from 1-3 (3 being the most difficult)</inlineHelpText>
+        <label>Ease of Installation</label>
+        <precision>1</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Elec_Permit_Application_Date__c</fullName>
+        <description>The date CDs were submitted to municipality for permit.</description>
+        <externalId>false</externalId>
+        <label>Elec. Permit Application Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Elec_Permit_Issue_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Elec. Permit Issue Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Elec_Permit_Number__c</fullName>
+        <externalId>false</externalId>
+        <label>Elec. Permit Number</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Elec_Permit_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Elec. Permit Type</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Full Submittal</fullName>
+                    <default>false</default>
+                    <label>Full Submittal</label>
+                </value>
+                <value>
+                    <fullName>OTC</fullName>
+                    <default>false</default>
+                    <label>OTC</label>
+                </value>
+                <value>
+                    <fullName>Online Permit</fullName>
+                    <default>false</default>
+                    <label>Online Permit</label>
+                </value>
+                <value>
+                    <fullName>Scheduled Appointment - OTC</fullName>
+                    <default>false</default>
+                    <label>Scheduled Appointment - OTC</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Elec_Source__c</fullName>
+        <description>REIT House Power: Electricity supplied by the Center, Complex or Mal (ex. GGP House Panel.
+Tenant Power:  Electricity supplied by the tenant (ex. Whole Foods Sub Panel).
+Utility Power:  Electricity supplied directly by utility company (ex. PG&amp;E, SE and COMED)</description>
+        <externalId>false</externalId>
+        <label>Elec. Supply Source</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>REIT House Power</fullName>
+                    <default>false</default>
+                    <label>REIT House Power</label>
+                </value>
+                <value>
+                    <fullName>Tenant Power</fullName>
+                    <default>false</default>
+                    <label>Tenant Power</label>
+                </value>
+                <value>
+                    <fullName>Utility Power</fullName>
+                    <default>false</default>
+                    <label>Utility Power</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Electrical_Permit_Req__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Electrical Permit Req.</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Electricity_Turned_On__c</fullName>
+        <externalId>false</externalId>
+        <label>Electricity Turned On</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Enforcement_Tow__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>This is the account of the business that will tow an offending driver from our spots.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>This is the account of the business that will tow an offending driver from our spots.</inlineHelpText>
+        <label>Enforcement Tow</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Construction Projects (Enforcement Tow)</relationshipLabel>
+        <relationshipName>Construction_Projects5</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Engineer_of_Record__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Engineer of Record</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Construction Projects (Engineer of Record)</relationshipLabel>
+        <relationshipName>Construction_Projects3</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Engineering_Cost__c</fullName>
+        <description>Input all engineer cost associated with project.</description>
+        <externalId>false</externalId>
+        <label>Engineering Cost</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Existing_Public_EVs_on_site__c</fullName>
+        <externalId>false</externalId>
+        <label>Existing Public EVs on-site</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Facilities_Manager_Email__c</fullName>
+        <externalId>false</externalId>
+        <label>Facilities Manager Email</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Facilities_Manager__c</fullName>
+        <externalId>false</externalId>
+        <label>Facilities Manager</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Facilities_Phone__c</fullName>
+        <externalId>false</externalId>
+        <label>Facilities Phone</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Phone</type>
+    </fields>
+    <fields>
+        <fullName>FinalExpenseTotal__c</fullName>
+        <description>Concur Field</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Concur Field</inlineHelpText>
+        <label>FinalExpenseTotal</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Final_Inspection_Date__c</fullName>
+        <description>Date the final inspection was passed by AHJ. Not a projected date - fill in only after this has been completed. Use Tasks to schedule and track upcoming inspections.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Date the final inspection was passed by AHJ. Not a projected date - fill in only after this has been completed. Use Tasks to schedule and track upcoming inspections.</inlineHelpText>
+        <label>AHJ Final Inspection Pass Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Final_Install_Cost__c</fullName>
+        <description>Final Install Cost - This amount put in this field adds to the Total Install Cost field at the top of the construction Project.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Final Install Cost - This amount put in this field adds to the Total Install Cost field at the top of the construction Project.</inlineHelpText>
+        <label>Final Install Cost</label>
+        <precision>10</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>GLA_SqFt_Score__c</fullName>
+        <externalId>false</externalId>
+        <label>GLA SqFt Score</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GLA_SqFt__c</fullName>
+        <externalId>false</externalId>
+        <label>GLA (SqFt)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Google_Map_Neighborhood__c</fullName>
+        <externalId>false</externalId>
+        <formula>IMAGE(&quot;http://maps.google.com/maps/api/staticmap?center=&quot; &amp; Site_Address__c&amp; &quot;,+&quot; &amp; City__c &amp; &quot;+&quot;&amp; State__c&amp;&quot;+&quot;&amp;Zip_Code__c&amp;&quot;&amp;zoom=14&amp;format=png&amp;maptype=roadmap&amp;mobile=false&amp;language=English&amp;markers=|color:Yellow|label:Address|&quot; &amp; Site_Address__c&amp; &quot;,+&quot; &amp; City__c &amp; &quot;+&quot;&amp; State__c&amp;&quot;+&quot;&amp; Zip_Code__c &amp;&quot;&amp;size=350x350&amp;key=&amp;sensor=false&quot;,&quot;Google Maps&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Google Map (Neighborhood</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Google_Map_Regional__c</fullName>
+        <externalId>false</externalId>
+        <formula>IMAGE(&quot;http://maps.google.com/maps/api/staticmap?center=&quot; &amp; Site_Address__c&amp; &quot;,+&quot; &amp; City__c &amp; &quot;+&quot;&amp; State__c&amp;&quot;+&quot;&amp;Zip_Code__c&amp;&quot;&amp;zoom=10&amp;format=png&amp;maptype=roadmap&amp;mobile=false&amp;language=English&amp;markers=|color:Yellow|label:Address|&quot; &amp; Site_Address__c&amp; &quot;,+&quot; &amp; City__c &amp; &quot;+&quot;&amp; State__c&amp;&quot;+&quot;&amp; Zip_Code__c &amp;&quot;&amp;size=350x350&amp;key=&amp;sensor=false&quot;,&quot;Google Maps&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Google Map (Regional)</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Google_Map_Site__c</fullName>
+        <externalId>false</externalId>
+        <formula>IMAGE(&quot;http://maps.google.com/maps/api/staticmap?center=&quot; &amp; Site_Address__c&amp; &quot;,+&quot; &amp; City__c &amp; &quot;+&quot;&amp; State__c&amp;&quot;+&quot;&amp;Zip_Code__c&amp;&quot;&amp;zoom=16&amp;format=png&amp;maptype=satellite&amp;mobile=false&amp;language=English&amp;markers=|color:Yellow|label:Address|&quot; &amp; Site_Address__c&amp; &quot;,+&quot; &amp; City__c &amp; &quot;+&quot;&amp; State__c&amp;&quot;+&quot;&amp; Zip_Code__c &amp;&quot;&amp;size=800x800&amp;key=&amp;sensor=false&quot;,&quot;Google Maps&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Google Map (Site)</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>HHI_Score__c</fullName>
+        <externalId>false</externalId>
+        <label>HHI Score</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Hours_of_Operation__c</fullName>
+        <externalId>false</externalId>
+        <label>Hours of Operation</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Infrastructure_Obstructions__c</fullName>
+        <externalId>false</externalId>
+        <label>Infrastructure Obstructions</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Fire Hydrant</fullName>
+                    <default>false</default>
+                    <label>Fire Hydrant</label>
+                </value>
+                <value>
+                    <fullName>Gas Line</fullName>
+                    <default>false</default>
+                    <label>Gas Line</label>
+                </value>
+                <value>
+                    <fullName>Irrigation</fullName>
+                    <default>false</default>
+                    <label>Irrigation</label>
+                </value>
+                <value>
+                    <fullName>Landscape Lighting</fullName>
+                    <default>false</default>
+                    <label>Landscape Lighting</label>
+                </value>
+                <value>
+                    <fullName>Surface Lighting</fullName>
+                    <default>false</default>
+                    <label>Surface Lighting</label>
+                </value>
+                <value>
+                    <fullName>Water Line</fullName>
+                    <default>false</default>
+                    <label>Water Line</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Initial_Site_Inspection__c</fullName>
+        <externalId>false</externalId>
+        <label>Initial Site Inspection</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Install_Cost_Estimate__c</fullName>
+        <externalId>false</externalId>
+        <label>Install Cost Estimate</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Installation_Code_A__c</fullName>
+        <externalId>false</externalId>
+        <label>Installation Code A</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Installation_Notes__c</fullName>
+        <externalId>false</externalId>
+        <label>Installation Notes</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Installed_Date_passed_inspection__c</fullName>
+        <externalId>false</externalId>
+        <label>Installed Date (passed inspection)</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Installer_Company_Name__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Installer (Company) Name</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Construction Projects (Installer (Company) Name)</relationshipLabel>
+        <relationshipName>Construction_Projects1</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Installer_Contact_Name__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Installer (Contact) Name</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Construction Projects (Installer (Contact) Name)</relationshipLabel>
+        <relationshipName>Construction_Projects2</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Kiosk_Bolted_Down__c</fullName>
+        <externalId>false</externalId>
+        <label>Station Bolted Down</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Kiosk_Exact_Physical_Location_s__c</fullName>
+        <externalId>false</externalId>
+        <label>Kiosk (Exact) Physical Location(s)</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LL_CD90_Approval_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>LL CD90 Approval Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Location_Description_EVSE__c</fullName>
+        <externalId>false</externalId>
+        <label>Location Description (EVSE)</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Location_Description_per_Proposal__c</fullName>
+        <externalId>false</externalId>
+        <label>Location Description (per Proposal)</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Location_Typology__c</fullName>
+        <externalId>false</externalId>
+        <label>Location Typology</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>MSA_US_Census__c</fullName>
+        <externalId>false</externalId>
+        <label>MSA (US Census)</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Media_Access_Date__c</fullName>
+        <description>Date the station can start showing media to a paying sponsor.  Not a projected date - fill in only after this has been completed</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Date the station can start showing media to a paying sponsor.  Not a projected date - fill in only after this has been completed</inlineHelpText>
+        <label>Media Access Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Network_No__c</fullName>
+        <externalId>false</externalId>
+        <label>Network No</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Network_Region__c</fullName>
+        <externalId>false</externalId>
+        <label>Network Region</label>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>HI</fullName>
+                    <default>false</default>
+                    <label>HI</label>
+                </value>
+                <value>
+                    <fullName>NorCal</fullName>
+                    <default>false</default>
+                    <label>NorCal</label>
+                </value>
+                <value>
+                    <fullName>LA</fullName>
+                    <default>false</default>
+                    <label>LA</label>
+                </value>
+                <value>
+                    <fullName>Santa Barbara</fullName>
+                    <default>false</default>
+                    <label>Santa Barbara</label>
+                </value>
+                <value>
+                    <fullName>Orange County</fullName>
+                    <default>false</default>
+                    <label>Orange County</label>
+                </value>
+                <value>
+                    <fullName>San Diego</fullName>
+                    <default>false</default>
+                    <label>San Diego</label>
+                </value>
+                <value>
+                    <fullName>Chicago</fullName>
+                    <default>false</default>
+                    <label>Chicago</label>
+                </value>
+                <value>
+                    <fullName>AZ</fullName>
+                    <default>false</default>
+                    <label>AZ</label>
+                </value>
+                <value>
+                    <fullName>Oregon</fullName>
+                    <default>false</default>
+                    <label>Oregon</label>
+                </value>
+                <value>
+                    <fullName>South FL</fullName>
+                    <default>false</default>
+                    <label>South FL</label>
+                </value>
+                <value>
+                    <fullName>DC</fullName>
+                    <default>false</default>
+                    <label>DC</label>
+                </value>
+                <value>
+                    <fullName>NJ</fullName>
+                    <default>false</default>
+                    <label>NJ</label>
+                </value>
+                <value>
+                    <fullName>NY</fullName>
+                    <default>false</default>
+                    <label>NY</label>
+                </value>
+                <value>
+                    <fullName>Texas</fullName>
+                    <default>false</default>
+                    <label>Texas</label>
+                </value>
+                <value>
+                    <fullName>Washington DC</fullName>
+                    <default>false</default>
+                    <label>Washington DC</label>
+                </value>
+                <value>
+                    <fullName>Seattle</fullName>
+                    <default>false</default>
+                    <label>Seattle</label>
+                </value>
+                <value>
+                    <fullName>Boston</fullName>
+                    <default>false</default>
+                    <label>Boston</label>
+                </value>
+                <value>
+                    <fullName>Atlanta</fullName>
+                    <default>false</default>
+                    <label>Atlanta</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>On_Site_EVSE_Code__c</fullName>
+        <externalId>false</externalId>
+        <label>On-Site EVSE Code</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Opp_City__c</fullName>
+        <externalId>false</externalId>
+        <formula>Biz_Dev_Opportunity__r.City__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Opp City</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Opp_Close__c</fullName>
+        <externalId>false</externalId>
+        <formula>Biz_Dev_Opportunity__r.CloseDate</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Opp Close Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Opp_Close_to_Completion__c</fullName>
+        <externalId>false</externalId>
+        <formula>(Completion_Date__c -  Opp_Close__c)/7</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Opp Close to Completion in Weeks</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Opp_Network_Region_No__c</fullName>
+        <externalId>false</externalId>
+        <formula>Biz_Dev_Opportunity__r.Network_No_b__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Opp Network Region No</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Opp_Network_Region__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(Biz_Dev_Opportunity__r.Network_Region__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Opp Network Region</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Opp_Site_A__c</fullName>
+        <externalId>false</externalId>
+        <formula>Biz_Dev_Opportunity__r.Site_Address__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Opp Site Address</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Opp_State__c</fullName>
+        <externalId>false</externalId>
+        <formula>Biz_Dev_Opportunity__r.State__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Opp State</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Opp_Zip_Code__c</fullName>
+        <externalId>false</externalId>
+        <formula>Biz_Dev_Opportunity__r.Zip_Code__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Opp Zip Code</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Ops_Access_and_Site_Info__c</fullName>
+        <externalId>false</externalId>
+        <formula>Primary_Account__r.Ops_Access_and_Site_Info__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Ops Access and Site Info</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Other_Noteworthy_Terms__c</fullName>
+        <externalId>false</externalId>
+        <label>Other Noteworthy Terms</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Other_Permit_Information__c</fullName>
+        <externalId>false</externalId>
+        <label>Other Permit Information</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Other_Permit_Req__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Other Permit Req.</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>PO_Issued__c</fullName>
+        <description>Date in which Purchase Order was issued from Volta to the Install Company.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Date in which Purchase Order was issued from Volta to the Install Company.</inlineHelpText>
+        <label>PO Issued</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Parking__c</fullName>
+        <externalId>false</externalId>
+        <label>Parking</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Permit_Cost__c</fullName>
+        <description>Cost of the Permit from the Authority Having Jurisdiction (AHJ), aka city/county/etc. By entering a number you&apos;ve acknowledged that you&apos;ve uploaded the required permit scan into the dropbox for salesforce folder.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Cost of the Permit from the Authority Having Jurisdiction (AHJ), aka city/county/etc. By entering a number you&apos;ve acknowledged that you&apos;ve uploaded the required permit scan into the dropbox for salesforce folder.</inlineHelpText>
+        <label>Permit Cost</label>
+        <precision>12</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Permit_Expiration_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Permit Expiration Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Permit_Priority__c</fullName>
+        <externalId>false</externalId>
+        <label>Permit Priority</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>1 - Critical</fullName>
+                    <default>true</default>
+                    <label>1 - Critical</label>
+                </value>
+                <value>
+                    <fullName>2 - High</fullName>
+                    <default>false</default>
+                    <label>2 - High</label>
+                </value>
+                <value>
+                    <fullName>3 - Standard</fullName>
+                    <default>false</default>
+                    <label>3 - Standard</label>
+                </value>
+                <value>
+                    <fullName>4 - Low</fullName>
+                    <default>false</default>
+                    <label>4 - Low</label>
+                </value>
+                <value>
+                    <fullName>5 - Lowest</fullName>
+                    <default>false</default>
+                    <label>5 - Lowest</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Permiting_Notes__c</fullName>
+        <externalId>false</externalId>
+        <label>Permiting Notes</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Phase__c</fullName>
+        <externalId>false</externalId>
+        <formula>Text(Biz_Dev_Opportunity__r.Phase__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Phase</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Phone_on_site__c</fullName>
+        <externalId>false</externalId>
+        <label>Phone (on-site)</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Phone</type>
+    </fields>
+    <fields>
+        <fullName>Planned_Production_Build__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>This is the PB that the construction project Locations will most likely receive their Stations from.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>This is the PB that the construction project Locations will most likely receive their Stations from.</inlineHelpText>
+        <label>Planned Production Build</label>
+        <referenceTo>Production_Build__c</referenceTo>
+        <relationshipLabel>Construction Projects</relationshipLabel>
+        <relationshipName>Construction_Projects</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Platinum_Trophy_Site__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Platinum (Trophy) Site</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Population__c</fullName>
+        <externalId>false</externalId>
+        <label>Population</label>
+        <precision>8</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Price_of_Installation__c</fullName>
+        <externalId>false</externalId>
+        <label>Price of Installation</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Primary_Account__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Site Account</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>Account.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Site</value>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Construction Projects</relationshipLabel>
+        <relationshipName>Construction_Projects</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Project_Launch_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Project Launch Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Project_Notes__c</fullName>
+        <externalId>false</externalId>
+        <label>Project Notes</label>
+        <length>10000</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>25</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Property_No__c</fullName>
+        <displayFormat>{0000}</displayFormat>
+        <externalId>false</externalId>
+        <label>Property No</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>AutoNumber</type>
+    </fields>
+    <fields>
+        <fullName>Property_Owner_Account__c</fullName>
+        <externalId>false</externalId>
+        <formula>Biz_Dev_Opportunity__r.Property_Owner_Account__r.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Property Owner Account</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Proposal_Amount__c</fullName>
+        <description>Estimated cost provided by Installer</description>
+        <externalId>false</externalId>
+        <label>Installer Proposed Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>RC_GLA_SF__c</fullName>
+        <externalId>false</externalId>
+        <label>RC GLA-SF</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>RC_HHI__c</fullName>
+        <externalId>false</externalId>
+        <label>RC HHI $$</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>RC_Hours_Open__c</fullName>
+        <externalId>false</externalId>
+        <label>RC # Hours Open</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>RC_Location_Description__c</fullName>
+        <externalId>false</externalId>
+        <label>RC Location Description</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>RC_Monthly_Traffic__c</fullName>
+        <externalId>false</externalId>
+        <label>RC Monthly Traffic</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>RC_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>RC Name</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>RC_Parking__c</fullName>
+        <externalId>false</externalId>
+        <label>RC # Parking</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>RC_Pass_through__c</fullName>
+        <externalId>false</externalId>
+        <label>RC % Pass-through</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>RC_Sales_per_SF__c</fullName>
+        <externalId>false</externalId>
+        <label>RC Sales (per SF)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>RC_Site_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>RC Site Type</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Neighborhood</fullName>
+                    <default>false</default>
+                    <label>Neighborhood</label>
+                </value>
+                <value>
+                    <fullName>Regional-A</fullName>
+                    <default>false</default>
+                    <label>Regional-A</label>
+                </value>
+                <value>
+                    <fullName>Regional-B</fullName>
+                    <default>false</default>
+                    <label>Regional-B</label>
+                </value>
+                <value>
+                    <fullName>Super-Regional</fullName>
+                    <default>false</default>
+                    <label>Super-Regional</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>RC_of_Chargers__c</fullName>
+        <externalId>false</externalId>
+        <label>RC # of Chargers</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>RC_of_Stores__c</fullName>
+        <externalId>false</externalId>
+        <label>RC # of Stores</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Required_ADA_Accessibility__c</fullName>
+        <externalId>false</externalId>
+        <label>Required ADA Accessibility</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                    <label>Yes</label>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Requires_On_site_Advertising__c</fullName>
+        <externalId>false</externalId>
+        <label>Requires On-site Advertising</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Select One</fullName>
+                    <default>true</default>
+                    <label>Select One</label>
+                </value>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                    <label>Yes</label>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>SEM_Email__c</fullName>
+        <externalId>false</externalId>
+        <label>SEM Email</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SEM_Phone__c</fullName>
+        <externalId>false</externalId>
+        <label>SEM Phone</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Phone</type>
+    </fields>
+    <fields>
+        <fullName>SEM_Site_Electrical_Manager__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>SEM Site Electrical Manager</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Construction Projects (SEM Site Electrical Manager)</relationshipLabel>
+        <relationshipName>Construction_Projects1</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>SFM_Email__c</fullName>
+        <externalId>false</externalId>
+        <label>SFM Email</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SFM_Phone__c</fullName>
+        <externalId>false</externalId>
+        <label>SFM Phone</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Phone</type>
+    </fields>
+    <fields>
+        <fullName>SFM_Site_Facilities_Manager__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>SFM Site Facilities Manager</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Construction Projects</relationshipLabel>
+        <relationshipName>Construction_Projects</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>SL_Name__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>SL Name</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Construction Projects (SL Name)</relationshipLabel>
+        <relationshipName>Construction_Projects3</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Sales_Rep__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Sales Rep</label>
+        <referenceTo>User</referenceTo>
+        <relationshipLabel>Construction Projects</relationshipLabel>
+        <relationshipName>Construction_Projects</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Sales_per_SF__c</fullName>
+        <externalId>false</externalId>
+        <label>Sales per SF</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Score_Site_Grade__c</fullName>
+        <externalId>false</externalId>
+        <label>Score (Site Grade)</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>3.0</fullName>
+                    <default>false</default>
+                    <label>3.0</label>
+                </value>
+                <value>
+                    <fullName>2.75</fullName>
+                    <default>false</default>
+                    <label>2.75</label>
+                </value>
+                <value>
+                    <fullName>2.5</fullName>
+                    <default>false</default>
+                    <label>2.5</label>
+                </value>
+                <value>
+                    <fullName>2.25</fullName>
+                    <default>false</default>
+                    <label>2.25</label>
+                </value>
+                <value>
+                    <fullName>2.0</fullName>
+                    <default>false</default>
+                    <label>2.0</label>
+                </value>
+                <value>
+                    <fullName>1.75</fullName>
+                    <default>false</default>
+                    <label>1.75</label>
+                </value>
+                <value>
+                    <fullName>1.5</fullName>
+                    <default>false</default>
+                    <label>1.5</label>
+                </value>
+                <value>
+                    <fullName>1.25</fullName>
+                    <default>false</default>
+                    <label>1.25</label>
+                </value>
+                <value>
+                    <fullName>1.0</fullName>
+                    <default>false</default>
+                    <label>1.0</label>
+                </value>
+                <value>
+                    <fullName>0.75</fullName>
+                    <default>false</default>
+                    <label>0.75</label>
+                </value>
+                <value>
+                    <fullName>0.50</fullName>
+                    <default>false</default>
+                    <label>0.50</label>
+                </value>
+                <value>
+                    <fullName>0.25</fullName>
+                    <default>false</default>
+                    <label>0.25</label>
+                </value>
+                <value>
+                    <fullName>0.0</fullName>
+                    <default>false</default>
+                    <label>0.0</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Sign_Permit_Code__c</fullName>
+        <externalId>false</externalId>
+        <label>Sign. Permit Code</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Sign_Permit_Description__c</fullName>
+        <externalId>false</externalId>
+        <label>Sign. Permit Description</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Sign_Permit_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Sign Permit Type</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Signage_Permit_Req__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Signage Permit Req.</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Site_Account_Billing_Address__c</fullName>
+        <externalId>false</externalId>
+        <formula>Primary_Account__r.BillingStreet &amp; BR() 
+&amp; Primary_Account__r.BillingCity &amp; &quot;, &quot; &amp; Primary_Account__r.BillingState &amp; &quot; &quot; &amp; Primary_Account__r.BillingPostalCode &amp;BR() 
+&amp; Primary_Account__r.BillingCountry</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Site Account Billing Address</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Site_Account_Shipping_Address__c</fullName>
+        <externalId>false</externalId>
+        <formula>Primary_Account__r.ShippingStreet &amp; BR() 
+&amp; Primary_Account__r.ShippingCity &amp; &quot;, &quot; &amp; Primary_Account__r.ShippingState &amp; &quot; &quot; &amp; Primary_Account__r.ShippingPostalCode &amp;BR() 
+&amp; Primary_Account__r.ShippingCountry</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Site Account Shipping Address</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Site_Address__c</fullName>
+        <externalId>false</externalId>
+        <label>Site Address</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Site_PM_Company__c</fullName>
+        <externalId>false</externalId>
+        <label>Site PM Company</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Site_Sales_Rep__c</fullName>
+        <externalId>false</externalId>
+        <formula>Biz_Dev_Opportunity__r.Owner.FirstName &amp; &quot; &quot; &amp; Biz_Dev_Opportunity__r.Owner.LastName</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Site Sales Rep</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Site_Surface_Material__c</fullName>
+        <externalId>false</externalId>
+        <label>Site Surface Material</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Asphalt</fullName>
+                    <default>false</default>
+                    <label>Asphalt</label>
+                </value>
+                <value>
+                    <fullName>Concrete</fullName>
+                    <default>false</default>
+                    <label>Concrete</label>
+                </value>
+                <value>
+                    <fullName>Landscape</fullName>
+                    <default>false</default>
+                    <label>Landscape</label>
+                </value>
+                <value>
+                    <fullName>Garage</fullName>
+                    <default>false</default>
+                    <label>Garage</label>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                    <label>Other</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Site_Visibility__c</fullName>
+        <externalId>false</externalId>
+        <label>Site Visibility</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>1 - Impossible</fullName>
+                    <default>false</default>
+                    <label>1 - Impossible</label>
+                </value>
+                <value>
+                    <fullName>2 -</fullName>
+                    <default>false</default>
+                    <label>2 -</label>
+                </value>
+                <value>
+                    <fullName>3 -</fullName>
+                    <default>false</default>
+                    <label>3 -</label>
+                </value>
+                <value>
+                    <fullName>4 -</fullName>
+                    <default>false</default>
+                    <label>4 -</label>
+                </value>
+                <value>
+                    <fullName>5 - Shovel-ready</fullName>
+                    <default>false</default>
+                    <label>5 - Shovel-ready</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Site_Website__c</fullName>
+        <externalId>false</externalId>
+        <label>Site Website</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>Size_SF__c</fullName>
+        <externalId>false</externalId>
+        <label>Size (SF)</label>
+        <precision>8</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Specialty_Leasing_SL_Company__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Specialty Leasing (SL) Company</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Construction Projects (Specialty Leasing (SL) Company)</relationshipLabel>
+        <relationshipName>Construction_Projects2</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Stage__c</fullName>
+        <externalId>false</externalId>
+        <label>Stage</label>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Initial Site Inspection</fullName>
+                    <default>false</default>
+                    <label>Initial Site Inspection</label>
+                </value>
+                <value>
+                    <fullName>Engineering</fullName>
+                    <default>false</default>
+                    <label>Engineering</label>
+                </value>
+                <value>
+                    <fullName>Permitting</fullName>
+                    <default>false</default>
+                    <label>Permitting</label>
+                </value>
+                <value>
+                    <fullName>Pre-Construction Approval</fullName>
+                    <default>false</default>
+                    <label>Pre-Construction Approval</label>
+                </value>
+                <value>
+                    <fullName>In Progress</fullName>
+                    <default>false</default>
+                    <label>In Progress</label>
+                </value>
+                <value>
+                    <fullName>Completed</fullName>
+                    <default>false</default>
+                    <label>Completed</label>
+                </value>
+                <value>
+                    <fullName>On Hold - Muni Obstacles</fullName>
+                    <default>false</default>
+                    <label>On Hold - Muni Obstacles</label>
+                </value>
+                <value>
+                    <fullName>On Hold - Property Ownership</fullName>
+                    <default>false</default>
+                    <label>On Hold - Property Ownership</label>
+                </value>
+                <value>
+                    <fullName>OnHoldBizDevReview</fullName>
+                    <default>false</default>
+                    <label>On Hold - BizDev Review</label>
+                </value>
+                <value>
+                    <fullName>Disqualified</fullName>
+                    <default>false</default>
+                    <label>Disqualified</label>
+                </value>
+                <value>
+                    <fullName>Disqualified - CapEx</fullName>
+                    <default>false</default>
+                    <label>Disqualified - CapEx</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>State__c</fullName>
+        <externalId>false</externalId>
+        <label>State</label>
+        <length>2</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Striping_Company__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Striping Company</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Construction Projects (Striping Company)</relationshipLabel>
+        <relationshipName>Construction_Projects4</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Striping_Cost__c</fullName>
+        <externalId>false</externalId>
+        <label>Striping Cost</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Suggested_Type_of_Installation__c</fullName>
+        <externalId>false</externalId>
+        <label>Suggested Type of Installation</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Ground Mounted</fullName>
+                    <default>false</default>
+                    <label>Ground Mounted</label>
+                </value>
+                <value>
+                    <fullName>Wall Mounted</fullName>
+                    <default>false</default>
+                    <label>Wall Mounted</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Suggested_number_of_Installations__c</fullName>
+        <externalId>false</externalId>
+        <label>Suggested # of Installations</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Termination_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Termination Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Total_Price_of_Installation__c</fullName>
+        <description>This field adds the Engineering Cost, Final Install Cost, Striping Cost, Permit Cost &amp; Additional Install Cost</description>
+        <externalId>false</externalId>
+        <formula>(Engineering_Cost__c + Striping_Cost__c +  Permit_Cost__c  + Additional_Install_Cost__c + Final_Install_Cost__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>This field adds the Engineering Cost, Final Install Cost, Striping Cost, Permit Cost &amp; Additional Install Cost</inlineHelpText>
+        <label>Total Price of Installation</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Total_Qualification_Score__c</fullName>
+        <externalId>false</externalId>
+        <label>Total Qualification Score</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Trophy_Site__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Trophy Site</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>URL_to_Ele_Info__c</fullName>
+        <externalId>false</externalId>
+        <label>URL to Ele. Info</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>URL_to_Other_Info__c</fullName>
+        <externalId>false</externalId>
+        <label>URL to Other Info</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>URL_to_Sign_Info__c</fullName>
+        <externalId>false</externalId>
+        <label>URL to Sign. Info</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>Vertical__c</fullName>
+        <externalId>false</externalId>
+        <label>Vertical</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Retail</fullName>
+                    <default>false</default>
+                    <label>Retail</label>
+                </value>
+                <value>
+                    <fullName>Entertainment</fullName>
+                    <default>false</default>
+                    <label>Entertainment</label>
+                </value>
+                <value>
+                    <fullName>Education</fullName>
+                    <default>false</default>
+                    <label>Education</label>
+                </value>
+                <value>
+                    <fullName>Municipal</fullName>
+                    <default>false</default>
+                    <label>Municipal</label>
+                </value>
+                <value>
+                    <fullName>Hospital</fullName>
+                    <default>false</default>
+                    <label>Hospital</label>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                    <label>Other</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Visitors_Month__c</fullName>
+        <externalId>false</externalId>
+        <label>Visitors/Month</label>
+        <precision>8</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>X2_Hour_Signage__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Does this site have 2 hour signage installed?
+If yes, click the box
+We must have signage up before we can tow.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Does this site have 2 hour signage installed?
+If yes, click the box
+We must have signage up before we can tow.</inlineHelpText>
+        <label>2 Hour Signage</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Zip_Code__c</fullName>
+        <externalId>false</externalId>
+        <label>Zip Code</label>
+        <length>9</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>of_ADA_Pedestals__c</fullName>
+        <description># of Non-Revenue Generating ADA Chargers</description>
+        <externalId>false</externalId>
+        <inlineHelpText># of Non-Revenue Generating ADA Chargers</inlineHelpText>
+        <label># of Non-RevGen</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>of_Digital_Only_Kiosks__c</fullName>
+        <description># of Stations that are Dual digital. Any static/digital combo is a hybrid</description>
+        <externalId>false</externalId>
+        <inlineHelpText># of Stations that are Dual digital. Any static/digital combo is a hybrid</inlineHelpText>
+        <label># of (Dual Digital) Stations</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>of_Dual_Charger_Stations__c</fullName>
+        <externalId>false</externalId>
+        <label># of (Dual Charger) Stations</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>of_Hybrid_Kiosks__c</fullName>
+        <description>Number of Kiosks with both a static and digital face</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Number of Kiosks with both a static and digital face</inlineHelpText>
+        <label># of (Hybrid) Stations</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>of_Other_EVSE_On_site__c</fullName>
+        <externalId>false</externalId>
+        <label># of (Other) EVSE On-site</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>of_Static_Kiosks__c</fullName>
+        <externalId>false</externalId>
+        <label># of (Static) Stations</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>of_Stores__c</fullName>
+        <externalId>false</externalId>
+        <label># of Stores</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>of_Total_Kiosks__c</fullName>
+        <externalId>false</externalId>
+        <label># of Total Stations</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>of_Total_Level_3_Stations__c</fullName>
+        <externalId>false</externalId>
+        <label># of Total Level 3 Stations</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>of_Wall_Mounted_Kiosks__c</fullName>
+        <externalId>false</externalId>
+        <label># of (Wall-Mounted) Stations</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>weeks_Since_Opp_Close__c</fullName>
+        <description>Does include on hold time.</description>
+        <externalId>false</externalId>
+        <formula>(TODAY() - Opp_Close__c)/7</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Does include on hold time.</inlineHelpText>
+        <label>Weeks Since Opp Close</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <label>Construction Project</label>
+    <listViews>
+        <fullName>AZ</fullName>
+        <columns>NAME</columns>
+        <columns>Stage__c</columns>
+        <columns>Completion_Date__c</columns>
+        <columns>Price_of_Installation__c</columns>
+        <columns>Installer_Company_Name__c</columns>
+        <columns>Sales_Rep__c</columns>
+        <columns>Site_Address__c</columns>
+        <columns>City__c</columns>
+        <columns>Zip_Code__c</columns>
+        <columns>Primary_Account__c</columns>
+        <columns>Biz_Dev_Opportunity__c</columns>
+        <columns>Installer_Contact_Name__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Opp_Network_Region__c</field>
+            <operation>equals</operation>
+            <value>,AZ</value>
+        </filters>
+        <label>AZ</label>
+    </listViews>
+    <listViews>
+        <fullName>Active_DC</fullName>
+        <columns>NAME</columns>
+        <columns>Completion_Date__c</columns>
+        <columns>Stage__c</columns>
+        <columns>Price_of_Installation__c</columns>
+        <columns>CapEx_Approved__c</columns>
+        <columns>CapEx_Approval_Amount__c</columns>
+        <columns>CapEx_Approval_Date__c</columns>
+        <columns>CapEx_Approval_Notes__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Opp_Network_Region__c</field>
+            <operation>equals</operation>
+            <value>Washington DC</value>
+        </filters>
+        <filters>
+            <field>Stage__c</field>
+            <operation>notEqual</operation>
+            <value>Completed</value>
+        </filters>
+        <label>Active - DC</label>
+    </listViews>
+    <listViews>
+        <fullName>Active_DC_Site_Details</fullName>
+        <columns>NAME</columns>
+        <columns>OWNER.LAST_NAME</columns>
+        <columns>of_Total_Kiosks__c</columns>
+        <columns>Stage__c</columns>
+        <columns>Installer_Company_Name__c</columns>
+        <columns>Price_of_Installation__c</columns>
+        <columns>Completion_Date__c</columns>
+        <columns>Confidence__c</columns>
+        <columns>Primary_Account__c</columns>
+        <columns>Site_Sales_Rep__c</columns>
+        <columns>Biz_Dev_Opportunity__c</columns>
+        <columns>Opp_City__c</columns>
+        <columns>Opp_State__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Opp_Network_Region__c</field>
+            <operation>equals</operation>
+            <value>Washington DC</value>
+        </filters>
+        <filters>
+            <field>Stage__c</field>
+            <operation>notEqual</operation>
+            <value>Completed,Disqualified</value>
+        </filters>
+        <label>Active - DC Site Details</label>
+    </listViews>
+    <listViews>
+        <fullName>Active_DC_Site_Details1</fullName>
+        <columns>NAME</columns>
+        <columns>OWNER.LAST_NAME</columns>
+        <columns>Opp_Site_A__c</columns>
+        <columns>Opp_State__c</columns>
+        <columns>Opp_City__c</columns>
+        <columns>of_Total_Kiosks__c</columns>
+        <columns>Installer_Company_Name__c</columns>
+        <columns>Completion_Date__c</columns>
+        <columns>Primary_Account__c</columns>
+        <columns>Site_Sales_Rep__c</columns>
+        <columns>Biz_Dev_Opportunity__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Opp_Network_Region__c</field>
+            <operation>equals</operation>
+            <value>Washington DC</value>
+        </filters>
+        <filters>
+            <field>Stage__c</field>
+            <operation>notEqual</operation>
+            <value>Completed</value>
+        </filters>
+        <label>Active - DC Site Details</label>
+    </listViews>
+    <listViews>
+        <fullName>Active_Portland</fullName>
+        <columns>NAME</columns>
+        <columns>Completion_Date__c</columns>
+        <columns>Stage__c</columns>
+        <columns>Network_Region__c</columns>
+        <columns>Primary_Account__c</columns>
+        <columns>of_Total_Kiosks__c</columns>
+        <columns>Final_Inspection_Date__c</columns>
+        <columns>AHJ_Account__c</columns>
+        <columns>Total_Price_of_Installation__c</columns>
+        <columns>Biz_Dev_Opportunity__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Opp_Network_Region__c</field>
+            <operation>equals</operation>
+            <value>Portland</value>
+        </filters>
+        <filters>
+            <field>Stage__c</field>
+            <operation>notEqual</operation>
+            <value>Completed</value>
+        </filters>
+        <label>Active - Portland</label>
+    </listViews>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>Phase__c</columns>
+        <columns>Biz_Dev_Opportunity__c</columns>
+        <columns>Primary_Account__c</columns>
+        <columns>OWNER.FIRST_NAME</columns>
+        <columns>Property_No__c</columns>
+        <columns>Network_Region__c</columns>
+        <columns>Opp_Network_Region__c</columns>
+        <columns>of_Total_Kiosks__c</columns>
+        <columns>Site_Address__c</columns>
+        <columns>Stage__c</columns>
+        <columns>Completion_Date__c</columns>
+        <columns>Price_of_Installation__c</columns>
+        <columns>AHJ_Account__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <listViews>
+        <fullName>Chicago_Projects</fullName>
+        <columns>NAME</columns>
+        <columns>OWNER.ALIAS</columns>
+        <columns>of_Total_Kiosks__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>Stage__c</columns>
+        <columns>Installer_Company_Name__c</columns>
+        <columns>Price_of_Installation__c</columns>
+        <columns>Completion_Date__c</columns>
+        <columns>Confidence__c</columns>
+        <columns>Primary_Account__c</columns>
+        <columns>Site_Sales_Rep__c</columns>
+        <columns>Biz_Dev_Opportunity__c</columns>
+        <columns>Opp_City__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Opp_Network_Region__c</field>
+            <operation>equals</operation>
+            <value>Chicago</value>
+        </filters>
+        <filters>
+            <field>Stage__c</field>
+            <operation>notEqual</operation>
+            <value>Disqualified,Completed</value>
+        </filters>
+        <label>Chicago projects</label>
+    </listViews>
+    <listViews>
+        <fullName>Chicago_Projects_Completed</fullName>
+        <columns>NAME</columns>
+        <columns>Opp_State__c</columns>
+        <columns>Completion_Date__c</columns>
+        <columns>of_Total_Kiosks__c</columns>
+        <columns>of_Digital_Only_Kiosks__c</columns>
+        <columns>of_Hybrid_Kiosks__c</columns>
+        <columns>of_Static_Kiosks__c</columns>
+        <columns>of_Wall_Mounted_Kiosks__c</columns>
+        <columns>of_ADA_Pedestals__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Network_Region__c</field>
+            <operation>equals</operation>
+            <value>HI</value>
+        </filters>
+        <filters>
+            <field>Stage__c</field>
+            <operation>equals</operation>
+            <value>Completed</value>
+        </filters>
+        <label>Completed Projects - Station Counts</label>
+    </listViews>
+    <listViews>
+        <fullName>Chicagoland_Network</fullName>
+        <columns>NAME</columns>
+        <columns>Completion_Date__c</columns>
+        <columns>Stage__c</columns>
+        <columns>Network_Region__c</columns>
+        <columns>Installer_Contact_Name__c</columns>
+        <columns>Price_of_Installation__c</columns>
+        <columns>Site_Sales_Rep__c</columns>
+        <columns>of_Total_Kiosks__c</columns>
+        <columns>of_Hybrid_Kiosks__c</columns>
+        <columns>of_ADA_Pedestals__c</columns>
+        <columns>of_Wall_Mounted_Kiosks__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Network_Region__c</field>
+            <operation>contains</operation>
+            <value>Chicago</value>
+        </filters>
+        <label>Chicagoland Network</label>
+    </listViews>
+    <listViews>
+        <fullName>Chuck_s_Active</fullName>
+        <columns>NAME</columns>
+        <columns>Stage__c</columns>
+        <columns>Completion_Date__c</columns>
+        <columns>Price_of_Installation__c</columns>
+        <columns>Installer_Company_Name__c</columns>
+        <columns>Sales_Rep__c</columns>
+        <columns>Site_Address__c</columns>
+        <columns>City__c</columns>
+        <columns>Zip_Code__c</columns>
+        <columns>Primary_Account__c</columns>
+        <columns>Biz_Dev_Opportunity__c</columns>
+        <columns>Installer_Contact_Name__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Network_Region__c</field>
+            <operation>equals</operation>
+            <value>LA,Santa Barbara,Orange County,San Diego,AZ,Texas</value>
+        </filters>
+        <filters>
+            <field>Stage__c</field>
+            <operation>notContain</operation>
+            <value>Completed,On Hold - Muni Obstacles,On Hold - Property Ownership,On Hold - Biz</value>
+        </filters>
+        <label>Chuck&apos;s Active</label>
+    </listViews>
+    <listViews>
+        <fullName>Chuck_s_All</fullName>
+        <columns>NAME</columns>
+        <columns>Stage__c</columns>
+        <columns>Completion_Date__c</columns>
+        <columns>Price_of_Installation__c</columns>
+        <columns>Installer_Company_Name__c</columns>
+        <columns>Sales_Rep__c</columns>
+        <columns>Site_Address__c</columns>
+        <columns>City__c</columns>
+        <columns>Zip_Code__c</columns>
+        <columns>Primary_Account__c</columns>
+        <columns>Biz_Dev_Opportunity__c</columns>
+        <columns>Installer_Contact_Name__c</columns>
+        <columns>of_Total_Kiosks__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>OWNER.FIRST_NAME</field>
+            <operation>equals</operation>
+            <value>chuck</value>
+        </filters>
+        <label>Chuck&apos;s All</label>
+    </listViews>
+    <listViews>
+        <fullName>Chuck_s_Projects</fullName>
+        <booleanFilter>1 AND 2 AND 3 AND 4</booleanFilter>
+        <columns>NAME</columns>
+        <columns>Stage__c</columns>
+        <columns>OWNER.FIRST_NAME</columns>
+        <columns>Completion_Date__c</columns>
+        <columns>Network_No__c</columns>
+        <columns>Opp_City__c</columns>
+        <columns>Opp_Network_Region__c</columns>
+        <columns>Opp_Site_A__c</columns>
+        <columns>Opp_State__c</columns>
+        <columns>Opp_Zip_Code__c</columns>
+        <columns>Engineering_Cost__c</columns>
+        <columns>Total_Price_of_Installation__c</columns>
+        <columns>OBJECT_ID</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Network_Region__c</field>
+            <operation>equals</operation>
+            <value>LA,Santa Barbara,Orange County,San Diego,AZ</value>
+        </filters>
+        <filters>
+            <field>Stage__c</field>
+            <operation>notContain</operation>
+            <value>Completed</value>
+        </filters>
+        <filters>
+            <field>Stage__c</field>
+            <operation>notContain</operation>
+            <value>Disqualified</value>
+        </filters>
+        <filters>
+            <field>Stage__c</field>
+            <operation>notContain</operation>
+            <value>BizDev Review</value>
+        </filters>
+        <label>SoCal Active Projects</label>
+    </listViews>
+    <listViews>
+        <fullName>Completed_CPs_without_Cost_Info</fullName>
+        <booleanFilter>(1 OR 2 OR 3 OR 4 OR 5) AND 6</booleanFilter>
+        <columns>NAME</columns>
+        <columns>Stage__c</columns>
+        <columns>Opp_Network_Region__c</columns>
+        <columns>Completion_Date__c</columns>
+        <columns>Total_Price_of_Installation__c</columns>
+        <columns>Engineering_Cost__c</columns>
+        <columns>Permit_Cost__c</columns>
+        <columns>Final_Install_Cost__c</columns>
+        <columns>Striping_Cost__c</columns>
+        <columns>OWNER.FIRST_NAME</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Total_Price_of_Installation__c</field>
+            <operation>equals</operation>
+        </filters>
+        <filters>
+            <field>Engineering_Cost__c</field>
+            <operation>equals</operation>
+        </filters>
+        <filters>
+            <field>Permit_Cost__c</field>
+            <operation>equals</operation>
+        </filters>
+        <filters>
+            <field>Final_Install_Cost__c</field>
+            <operation>equals</operation>
+        </filters>
+        <filters>
+            <field>Striping_Cost__c</field>
+            <operation>equals</operation>
+        </filters>
+        <filters>
+            <field>Stage__c</field>
+            <operation>equals</operation>
+            <value>Completed</value>
+        </filters>
+        <label>Completed CPs without Cost Info</label>
+    </listViews>
+    <listViews>
+        <fullName>Completed_Chicago_Projects</fullName>
+        <columns>NAME</columns>
+        <columns>of_Total_Kiosks__c</columns>
+        <columns>Installer_Company_Name__c</columns>
+        <columns>Completion_Date__c</columns>
+        <columns>Primary_Account__c</columns>
+        <columns>Site_Sales_Rep__c</columns>
+        <columns>Biz_Dev_Opportunity__c</columns>
+        <columns>Opp_City__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Opp_Network_Region__c</field>
+            <operation>equals</operation>
+            <value>Chicago</value>
+        </filters>
+        <filters>
+            <field>Stage__c</field>
+            <operation>equals</operation>
+            <value>Completed</value>
+        </filters>
+        <label>Completed Chicago Projects</label>
+    </listViews>
+    <listViews>
+        <fullName>Completed_Construction_Projects</fullName>
+        <columns>NAME</columns>
+        <columns>Network_Region__c</columns>
+        <columns>of_Total_Kiosks__c</columns>
+        <columns>Primary_Account__c</columns>
+        <columns>Site_Address__c</columns>
+        <columns>OWNER.ALIAS</columns>
+        <columns>Completion_Date__c</columns>
+        <columns>Price_of_Installation__c</columns>
+        <columns>of_Digital_Only_Kiosks__c</columns>
+        <columns>of_Hybrid_Kiosks__c</columns>
+        <columns>of_Other_EVSE_On_site__c</columns>
+        <columns>of_Static_Kiosks__c</columns>
+        <columns>of_Wall_Mounted_Kiosks__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Stage__c</field>
+            <operation>equals</operation>
+            <value>Completed</value>
+        </filters>
+        <label>Completed Construction Projects</label>
+    </listViews>
+    <listViews>
+        <fullName>Construction_Projects_without_Opps</fullName>
+        <columns>NAME</columns>
+        <columns>Network_Region__c</columns>
+        <columns>of_Total_Kiosks__c</columns>
+        <columns>Primary_Account__c</columns>
+        <columns>Site_Address__c</columns>
+        <columns>OWNER.ALIAS</columns>
+        <columns>Completion_Date__c</columns>
+        <columns>Price_of_Installation__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Biz_Dev_Opportunity__c</field>
+            <operation>equals</operation>
+        </filters>
+        <label>Construction Projects without Opp</label>
+    </listViews>
+    <listViews>
+        <fullName>DC</fullName>
+        <booleanFilter>1</booleanFilter>
+        <columns>NAME</columns>
+        <columns>Stage__c</columns>
+        <columns>Network_Region__c</columns>
+        <columns>Completion_Date__c</columns>
+        <columns>Price_of_Installation__c</columns>
+        <columns>Installer_Company_Name__c</columns>
+        <columns>Sales_Rep__c</columns>
+        <columns>Site_Address__c</columns>
+        <columns>City__c</columns>
+        <columns>Zip_Code__c</columns>
+        <columns>Primary_Account__c</columns>
+        <columns>Biz_Dev_Opportunity__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Network_Region__c</field>
+            <operation>contains</operation>
+            <value>DC</value>
+        </filters>
+        <label>DC</label>
+    </listViews>
+    <listViews>
+        <fullName>DC_Network</fullName>
+        <columns>NAME</columns>
+        <columns>Stage__c</columns>
+        <columns>Completion_Date__c</columns>
+        <columns>Price_of_Installation__c</columns>
+        <columns>Installer_Company_Name__c</columns>
+        <columns>Sales_Rep__c</columns>
+        <columns>Site_Address__c</columns>
+        <columns>City__c</columns>
+        <columns>Zip_Code__c</columns>
+        <columns>Primary_Account__c</columns>
+        <columns>Biz_Dev_Opportunity__c</columns>
+        <columns>Installer_Contact_Name__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Opp_Network_Region__c</field>
+            <operation>equals</operation>
+            <value>,DC</value>
+        </filters>
+        <label>DC Network</label>
+    </listViews>
+    <listViews>
+        <fullName>Daugherty_projects</fullName>
+        <columns>NAME</columns>
+        <columns>OWNER.ALIAS</columns>
+        <columns>Opp_Network_Region__c</columns>
+        <columns>of_Total_Kiosks__c</columns>
+        <columns>Stage__c</columns>
+        <columns>Installer_Company_Name__c</columns>
+        <columns>Price_of_Installation__c</columns>
+        <columns>Completion_Date__c</columns>
+        <columns>Confidence__c</columns>
+        <columns>Primary_Account__c</columns>
+        <columns>Site_Sales_Rep__c</columns>
+        <columns>Biz_Dev_Opportunity__c</columns>
+        <columns>Opp_City__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>OWNER.ALIAS</field>
+            <operation>equals</operation>
+            <value>ddaug</value>
+        </filters>
+        <filters>
+            <field>Stage__c</field>
+            <operation>notEqual</operation>
+            <value>Disqualified,Completed</value>
+        </filters>
+        <label>Daugherty projects</label>
+    </listViews>
+    <listViews>
+        <fullName>Dave</fullName>
+        <columns>Biz_Dev_Opportunity__c</columns>
+        <columns>NAME</columns>
+        <columns>Phase__c</columns>
+        <columns>Primary_Account__c</columns>
+        <columns>OWNER.FIRST_NAME</columns>
+        <columns>Property_No__c</columns>
+        <columns>Network_Region__c</columns>
+        <columns>Opp_Network_Region__c</columns>
+        <columns>of_Total_Kiosks__c</columns>
+        <columns>Site_Address__c</columns>
+        <columns>Stage__c</columns>
+        <columns>Completion_Date__c</columns>
+        <columns>Price_of_Installation__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>OWNER.FIRST_NAME</field>
+            <operation>equals</operation>
+            <value>dave</value>
+        </filters>
+        <label>Dave</label>
+    </listViews>
+    <listViews>
+        <fullName>ENG_Metrics</fullName>
+        <columns>NAME</columns>
+        <columns>Opp_Network_Region__c</columns>
+        <columns>Stage__c</columns>
+        <columns>of_Total_Kiosks__c</columns>
+        <columns>Initial_Site_Inspection__c</columns>
+        <columns>CD_90s_Review__c</columns>
+        <columns>CD_S_S__c</columns>
+        <columns>Elec_Permit_Application_Date__c</columns>
+        <columns>Elec_Permit_Issue_Date__c</columns>
+        <columns>Elec_Permit_Type__c</columns>
+        <columns>AHJ_Account__c</columns>
+        <columns>Engineer_of_Record__c</columns>
+        <columns>Completion_Date__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>ENG Metrics</label>
+    </listViews>
+    <listViews>
+        <fullName>HI</fullName>
+        <columns>NAME</columns>
+        <columns>Stage__c</columns>
+        <columns>Completion_Date__c</columns>
+        <columns>Price_of_Installation__c</columns>
+        <columns>Installer_Company_Name__c</columns>
+        <columns>Sales_Rep__c</columns>
+        <columns>Site_Address__c</columns>
+        <columns>City__c</columns>
+        <columns>Zip_Code__c</columns>
+        <columns>Primary_Account__c</columns>
+        <columns>Biz_Dev_Opportunity__c</columns>
+        <columns>Installer_Contact_Name__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Opp_State__c</field>
+            <operation>equals</operation>
+            <value>HI</value>
+        </filters>
+        <label>HI</label>
+    </listViews>
+    <listViews>
+        <fullName>In_Progress</fullName>
+        <columns>NAME</columns>
+        <columns>Stage__c</columns>
+        <columns>Opp_Network_Region__c</columns>
+        <columns>Engineer_of_Record__c</columns>
+        <columns>Initial_Site_Inspection__c</columns>
+        <columns>CD_90s_Review__c</columns>
+        <columns>CD_S_S__c</columns>
+        <columns>Elec_Permit_Application_Date__c</columns>
+        <columns>Elec_Permit_Issue_Date__c</columns>
+        <columns>of_Total_Kiosks__c</columns>
+        <columns>of_Hybrid_Kiosks__c</columns>
+        <columns>of_Wall_Mounted_Kiosks__c</columns>
+        <columns>of_Static_Kiosks__c</columns>
+        <columns>of_ADA_Pedestals__c</columns>
+        <columns>Completion_Date__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Stage__c</field>
+            <operation>equals</operation>
+            <value>In Progress</value>
+        </filters>
+        <label>In Progress</label>
+    </listViews>
+    <listViews>
+        <fullName>In_Progress_Construction_Projects</fullName>
+        <columns>NAME</columns>
+        <columns>Network_Region__c</columns>
+        <columns>of_Total_Kiosks__c</columns>
+        <columns>Primary_Account__c</columns>
+        <columns>Site_Address__c</columns>
+        <columns>OWNER.ALIAS</columns>
+        <columns>Completion_Date__c</columns>
+        <columns>Price_of_Installation__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Stage__c</field>
+            <operation>equals</operation>
+            <value>In Progress</value>
+        </filters>
+        <label>In Progress Construction Projects</label>
+    </listViews>
+    <listViews>
+        <fullName>LA_Network</fullName>
+        <columns>NAME</columns>
+        <columns>Stage__c</columns>
+        <columns>Completion_Date__c</columns>
+        <columns>Price_of_Installation__c</columns>
+        <columns>Installer_Company_Name__c</columns>
+        <columns>Sales_Rep__c</columns>
+        <columns>Site_Address__c</columns>
+        <columns>City__c</columns>
+        <columns>Zip_Code__c</columns>
+        <columns>Primary_Account__c</columns>
+        <columns>Biz_Dev_Opportunity__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Opp_Network_Region__c</field>
+            <operation>contains</operation>
+            <value>LA</value>
+        </filters>
+        <label>LA Network</label>
+    </listViews>
+    <listViews>
+        <fullName>Muni_CityMuni</fullName>
+        <booleanFilter>(1 OR 2 OR 3 OR 4 OR 5) AND 6 AND 7</booleanFilter>
+        <columns>NAME</columns>
+        <columns>Stage__c</columns>
+        <columns>AHJ_Account__c</columns>
+        <columns>Opp_Network_Region__c</columns>
+        <columns>Completion_Date__c</columns>
+        <columns>Total_Price_of_Installation__c</columns>
+        <columns>Engineering_Cost__c</columns>
+        <columns>Permit_Cost__c</columns>
+        <columns>Final_Install_Cost__c</columns>
+        <columns>Striping_Cost__c</columns>
+        <columns>OWNER.FIRST_NAME</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Total_Price_of_Installation__c</field>
+            <operation>equals</operation>
+        </filters>
+        <filters>
+            <field>Engineering_Cost__c</field>
+            <operation>equals</operation>
+        </filters>
+        <filters>
+            <field>Permit_Cost__c</field>
+            <operation>equals</operation>
+        </filters>
+        <filters>
+            <field>Final_Install_Cost__c</field>
+            <operation>equals</operation>
+        </filters>
+        <filters>
+            <field>Striping_Cost__c</field>
+            <operation>equals</operation>
+        </filters>
+        <filters>
+            <field>Stage__c</field>
+            <operation>equals</operation>
+            <value>Completed</value>
+        </filters>
+        <label>Muni &amp; City</label>
+    </listViews>
+    <listViews>
+        <fullName>NY_Network</fullName>
+        <columns>NAME</columns>
+        <columns>Stage__c</columns>
+        <columns>Completion_Date__c</columns>
+        <columns>Price_of_Installation__c</columns>
+        <columns>Installer_Company_Name__c</columns>
+        <columns>Sales_Rep__c</columns>
+        <columns>Site_Address__c</columns>
+        <columns>City__c</columns>
+        <columns>Zip_Code__c</columns>
+        <columns>Primary_Account__c</columns>
+        <columns>Biz_Dev_Opportunity__c</columns>
+        <columns>Installer_Contact_Name__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Opp_Network_Region__c</field>
+            <operation>equals</operation>
+            <value>,NY</value>
+        </filters>
+        <label>NY Network</label>
+    </listViews>
+    <listViews>
+        <fullName>Norcal_Cx_Ready</fullName>
+        <columns>NAME</columns>
+        <columns>Stage__c</columns>
+        <columns>of_Total_Kiosks__c</columns>
+        <columns>AHJ_Account__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Stage__c</field>
+            <operation>equals</operation>
+            <value>Pre-Construction Approval,In Progress</value>
+        </filters>
+        <filters>
+            <field>Network_Region__c</field>
+            <operation>equals</operation>
+            <value>NorCal</value>
+        </filters>
+        <label>Norcal Cx Ready</label>
+    </listViews>
+    <listViews>
+        <fullName>Orange_County_Network</fullName>
+        <columns>NAME</columns>
+        <columns>Stage__c</columns>
+        <columns>Completion_Date__c</columns>
+        <columns>Price_of_Installation__c</columns>
+        <columns>Installer_Company_Name__c</columns>
+        <columns>Sales_Rep__c</columns>
+        <columns>Site_Address__c</columns>
+        <columns>City__c</columns>
+        <columns>Zip_Code__c</columns>
+        <columns>Primary_Account__c</columns>
+        <columns>Biz_Dev_Opportunity__c</columns>
+        <columns>Installer_Contact_Name__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Opp_Network_Region__c</field>
+            <operation>equals</operation>
+            <value>Orange County</value>
+        </filters>
+        <label>Orange County Network</label>
+    </listViews>
+    <listViews>
+        <fullName>Portland_Network</fullName>
+        <columns>NAME</columns>
+        <columns>Stage__c</columns>
+        <columns>Completion_Date__c</columns>
+        <columns>Price_of_Installation__c</columns>
+        <columns>Installer_Company_Name__c</columns>
+        <columns>Sales_Rep__c</columns>
+        <columns>Site_Address__c</columns>
+        <columns>City__c</columns>
+        <columns>Zip_Code__c</columns>
+        <columns>Primary_Account__c</columns>
+        <columns>Biz_Dev_Opportunity__c</columns>
+        <columns>Installer_Contact_Name__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Opp_Network_Region__c</field>
+            <operation>equals</operation>
+            <value>,Portland</value>
+        </filters>
+        <label>Portland Network</label>
+    </listViews>
+    <listViews>
+        <fullName>Project_Engineering_View</fullName>
+        <columns>NAME</columns>
+        <columns>Stage__c</columns>
+        <columns>Opp_Network_Region__c</columns>
+        <columns>Engineer_of_Record__c</columns>
+        <columns>Initial_Site_Inspection__c</columns>
+        <columns>CD_90s_Review__c</columns>
+        <columns>CD_S_S__c</columns>
+        <columns>Elec_Permit_Application_Date__c</columns>
+        <columns>Elec_Permit_Issue_Date__c</columns>
+        <columns>of_Total_Kiosks__c</columns>
+        <columns>of_Hybrid_Kiosks__c</columns>
+        <columns>of_Wall_Mounted_Kiosks__c</columns>
+        <columns>of_Static_Kiosks__c</columns>
+        <columns>of_ADA_Pedestals__c</columns>
+        <columns>Completion_Date__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Stage__c</field>
+            <operation>equals</operation>
+            <value>Initial Site Inspection,Engineering,Permitting</value>
+        </filters>
+        <label>Project Engineering View</label>
+    </listViews>
+    <listViews>
+        <fullName>Riggs_View</fullName>
+        <columns>NAME</columns>
+        <columns>Opp_Network_Region__c</columns>
+        <columns>Stage__c</columns>
+        <columns>Engineer_of_Record__c</columns>
+        <columns>Project_Launch_Date__c</columns>
+        <columns>Initial_Site_Inspection__c</columns>
+        <columns>CD_90s_Review__c</columns>
+        <columns>LL_CD90_Approval_Date__c</columns>
+        <columns>CD_S_S__c</columns>
+        <columns>Completion_Date__c</columns>
+        <columns>AHJ_Account__c</columns>
+        <columns>Confidence__c</columns>
+        <columns>Property_Owner_Account__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Stage__c</field>
+            <operation>equals</operation>
+            <value>Initial Site Inspection,Engineering,Permitting</value>
+        </filters>
+        <label>Eng &amp; Permit View (active markets)</label>
+    </listViews>
+    <listViews>
+        <fullName>San_Diego_Network</fullName>
+        <columns>NAME</columns>
+        <columns>Stage__c</columns>
+        <columns>Completion_Date__c</columns>
+        <columns>Price_of_Installation__c</columns>
+        <columns>Installer_Company_Name__c</columns>
+        <columns>Sales_Rep__c</columns>
+        <columns>Site_Address__c</columns>
+        <columns>City__c</columns>
+        <columns>Zip_Code__c</columns>
+        <columns>Primary_Account__c</columns>
+        <columns>Biz_Dev_Opportunity__c</columns>
+        <columns>Installer_Contact_Name__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Opp_Network_Region__c</field>
+            <operation>equals</operation>
+            <value>,San Diego</value>
+        </filters>
+        <label>San Diego Network</label>
+    </listViews>
+    <listViews>
+        <fullName>Santa_Barbara_Network</fullName>
+        <columns>NAME</columns>
+        <columns>Stage__c</columns>
+        <columns>Completion_Date__c</columns>
+        <columns>Price_of_Installation__c</columns>
+        <columns>Installer_Company_Name__c</columns>
+        <columns>Sales_Rep__c</columns>
+        <columns>Site_Address__c</columns>
+        <columns>City__c</columns>
+        <columns>Zip_Code__c</columns>
+        <columns>Primary_Account__c</columns>
+        <columns>Biz_Dev_Opportunity__c</columns>
+        <columns>Installer_Contact_Name__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Opp_Network_Region__c</field>
+            <operation>equals</operation>
+            <value>Santa Barbara</value>
+        </filters>
+        <label>Santa Barbara Network</label>
+    </listViews>
+    <listViews>
+        <fullName>Seattle_Network</fullName>
+        <columns>NAME</columns>
+        <columns>Stage__c</columns>
+        <columns>Completion_Date__c</columns>
+        <columns>Price_of_Installation__c</columns>
+        <columns>Installer_Company_Name__c</columns>
+        <columns>Sales_Rep__c</columns>
+        <columns>Site_Address__c</columns>
+        <columns>City__c</columns>
+        <columns>Zip_Code__c</columns>
+        <columns>Primary_Account__c</columns>
+        <columns>Biz_Dev_Opportunity__c</columns>
+        <columns>Installer_Contact_Name__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Opp_Network_Region__c</field>
+            <operation>equals</operation>
+            <value>,Seattle</value>
+        </filters>
+        <label>Seattle Network</label>
+    </listViews>
+    <listViews>
+        <fullName>SoCal_Network_Entire</fullName>
+        <columns>NAME</columns>
+        <columns>Completion_Date__c</columns>
+        <columns>Stage__c</columns>
+        <columns>Installer_Company_Name__c</columns>
+        <columns>Network_Region__c</columns>
+        <columns>Opp_Network_Region__c</columns>
+        <columns>of_Total_Kiosks__c</columns>
+        <columns>of_Hybrid_Kiosks__c</columns>
+        <columns>of_Static_Kiosks__c</columns>
+        <columns>of_Wall_Mounted_Kiosks__c</columns>
+        <columns>of_ADA_Pedestals__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Network_Region__c</field>
+            <operation>contains</operation>
+            <value>LA,Santa Barbara,Orange County,San Diego,San</value>
+        </filters>
+        <label>SoCal Network (Entire)</label>
+    </listViews>
+    <listViews>
+        <fullName>SoCal_Sites_Completed</fullName>
+        <columns>Stage__c</columns>
+        <columns>Completion_Date__c</columns>
+        <columns>NAME</columns>
+        <columns>of_Total_Kiosks__c</columns>
+        <columns>of_Digital_Only_Kiosks__c</columns>
+        <columns>of_Hybrid_Kiosks__c</columns>
+        <columns>of_Other_EVSE_On_site__c</columns>
+        <columns>of_Static_Kiosks__c</columns>
+        <columns>of_Wall_Mounted_Kiosks__c</columns>
+        <columns>of_ADA_Pedestals__c</columns>
+        <columns>Opp_Network_Region__c</columns>
+        <columns>Opp_City__c</columns>
+        <columns>Opp_State__c</columns>
+        <columns>Opp_Site_A__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>OWNER.FIRST_NAME</field>
+            <operation>equals</operation>
+            <value>chuck,jacob,alexander</value>
+        </filters>
+        <filters>
+            <field>Opp_Network_Region__c</field>
+            <operation>contains</operation>
+            <value>Los_Angeles,Orange County,San Diego,Santa Barbara,San</value>
+        </filters>
+        <filters>
+            <field>Stage__c</field>
+            <operation>equals</operation>
+            <value>Completed</value>
+        </filters>
+        <label>SoCal Sites Completed</label>
+    </listViews>
+    <listViews>
+        <fullName>South_FL_Network</fullName>
+        <columns>NAME</columns>
+        <columns>Stage__c</columns>
+        <columns>Completion_Date__c</columns>
+        <columns>Price_of_Installation__c</columns>
+        <columns>Installer_Company_Name__c</columns>
+        <columns>Sales_Rep__c</columns>
+        <columns>Site_Address__c</columns>
+        <columns>City__c</columns>
+        <columns>Zip_Code__c</columns>
+        <columns>Primary_Account__c</columns>
+        <columns>Biz_Dev_Opportunity__c</columns>
+        <columns>Installer_Contact_Name__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Opp_Network_Region__c</field>
+            <operation>equals</operation>
+            <value>,South FL</value>
+        </filters>
+        <label>South FL Network</label>
+    </listViews>
+    <nameField>
+        <label>Construction Project Name</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Construction Projects</pluralLabel>
+    <searchLayouts>
+        <customTabListAdditionalFields>Stage__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Network_Region__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Primary_Account__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>of_Total_Kiosks__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Completion_Date__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Final_Inspection_Date__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>AHJ_Account__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Total_Price_of_Installation__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Biz_Dev_Opportunity__c</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>Stage__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Network_Region__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Primary_Account__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>of_Total_Kiosks__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Completion_Date__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Final_Inspection_Date__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>AHJ_Account__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Total_Price_of_Installation__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Biz_Dev_Opportunity__c</lookupDialogsAdditionalFields>
+        <searchFilterFields>NAME</searchFilterFields>
+        <searchFilterFields>Stage__c</searchFilterFields>
+        <searchFilterFields>Network_Region__c</searchFilterFields>
+        <searchFilterFields>Primary_Account__c</searchFilterFields>
+        <searchFilterFields>of_Total_Kiosks__c</searchFilterFields>
+        <searchFilterFields>Completion_Date__c</searchFilterFields>
+        <searchFilterFields>Final_Inspection_Date__c</searchFilterFields>
+        <searchFilterFields>AHJ_Account__c</searchFilterFields>
+        <searchFilterFields>Total_Price_of_Installation__c</searchFilterFields>
+        <searchFilterFields>Biz_Dev_Opportunity__c</searchFilterFields>
+        <searchResultsAdditionalFields>Property_No__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Stage__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Network_Region__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Primary_Account__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>of_Total_Kiosks__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Completion_Date__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>AHJ_Account__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Total_Price_of_Installation__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Biz_Dev_Opportunity__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+    <validationRules>
+        <fullName>Require_CapEx_ConsAmount_If_Checked_Appr</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND(ISBLANK(CapEx_Approval_Amount__c),  CapEx_Approved__c  =true)</errorConditionFormula>
+        <errorDisplayField>CapEx_Approved__c</errorDisplayField>
+        <errorMessage>Please provide the CapEx Construction Approval amount.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Require_Future_Completion_Date</fullName>
+        <active>false</active>
+        <description>Requires the completion date field be filled in with a date in the future.</description>
+        <errorConditionFormula>AND( 
+ISPICKVAL(Stage__c, &quot;Completed&quot;), 
+TODAY() &gt; Completion_Date__c 
+)</errorConditionFormula>
+        <errorDisplayField>Completion_Date__c</errorDisplayField>
+        <errorMessage>Completion Date Must be in the Future</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Total_Price_of_Installation_CW</fullName>
+        <active>true</active>
+        <description>Needs Total Price of Installation Field before Completed</description>
+        <errorConditionFormula>AND 
+(ISPICKVAL ( Stage__c,&quot;Completed&quot;), 
+ISBLANK( Total_Price_of_Installation__c ) 
+)</errorConditionFormula>
+        <errorDisplayField>of_Digital_Only_Kiosks__c</errorDisplayField>
+        <errorMessage>Needs Total Price of Installation Field before Completed</errorMessage>
+    </validationRules>
+    <visibility>Public</visibility>
+    <webLinks>
+        <fullName>Location_Map</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Location Map</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/20.0/connection.js&quot;)};
+{!REQUIRESCRIPT(&quot;/soap/ajax/10.0/apex.js&quot;)};
+{!REQUIRESCRIPT(&apos;https://www.google.com/jsapi?.js&apos;)}
+
+
+var map;
+
+function initLocation(curr) {
+  var lat = parseFloat(curr[&apos;LatLong__c&apos;].split(&quot;,&quot;)[0]);
+  var lon = parseFloat(curr[&apos;LatLong__c&apos;].split(&quot;,&quot;)[1]);
+  var myLatLng = new google.maps.LatLng(lat, lon);
+
+  if (isNaN(lon)) {
+    alert(&quot;error in record: &apos;&quot; + curr[&apos;Name&apos;] + &quot;&apos;\n------\n&quot;
+          + &quot;could not parse &quot; + curr[&apos;LatLong__c&apos;] + &quot;.\n&quot;
+          + &quot;example of correct format: 36.975966, -121.966073\n&quot;
+          + &quot;now displaying marker at this example lat/long.&quot;);
+    myLatLng = new google.maps.LatLng(36.975966, -121.966073);
+  }
+
+  var approvalStatus = sforce.connection.query(&quot;SELECT Id, Status FROM ProcessInstance WHERE TargetObjectId = &apos;&quot; + curr.Id + &quot;&apos;&quot;)[&apos;records&apos;];
+  
+  var c = &apos;green&apos;;
+  if (approvalStatus == null || typeof approvalStatus == &apos;undefined&apos;) c = &apos;yellow&apos;;
+  else {
+	if (!approvalStatus.length) approvalStatus = [approvalStatus];
+    for (var ndx = 0; ndx &lt; approvalStatus.length; ndx++) {
+      var currSt = approvalStatus[ndx];
+      if (currSt.Status == &apos;Rejected&apos;) {
+        c = &apos;red&apos;;
+        break;
+      }
+      if (currSt.Status == &apos;Approved&apos;) c = &apos;#00A8E1&apos;;
+    }
+  }
+
+  var marker = new google.maps.Marker({
+    position: myLatLng,
+    map: map,
+    title: curr[&apos;Name&apos;],
+    draggable: true,
+    icon: {
+        path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW,
+        scale: 6,
+        fillColor: c,
+        fillOpacity: 0.8,
+        strokeWeight: 2,
+        anchor: new google.maps.Point(0,2),
+        rotation: parseFloat(curr[&apos;Azimuth__c&apos;])
+    }
+  });
+
+  var infostr = &apos;&lt;h4&gt;&apos; + curr[&apos;Name&apos;] + &apos;&lt;/h4&gt;&apos;
+           + &apos;&lt;br/&gt;&apos; + myLatLng
+		   + &apos;&lt;br/&gt;&apos; + curr[&apos;Site_Vet_Approval__c&apos;]
+           + &apos;&lt;br/&gt;&lt;i&gt;&apos; + curr[&apos;Location_Notes__c&apos;] + &apos;&lt;/i&gt;&apos;
+           ;
+
+  var infowindow = new google.maps.InfoWindow({
+    content: infostr
+  });
+
+  var open = false;
+  marker.addListener(&apos;click&apos;, function() {
+	if (!open) {
+		infowindow.open(map, marker);
+	}
+	else {
+		infowindow.close(map, marker);
+	}
+	open = !open;
+  });
+  marker.addListener(&apos;dblclick&apos;, function() {
+    window.location.href = &apos;/&apos; + curr.Id;
+  });
+
+  var dirFromDelta = function(x, y) {
+    y = marker.getPosition().lng() - myLatLng.lng();
+    x = marker.getPosition().lat() - myLatLng.lat();
+    var rval = 180/Math.PI * Math.atan(y / x);
+    if (x &lt; 0) rval += 180;
+    return rval;
+  }
+  var rotateArrow = function(val) {
+    marker.setIcon({
+       path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW,
+       scale: 6,
+       fillColor: c,
+       fillOpacity: 0.8,
+       strokeWeight: 2,
+       anchor: new google.maps.Point(0,2),
+       rotation: val
+    });
+  };
+
+  marker.addListener(&apos;drag&apos;, function() {
+    if (marker.getPosition() == myLatLng) return;
+    rotateArrow(dirFromDelta(marker.getPosition().lat() - myLatLng.lat(), marker.getPosition().lng() - myLatLng.lng()));
+    marker.setPosition(myLatLng);
+  });
+
+  var orig = parseFloat(curr[&apos;Azimuth__c&apos;]);
+  marker.addListener(&apos;dragend&apos;, function() {
+    curr[&apos;Azimuth__c&apos;] = marker.getIcon().rotation;
+    if (!sforce.connection.update([curr])[0].getBoolean(&apos;success&apos;)) {
+      rotateArrow(orig);
+    }
+  });
+}
+
+
+function getMapProp (points) {
+  var lat = 0; var lng = 0;
+  var minLat = 0; var minLng = 0; var maxLat = 0; var maxLng = 0;
+  var isFirstIteration = true;
+
+  for (ndx = 0; ndx &lt; points.length; ndx++) {
+    var currLng = parseFloat(points[ndx][&apos;LatLong__c&apos;].split(&quot;,&quot;)[1]);
+    if (isNaN(currLng)) continue;
+    lng += currLng;
+
+    var currLat = parseFloat(points[ndx][&apos;LatLong__c&apos;].split(&quot;,&quot;)[0]);
+    lat += currLat;
+    if (isFirstIteration) {
+      isFirstIteration = false;
+      minLat = maxLat = currLat;
+      minLng = maxLng = currLng;
+    }
+    minLat = Math.min(minLat, currLat);
+    maxLat = Math.max(maxLat, currLat);
+    minLng = Math.min(minLng, currLng);
+    maxLng = Math.max(maxLng, currLng);
+  }
+  lat /= points.length;
+  lng /= points.length;
+
+  var sw = new google.maps.LatLng(minLat, minLng);
+  var ne = new google.maps.LatLng(maxLat, maxLng);
+  var bounds = new google.maps.LatLngBounds (
+    sw, ne
+  );
+
+  var rval = {
+    center: new google.maps.LatLng(lat, lng),
+    zoom:10,
+    mapTypeId:google.maps.MapTypeId.SATELLITE,
+    disableDoubleClickZoom: true,
+    myBounds: bounds
+  };
+
+  return rval;
+}
+
+//on the next line, you’ll replace SiteFieldName__r with MySiteObjectEquivalentFieldName__r
+var locations = sforce.connection.query(&quot;SELECT LatLong__c, Name, Azimuth__c, 	Location_Notes__c, Site_Vet_Approval__c, Id FROM Kiosk__c WHERE Construction_Project__r.name = &apos;{!Construction_Project__c.Name}&apos;&quot;);
+
+function initMap () {
+  var prev = document.getElementById(&quot;existingMap&quot;);
+  if (prev != null) prev.parentNode.removeChild(prev);
+
+  var mapDiv = document.createElement(&quot;DIV&quot;);
+  mapDiv.setAttribute(&quot;style&quot;,&quot;width:250&quot;);
+  mapDiv.setAttribute(&quot;style&quot;,&quot;height:380px&quot;);
+  mapDiv.setAttribute(&quot;id&quot;,&quot;existingMap&quot;);
+
+  document.getElementsByTagName(&apos;body&apos;)[0].appendChild(mapDiv);
+
+  if (locations.size == 0) {
+    var planB = sforce.connection.query(&quot;SELECT Address__c FROM Construction_Project__c WHERE Name = &apos;{!Construction_Project__c.Name}&apos;&quot;).getArray(&quot;records&quot;)[0][&apos;Address__c&apos;];
+
+    map = new google.maps.Map(mapDiv, {
+      zoom:18,
+      mapTypeId:google.maps.MapTypeId.SATELLITE,
+      disableDoubleClickZoom: true
+    });
+
+    new google.maps.Geocoder().geocode( { &apos;address&apos;: planB }, function(results, status) {
+      if (status == google.maps.GeocoderStatus.OK) {
+        map.setCenter(results[0].geometry.location);
+      } else {
+		if (status == &quot;ZERO_RESULTS&quot;) status = &quot;no address or locations present in this record.&quot;;
+        alert(&quot;Geocode was not successful for the following reason: &quot; + status);
+      }
+    });
+  }
+  else {
+    var mapProp = getMapProp (locations.getArray(&quot;records&quot;));
+    map = new google.maps.Map(mapDiv, mapProp);
+    map.fitBounds(mapProp[&apos;myBounds&apos;]);
+    map.setCenter(mapProp[&apos;myBounds&apos;].getCenter());
+  }
+  map.setTilt(0);
+}
+
+
+google.load(&quot;maps&quot;, &quot;3&quot;,{
+  callback : function() {
+    initMap();
+    locations.getArray(&quot;records&quot;).forEach(initLocation);
+  
+    map.addListener(&apos;dblclick&apos;, function (event) {
+  	var pnt = event.latLng;
+      var lat = pnt.lat();
+      lat = lat.toFixed(4);
+      var lng = pnt.lng();
+      lng = lng.toFixed(4);
+      
+      var newLocation = new sforce.SObject(&apos;Kiosk__c&apos;);
+      newLocation.Name = &apos;???&apos;;
+      newLocation.LatLong__c = lat + &quot;, &quot; + lng;
+      newLocation.Azimuth__c = 0;
+      newLocation.SiteFieldName__c = &apos;{!Construction_Project__c.Id}&apos;;
+      
+      var result = sforce.connection.create([newLocation])[0];
+      if (result.success == &apos;true&apos;) {
+        window.location.href = &apos;/&apos; + result.id;
+      }
+      else alert (&apos;Failed to save new Location: \n&apos; + newLocation);
+    });
+  
+    window.scrollTo(0,document.body.scrollHeight);
+  }
+});</url>
+    </webLinks>
+    <webLinks>
+        <fullName>New_Kiosk</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>New Kiosk</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <url>/a0d/e?CF00Nd0000008EI89={!Construction_Project__c.Name}&amp;CF00Nd0000008EI89_lkid={!Construction_Project__c.Id}&amp;retURL=%2F{!Construction_Project__c.Id}&amp;00Nd0000008EI8T={!Construction_Project__c.Site_Address__c}&amp;00Nd0000008EI86={!Construction_Project__c.City__c}&amp;00Nd0000008EI87={!Construction_Project__c.Client_No__c}&amp;00Nd0000008EI8G={!Construction_Project__c.Network_No__c}&amp;00Nd0000008EI8H={!Construction_Project__c.Network_Region__c}&amp;00Nd0000008EI8J={!Construction_Project__c.Property_No__c}&amp;00Nd0000008EI8P={!Construction_Project__c.State__c}&amp;00Nd0000008EI8V={!Construction_Project__c.Zip_Code__c}&amp;CF00Nd0000008EI84={!Construction_Project__c.Primary_Account__c}&amp;CF00Nd0000008EI84_lkid={!Construction_Project__c.Primary_AccountId__c}&amp;00Nd0000008EI88={!Construction_Project__c.Completion_Date__c}</url>
+    </webLinks>
+</CustomObject>

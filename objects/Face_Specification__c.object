@@ -1,0 +1,494 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableChangeDataCapture>false</enableChangeDataCapture>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ReadWrite</externalSharingModel>
+    <fields>
+        <fullName>Bleed__c</fullName>
+        <description>What&apos;s the print bleed in inches? This is helpful for printer accuracy</description>
+        <externalId>false</externalId>
+        <inlineHelpText>What&apos;s the print bleed in inches? This is helpful for printer accuracy</inlineHelpText>
+        <label>Bleed</label>
+        <precision>6</precision>
+        <required>false</required>
+        <scale>4</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Color__c</fullName>
+        <externalId>false</externalId>
+        <label>Color</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>CMYK</fullName>
+                    <default>false</default>
+                    <label>CMYK</label>
+                </value>
+                <value>
+                    <fullName>RGB</fullName>
+                    <default>false</default>
+                    <label>RGB</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Diagonal_Length__c</fullName>
+        <description>In Inches</description>
+        <externalId>false</externalId>
+        <inlineHelpText>In Inches</inlineHelpText>
+        <label>Diagonal Length</label>
+        <precision>14</precision>
+        <required>false</required>
+        <scale>6</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>File_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>File Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>PDF</fullName>
+                    <default>true</default>
+                    <label>PDF</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Manufacturer__c</fullName>
+        <externalId>false</externalId>
+        <label>Manufacturer</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Walker - Los Angeles</fullName>
+                    <default>false</default>
+                    <label>Walker - Los Angeles</label>
+                </value>
+                <value>
+                    <fullName>PMT - Hawaii</fullName>
+                    <default>false</default>
+                    <label>PMT - Hawaii</label>
+                </value>
+                <value>
+                    <fullName>Peerless - Chicago</fullName>
+                    <default>false</default>
+                    <label>Peerless - Chicago</label>
+                </value>
+                <value>
+                    <fullName>Samsung</fullName>
+                    <default>false</default>
+                    <label>Samsung</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Media_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Media Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Static LED Backlit</fullName>
+                    <default>false</default>
+                    <label>Static LED Backlit</label>
+                </value>
+                <value>
+                    <fullName>Static LED Frontlit</fullName>
+                    <default>false</default>
+                    <label>Static LED Frontlit</label>
+                </value>
+                <value>
+                    <fullName>Digital Screen</fullName>
+                    <default>false</default>
+                    <label>Digital Screen</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Motion_Rate__c</fullName>
+        <externalId>false</externalId>
+        <label>Motion Rate</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>60</fullName>
+                    <default>false</default>
+                    <label>60</label>
+                </value>
+                <value>
+                    <fullName>120</fullName>
+                    <default>false</default>
+                    <label>120</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Operating_Temperature_High__c</fullName>
+        <description>In Farenheit, convert if in Celsius</description>
+        <externalId>false</externalId>
+        <inlineHelpText>In Farenheit, convert if in Celsius</inlineHelpText>
+        <label>Operating Temperature High</label>
+        <precision>4</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Operating_Temperature_Low__c</fullName>
+        <description>In Farenheit, convert if in Celsius</description>
+        <externalId>false</externalId>
+        <inlineHelpText>In Farenheit, convert if in Celsius</inlineHelpText>
+        <label>Operating Temperature Low</label>
+        <precision>4</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Optimal_Material__c</fullName>
+        <description>note - 3M IJ180C requires a (semi-gloss) laminate mounted onto dibond</description>
+        <externalId>false</externalId>
+        <inlineHelpText>note - 3M IJ180C requires a (semi-gloss) laminate mounted onto dibond</inlineHelpText>
+        <label>Optimal Material</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Duratrans</fullName>
+                    <default>false</default>
+                    <label>Duratrans</label>
+                </value>
+                <value>
+                    <fullName>Backlit Paper</fullName>
+                    <default>false</default>
+                    <label>Backlit Paper</label>
+                </value>
+                <value>
+                    <fullName>Vinyl</fullName>
+                    <default>false</default>
+                    <label>Vinyl</label>
+                </value>
+                <value>
+                    <fullName>3M IJ180C</fullName>
+                    <default>false</default>
+                    <label>3M IJ180C</label>
+                </value>
+                <value>
+                    <fullName>N/A</fullName>
+                    <default>false</default>
+                    <label>N/A</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Outer_Dimension_Depth__c</fullName>
+        <description>In Inches</description>
+        <externalId>false</externalId>
+        <inlineHelpText>In Inches</inlineHelpText>
+        <label>Outer Dimension Depth</label>
+        <precision>16</precision>
+        <required>false</required>
+        <scale>6</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Outer_Dimension_Length__c</fullName>
+        <description>In Inches</description>
+        <externalId>false</externalId>
+        <inlineHelpText>In Inches</inlineHelpText>
+        <label>Outer Dimension Length</label>
+        <precision>16</precision>
+        <required>false</required>
+        <scale>6</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Outer_dimension_width__c</fullName>
+        <description>In Inches</description>
+        <externalId>false</externalId>
+        <inlineHelpText>In Inches</inlineHelpText>
+        <label>Outer Dimension Width</label>
+        <precision>16</precision>
+        <required>false</required>
+        <scale>6</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Pixel_Ratio_Height__c</fullName>
+        <externalId>false</externalId>
+        <label>Pixel Ratio Height</label>
+        <precision>10</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Pixel_Ratio_Width__c</fullName>
+        <externalId>false</externalId>
+        <label>Pixel Ratio Width</label>
+        <precision>10</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Resolution__c</fullName>
+        <externalId>false</externalId>
+        <label>Resolution</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>300 DPI</fullName>
+                    <default>false</default>
+                    <label>300 DPI</label>
+                </value>
+                <value>
+                    <fullName>300 PPI</fullName>
+                    <default>false</default>
+                    <label>300 PPI</label>
+                </value>
+                <value>
+                    <fullName>1080p</fullName>
+                    <default>false</default>
+                    <label>1080p</label>
+                </value>
+                <value>
+                    <fullName>1080i</fullName>
+                    <default>false</default>
+                    <label>1080i</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Visible_Area_Diagonal__c</fullName>
+        <externalId>false</externalId>
+        <label>Visible Area - Diagonal</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>10</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Visible_Area_Vertical__c</fullName>
+        <description>Visible Area - Vertical in Inches</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Visible Area - Vertical in Inches</inlineHelpText>
+        <label>Visible Area - Vertical</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>6</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Visible_Area__c</fullName>
+        <description>Horizontal Visible Area in Inches</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Horizontal Visible Area in Inches</inlineHelpText>
+        <label>Visible Area - Horizontal</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>6</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Warranty_Length__c</fullName>
+        <description>In months</description>
+        <externalId>false</externalId>
+        <inlineHelpText>In months</inlineHelpText>
+        <label>Warranty Length</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>With_Margin_Horizontal__c</fullName>
+        <description>With Margin - Vertical in Inches</description>
+        <externalId>false</externalId>
+        <inlineHelpText>With Margin - Vertical in Inches</inlineHelpText>
+        <label>With Margin - Horizontal</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>6</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>With_Margin_Vertical__c</fullName>
+        <description>With Margin - Vertical in Inches</description>
+        <externalId>false</externalId>
+        <inlineHelpText>With Margin - Vertical in Inches</inlineHelpText>
+        <label>With Margin - Vertical</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>6</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <label>Face Specification</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>OBJECT_ID</columns>
+        <columns>NAME</columns>
+        <columns>Visible_Area__c</columns>
+        <columns>Visible_Area_Vertical__c</columns>
+        <columns>With_Margin_Horizontal__c</columns>
+        <columns>With_Margin_Vertical__c</columns>
+        <columns>Bleed__c</columns>
+        <columns>Color__c</columns>
+        <columns>File_Type__c</columns>
+        <columns>Manufacturer__c</columns>
+        <columns>Media_Type__c</columns>
+        <columns>Optimal_Material__c</columns>
+        <columns>Resolution__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <label>Face Specification Name</label>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Face Specifications</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+    <visibility>Public</visibility>
+</CustomObject>
